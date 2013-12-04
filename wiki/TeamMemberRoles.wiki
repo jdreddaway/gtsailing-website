@@ -1,0 +1,21 @@
+#summary What the responsibilities of each person are.
+
+== Customers ==
+
+  * Define acceptance criteria
+  * Decide which features are most important
+  * Guide the developers
+
+== Developers ==
+
+  * Assigns complexity to stories along with QAs
+  * Write code that fulfills the acceptance criteria
+  * Collaborates with the customers
+  * Ask the other developers for feedback
+
+== QAs ==
+
+  * Assign complexity to stories along with developers
+  * Ensure that stories meet the acceptance criteria
+  * Ensure that the developers did not break existing features
+  * Try to find bugs
