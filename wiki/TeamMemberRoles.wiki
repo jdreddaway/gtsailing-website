@@ -2,13 +2,14 @@
 
 == Customers ==
 
+  * Provide [http://www.jamesshore.com/Agile-Book/vision.html vision]
   * Define acceptance criteria
   * Decide which features are most important
   * Guide the developers
 
 == Developers ==
 
-  * Assigns complexity to stories along with QAs
+  * Assigns [http://www.jamesshore.com/Agile-Book/estimating.html complexity] to [http://www.jamesshore.com/Agile-Book/stories.html stories] along with QAs
   * Write code that fulfills the acceptance criteria
   * Collaborates with the customers
   * Ask the other developers for feedback
@@ -16,6 +17,6 @@
 == QAs ==
 
   * Assign complexity to stories along with developers
-  * Ensure that stories meet the acceptance criteria
+  * Ensure that stories are [http://www.jamesshore.com/Agile-Book/done_done.html done done]
   * Ensure that the developers did not break existing features
   * Try to find bugs
