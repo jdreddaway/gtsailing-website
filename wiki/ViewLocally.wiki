@@ -1,0 +1,5 @@
+= How to View the Website Locally =
+
+  # Extract `utilities/USBWebserver v8.6.zip` to the svn trunk on your filesystem (ie. where the root folder is located).
+  # Run usbwebserver.exe
+  # Allow the security dialogs that appear.
