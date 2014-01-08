@@ -1,3 +1,5 @@
+#summary How to get the project files on your computer using subversion.
+
 = Getting the Files on Your Computer =
 
 == Introduction ==
