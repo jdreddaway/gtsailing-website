@@ -1,0 +1,15 @@
+= Getting the Files on Your Computer =
+
+== Introduction ==
+
+The project files are stored in a system called [http://en.wikipedia.org/wiki/Apache_Subversion subversion (SVN)]. I like to use a subversion client called [http://en.wikipedia.org/wiki/TortoiseSVN TortoiseSVN] to checkout/update/commit files. Below are the steps you should follow to get the files on your computer.
+
+== What to Do ==
+
+  # Install TortoiseSVN by following these [http://sourceforge.net/apps/trac/sourceforge/wiki/TortoiseSVN%20instructions#InstallingTortoiseSVN instructions].
+  # Click [https://code.google.com/p/gtsailing-website/source/checkout here] for information about how to checkout the gtsailing-website project.
+  # Create a new folder on your computer where you would like the website to be located.
+  # Right-click the folder and select "SVN Checkout..."
+  # In the "URL of Repository" box, enter the url from Google Code.
+  # Do not change any of the other options. Click OK.
+  # You will be prompted for a username and password. Your username is your gmail address, but your password is not your gmail password. The password is automatically generated for you. Click [https://code.google.com/hosting/settings here] to see what it is.
