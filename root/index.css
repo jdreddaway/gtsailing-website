@@ -84,9 +84,14 @@ body
 	border-radius: .3em;
 }
 
-#nav a:link,  nav a:hover, #nav a:visited
+#nav a:link,  #nav a:hover, #nav a:visited
 {
 	text-decoration: none;
 	color: black;
 	font-size: large;
+}
+
+#nav a:hover {
+	transition-duration:1s;
+	background-color: #E0AA0F;
 }

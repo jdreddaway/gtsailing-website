@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Sailing Club at Georgia Tech</title>
-	<link rel="stylesheet" type="text/css" href="/index-styles.css" />
+	<link rel="stylesheet" type="text/css" href="/index.css" />
 </head>
 <body>
 	<div id="fb-root"></div>
