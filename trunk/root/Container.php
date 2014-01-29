@@ -63,7 +63,7 @@ class Container {
 			'/calendar.php' => 'Calendar',
 			'/instruction.php' => 'Instruction',
 			'/competition.php' => 'Competition',
-			'/contact.php' => 'Contact Us');
+			'/contact/' => 'Contact Us');
 		echo "<ul>";
 		foreach ($pages as $page => $title) {
 			echo "<li><a href=\"{$page}\">{$title}</a></li>\n";
@@ -105,7 +105,7 @@ class Container {
 </style>
 </head>
 
-<body><a name="Top" id="Top"></a>
+<body>
 <div id="container">
 	<div id="header">
 		<div id="logo_w1">Georgia Tech</div>
