@@ -56,8 +56,8 @@ class ClubInfo extends Container {
 			<P>View a <a href="documents/Lake_Lanier_Map.jpg" target="_blank">chart</a> of the area of Lake Lanier where we sail.</P>
 			<P>&nbsp;</P>
 			<P><STRONG>Club Profile</STRONG></P>
-			<p><A href="instruction.php"><img src="images/profile_instr.JPG" width="124" height="94" border="0" align="middle"/></A> <A href="instruction.php">Instruction</A></p>
-			<p><A href="competition.php"><img src="images/profile_comp.JPG" width="124" height="94" border="0" align="middle"/></A> <A href="competition.php">Competition</A></p>
+			<p><A href="instruction.php"><img src="images/profile_instr.jpg" width="124" height="94" border="0" align="middle"/></A> <A href="instruction.php">Instruction</A></p>
+			<p><A href="competition.php"><img src="images/profile_comp.jpg" width="124" height="94" border="0" align="middle"/></A> <A href="competition.php">Competition</A></p>
 	
 	<?php
 	}

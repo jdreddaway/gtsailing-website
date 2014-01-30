@@ -60,7 +60,9 @@ class Instruction extends Container {
 						"Mike Roberts" => "mroberts (at) gatech.edu",
 						"Matt Sheffield" => "sheffmatt (at) gmail.com",						
 						"Matthew Salley" => "mattsalley@gmail.com",
-						"Christopher Jackson" => "cjtjackson36@gmail.com"
+						"Christopher Jackson" => "cjtjackson36@gmail.com",
+						"J.D. Reddaway" => "jdreddaway@gatech.edu",
+						"Marten Kendrick" => "mkendrick7@gatech.edu"
 					);
 														
 					$lakehosts = array(
@@ -101,13 +103,11 @@ class Instruction extends Container {
 			"j24" => "J/24"
 		);
 		$instructors = array(
-			"Andrew Battigaglia" => array("420",),
 			"Mike Roberts" => array("420", "hobie",),
 			"Matt Sheffield" => array("420", "laser"),
 			"Christopher Jackson" => array("j24"),
-			"Elliot Newnham" => array("420", "laser"),
 			"J.D. Reddaway" => array("420", "laser"),
-			"Martin Kendrick" => array("420", "laser")
+			"Marten Kendrick" => array("420", "laser")
 		);
 		
 		$widths = array(138, 250, 64, 41, 31, 42, 41);
@@ -135,161 +135,6 @@ class Instruction extends Container {
 		?>
 		</tbody>
 		</table>
-		
-		<?php
-		
-		/*
-		<TABLE width="667" border="4" cellspacing="2">
-		<TBODY>
-			<TR>
-				<TD width="138" style="padding:3px"><STRONG>Instructor:</STRONG></TD>
-				<TD width="250" style="padding:3px"><STRONG>E-mail Address:</STRONG></TD>
-				<TD width="64" style="padding:3px"><STRONG>Windsurf</STRONG></TD>
-				<TD width="41" style="padding:3px"><STRONG>Laser</STRONG></TD>
-				<TD width="31" style="padding:3px"><strong>Dinghy</strong></TD>
-				<TD width="42" style="padding:3px"><STRONG>Hobie</STRONG></TD>
-				<TD width="41" style="padding:3px"><STRONG>J-24</STRONG></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Andrew Battigaglia</TD> ("420",)
-				<TD style="padding:3px">abattigaglia (at) gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Doug Britton</TD> ("windsurf","j24")
-				<TD style="padding:3px">douglas.britton (at) gtri.gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Phil Forgione</TD> ("laser", "420")
-				<TD style="padding:3px">laserrad90 (at) yahoo.com</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Clint Hodges</TD> ("420", "j24")
-				<TD style="padding:3px">sugarfreesailor (at) gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Jamie Keogh</TD> 
-				<TD style="padding:3px">gtg641q (at) mail.gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Davis King</TD> ("j24",)
-				<TD style="padding:3px">davis1 (at) davisking.com</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">David Leung</TD> ("windsurf", "420", "hobie")
-				<TD style="padding:3px">windsurfgod (at) gmail.com</TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Laura Levy</TD> ("420",)
-				<TD style="padding:3px">laura.levy (at) gmail.com</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Greg Matthews</TD> ("windsurf", "hobie","j24")
-				<TD style="padding:3px">sailingreg (at) yahoo.com</TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Tim McKinzie</TD> ("420",)
-				<TD style="padding:3px">tmckinzie (at) gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Sebastian Miles</TD> ("420",)
-				<TD style="padding:3px">gtg302q (at) mail.gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Ralph Mueller</TD> ("hobie",)
-				<TD style="padding:3px">ralphm (at) isye.gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Konrad Rykaczewski</TD> ("windsurf",)
-				<TD style="padding:3px">konrad.rykaczewski (at) gmail.com</TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Matthew Widlansky</TD> ("laser","420","j24")
-				<TD style="padding:3px">gtg058g (at) mail.gatech.edu</TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-			</TR>
-			<TR>
-				<TD style="padding:3px">Darin "Pablo" Yawn</TD> ("windsurf","laser","420","hobie","j24")
-				<TD style="padding:3px">gtpablo (at) gmail.com</TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">X</div></TD>
-				<TD style="padding:3px"><div align="center">&nbsp;</div></TD>
-			</TR>
-		</TBODY>
-		</TABLE>
-		*/
-		?>
-		
 	<?php
 	}
 	
