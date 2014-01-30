@@ -1,0 +1,97 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+body
+{
+	background-color:black;
+	margin:0;
+	background-image:url(/images/sunset-cropped.jpg);
+	background-size:auto;
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-attachment: fixed; /* firefox and opera fix */
+	
+	position:relative;
+}
+
+#content
+{
+	background-color:rgba(255, 255, 255, 0.7);
+	width: 20em;
+	min-height: 20em;
+	margin:0px;
+	padding: 1em;
+	border-radius: 1em;
+	
+	float:right;
+	margin: 10% 25% 0px 0px;
+	
+	position:relative;
+}
+
+#top
+{
+	position:relative;
+}
+
+#title
+{
+	position:absolute;
+	width:70%;
+	right:0px;
+	top:0px;
+	
+	font-size:xx-large;
+	font-family: Arial, Sans-serif;
+}
+
+.fb-like
+{
+	width: 300px; /* must match what is in html */
+	margin: 1em auto 0px auto;
+}
+
+#logo
+{
+	width:50%; /* TODO make smaller image */
+}
+
+#nav
+{
+	margin:0;
+	padding:0;
+	display: block;
+	list-style-type: none;
+}
+
+#nav li
+{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	margin: .4em .2em;
+}
+
+#nav a
+{
+	display: inline-block;
+	padding: .4em .4em;
+	text-align: center;
+	background-color: white;
+	
+	border-color: black;
+	border-width: 1px;
+	border-radius: .3em;
+}
+
+#nav a:link,  #nav a:hover, #nav a:visited
+{
+	text-decoration: none;
+	color: black;
+	font-size: large;
+}
+
+#nav a:hover {
+	transition-duration:1s;
+	background-color: #E0AA0F;
+}
