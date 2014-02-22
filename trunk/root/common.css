@@ -1,0 +1,104 @@
+/*
+	gold: #E0AA0F (224, 170, 15)
+	navy: #002b45 (0, 43, 69)
+	old gold: #CFB53B (207, 181, 59)
+	vegas gold: #C5B358
+*/
+
+@font-face {
+   font-family: "Lane Narrow Light"; 
+   src: url('fonts/Lane Narrow Light.ttf');
+} 
+
+h2 {
+	text-align:center;
+	font-size:6em;
+	font-weight:thin;
+	font-family:"Lane Narrow Light" "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+}
+
+body {
+	margin:0;
+	background-color:white;
+}
+
+body > div {
+	width:100%;
+	min-width:40em;
+	box-shadow: 0px 0px 150px 50px rgba(0, 43, 69, 0.8);
+}
+
+div.fixed {
+	position: relative;
+}
+
+div.fixed > * {
+	position:absolute;
+}
+
+div.dynamic {
+	padding:5em 0;
+}
+
+div.dynamic > h2 {
+	width:75%;
+	text-align:center;
+}
+
+div.dynamic > * {
+	margin: 0 auto;
+	display:block;
+	/* another class must specify the width in order to center */
+}
+
+body > div * {
+	margin:0;
+}
+
+.description > * {
+	border-radius:5px;
+}
+
+.description  h2 {
+	padding:.1em;
+	/* background-color:rgba(0, 43, 69, 0.7); */
+	/* background-color:rgba(224, 170, 15, .7); */
+}
+
+.description  p {
+	padding: 1em;
+	font-family:"Arial" "sans-serif";
+}
+
+.description {
+	max-width:50em;
+}
+
+.description.dark {
+	color:white;
+}
+
+.description.dark p {
+	background-color:rgba(0, 0, 0, .6);
+}
+
+.description.light {
+	color:black;
+}
+
+.description.light p {
+	background-color:rgba(255, 255, 255, 0.6);
+}
+
+img.background {
+	display:block;
+	position:relative;
+	width:100%;
+	font-size:0px;
+	z-index:-1;
+	padding:0;
+}
+
+.medimg {
+	width:20em;
+}
