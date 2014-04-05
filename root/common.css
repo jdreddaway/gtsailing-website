@@ -20,6 +20,7 @@ h2 {
 body {
 	margin:0;
 	background-color:white;
+	position:relative;
 }
 
 body > div {
@@ -101,4 +102,26 @@ img.background {
 
 .medimg {
 	width:20em;
+}
+
+#scrollnav {
+	position:fixed;
+	right:10px;
+	top:45%;
+	
+	list-style-type:none;
+	margin:0;
+	padding:.1em .3em;
+	
+	border-radius:3px;
+	border:1px solid rgba(128, 128, 128, 0.2);
+	
+	z-index:2; /* fixes weird bug where links go behind other images */
+	
+	background-color:rgba(0, 43, 69, 0.1);
+}
+
+#scrollnav img {
+	display:block;
+	cursor:pointer;
 }
