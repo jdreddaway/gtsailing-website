@@ -1,5 +1,5 @@
 <?php
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/scripts/common.php");
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/common/server-scripts.php");
 
 	/* this expects that certain variables have already been set: */
 	global $title;
@@ -11,8 +11,9 @@
 <html>
 <head>
 	<title>GT Sailing - <?php print($title); ?></title>
-	<link rel="stylesheet" href="/template.css" />
+	<link rel="stylesheet" href="/common/old.css" />
 	<link rel="stylesheet" href="<?php print("/$pageName/$pageName.css");?>" />
+	<script type="text/javascript" src="/common/client-scripts.js"></script>
 </head>
 <body>
 	<div id="page">
