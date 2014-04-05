@@ -5,8 +5,14 @@
 	<title>Sailing Club at Georgia Tech</title>
 	<link rel="stylesheet" type="text/css" href="/common.css" />
 	<link rel="stylesheet" type="text/css" href="/index.css" />
+	<script type="text/javascript" src="/common.js"></script>
 </head>
 <body>
+	<ul id="scrollnav">
+		<li><a onclick="scrollTo('what_we_do');"><img src="images/little circle gold.png" /></a></li>
+		<li><a onclick="scrollTo('whenever');"><img src="images/little circle gold.png" /></a></li>
+		<li><a onclick="scrollTo('raceteam');"><img src="images/little circle gold.png" /></a></li>
+	</ul>
 	<div class="dynamic">
 		<h2>Sailing Club at Georgia Tech</h2>
 		<img class="medimg" alt="GT Sailing Burgee" src="/images/backgrounds/burgee.png" />
