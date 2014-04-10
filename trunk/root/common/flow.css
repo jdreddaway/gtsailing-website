@@ -13,7 +13,7 @@
 h2 {
 	text-align:center;
 	font-size:6em;
-	font-weight:thin;
+	font-weight:lighter;
 	font-family:"Lane Narrow Light" "Helvetica Neue Light", Helvetica, Arial, sans-serif;
 }
 
@@ -52,45 +52,43 @@ div.dynamic > * {
 	/* another class must specify the width in order to center */
 }
 
-body > div * {
+.fixed > div {
+	max-width:50em;
+}
+
+.fixed > div  h2 {
 	margin:0;
-}
-
-.description > * {
-	border-radius:5px;
-}
-
-.description  h2 {
 	padding:.1em;
 	/* background-color:rgba(0, 43, 69, 0.7); */
 	/* background-color:rgba(224, 170, 15, .7); */
 }
 
-.description  p {
-	padding: 1em;
-	font-family:"Arial" "sans-serif";
-}
-
-.description {
-	max-width:50em;
-}
-
-.description.dark {
+.fixed > div.dark {
 	color:white;
 }
 
-.description.dark p {
+.fixed > div.dark > div, .fixed > div.dark > p {
 	background-color:rgba(0, 0, 0, .6);
 }
 
-.description.light {
+.fixed > div.light {
 	color:black;
 }
 
-.description.light p {
+.fixed > div.light p {
 	background-color:rgba(255, 255, 255, 0.6);
 }
 
+.fixed > div > div, .fixed > div > p {
+	border-radius:5px;
+	padding: 1em;
+}
+
+.fixed > div  p {
+	font-family:"Arial" "sans-serif";
+}
+
+/* This exists so that each block is as big as the background image */
 img.background {
 	display:block;
 	position:relative;
@@ -121,7 +119,10 @@ img.background {
 	background-color:rgba(0, 43, 69, 0.1);
 }
 
-#scrollnav img {
-	display:block;
+#scrollnav a {
+	display: block;
+	background-image:url("/images/little circle gold.png");
+	width:20px;
+	height:20px;
 	cursor:pointer;
 }
