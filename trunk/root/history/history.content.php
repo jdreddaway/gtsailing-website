@@ -1,12 +1,6 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('laws');"></a></li>
-	<li><a onclick="scrollTo('responsibilities');"></a></li>
-	<li><a onclick="scrollTo('lakehosts');"></a></li>
-	<li><a onclick="scrollTo('qualification');"></a></li>
-</ul>
-<div class="fixed">
+<div id="history" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="history" class="dark">
+	<div id="history_d" class="dark">
 		<h2>History</h2>
 		<p>
 			The Georgia Tech Sailing Club was founded in 1961 by a group of students who discovered they had a common interest in sailing and racing.

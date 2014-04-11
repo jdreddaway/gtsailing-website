@@ -1,11 +1,6 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('benefits');"></a></li>
-	<li><a onclick="scrollTo('dues');"></a></li>
-	<li><a onclick="scrollTo('responsibilities');"></a></li>
-</ul>
-<div class="fixed">
+<div id="benefits" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="benefits" class="dark">
+	<div id="benefits_d" class="dark">
 		<h2>Benefits</h2>
 		<div>
 			<p>
@@ -19,18 +14,18 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="dues" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="dues" class="dark">
+	<div id="dues_d" class="dark">
 		<h2>Dues</h2>
 		<p>
 			Dues are $50 per member, etc.
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="responsibilities" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="responsibilities" class="dark">
+	<div id="responsibilities_d" class="dark">
 		<h2>Responsibilities</h2>
 		<div>
 			<p>

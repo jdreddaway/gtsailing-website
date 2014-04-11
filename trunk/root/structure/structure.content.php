@@ -1,10 +1,4 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('laws');"></a></li>
-	<li><a onclick="scrollTo('responsibilities');"></a></li>
-	<li><a onclick="scrollTo('lakehosts');"></a></li>
-	<li><a onclick="scrollTo('qualification');"></a></li>
-</ul>
-<div class="fixed">
+<div id="execboard" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
 	<div id="board" class="dark">
 		<h2>Executive Board</h2>
@@ -14,61 +8,61 @@
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="commodore" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="commodore" class="dark">
+	<div id="commodore_d" class="dark">
 		<h2>Commodore</h2>
 		<p>
 			TODO: The commodore is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="vice" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="vice" class="dark">
+	<div id="vc" class="dark">
 		<h2>Vice Commodore</h2>
 		<p>
 			TODO: The Vice commodore is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="treasurer" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="treasurer" class="dark">
+	<div id="treasurer_d" class="dark">
 		<h2>Treasurer</h2>
 		<p>
 			TODO: The treasurer is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="secretary" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="secretary" class="dark">
+	<div id="secretary_d" class="dark">
 		<h2>Secretary</h2>
 		<p>
 			TODO: The secretary is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="fleetcaptain" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="fleetcaptain" class="dark">
+	<div id="fleet" class="dark">
 		<h2>Fleet Captain</h2>
 		<p>
 			TODO: The fleet captain is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="racecaptain" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="racecaptain" class="dark">
+	<div id="race" class="dark">
 		<h2>Race Team Captain</h2>
 		<p>
 			TODO: The race team captain is in charge of...
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="socialchair" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
 	<div id="social" class="dark">
 		<h2>Membership Chair</h2>

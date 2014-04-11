@@ -1,12 +1,6 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('laws');"></a></li>
-	<li><a onclick="scrollTo('responsibilities');"></a></li>
-	<li><a onclick="scrollTo('lakehosts');"></a></li>
-	<li><a onclick="scrollTo('qualification');"></a></li>
-</ul>
-<div class="fixed">
+<div id="laws" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="laws" class="dark">
+	<div id="laws_d" class="dark">
 		<h2>Constitution and Bylaws</h2>
 		<p>
 			Each member is expected to obey the club <a href="#">constitution and bylaws</a>.
@@ -16,9 +10,9 @@
 		</p>
 	</div>
 </div>
-<div class="fixed">
+<div id="lakehosts" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="lakehosts" class="dark">
+	<div id="lakehosts_d" class="dark">
 		<h2>Lakehosts</h2>
 		<div>
 			<p>
@@ -47,15 +41,14 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="certification" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="qualification" class="dark">
-		<h2>Skipper Qualification</h2>
+	<div id="cert" class="dark">
+		<h2>Skipper Certification</h2>
 		<p>
-			In order to protect our <a href="#">equipment</a> and our members, the Georgia Tech Sailing Club has developed a strict skipper qualification process.
-			Each fleet has a unique and specific process.
-			Each process is intended to ensure that only members who have demonstrated mastery of fleet-specific boat handling skills may take out crew or equipment.
-			For more information about skipper qualification, <a href="#">click here</a>.
+			In order to protect our <a href="#">equipment</a> and our members, we have developed a strict skipper certification process.
+			Each fleet has a different process that is intended to ensure that only members who have demonstrated mastery of the skills required to sail that specific boat.
+			For more information about skipper certification, <a href="#">click here</a>.
 		</p>
 	</div>
 </div>

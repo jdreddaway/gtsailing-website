@@ -17,5 +17,9 @@
 </head>
 <body>
 	<?php requireOnce("/$pageName/$pageName.content.php"); ?>
+	
+	<script type="text/javascript">
+		setUpScrollNav();
+	</script>
 </body>
 </html>

@@ -1,43 +1,36 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('420s');"></a></li>
-	<li><a onclick="scrollTo('j24s');"></a></li>
-	<li><a onclick="scrollTo('lasers');"></a></li>
-	<li><a onclick="scrollTo('hobies');"></a></li>
-	<li><a onclick="scrollTo('windsurfers');"></a></li>
-</ul>
-<div class="fixed">
+<div id="420s" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="420s" class="dark">
+	<div id="420_d" class="dark">
 		<h2>6 Club Rigged 420s</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="j24s" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="j24s" class="dark">
+	<div id="j24_d" class="dark">
 		<h2>2 J-24s</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="lasers" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="lasers" class="dark">
+	<div id="laser_d" class="dark">
 		<h2>5 Lasers</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="hobies" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="hobies" class="dark">
+	<div id="hobies_d" class="dark">
 		<h2>3 Hobies</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="windsurfers" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="windsurfers" class="dark">
+	<div id="windsurfer_d" class="dark">
 		<h2>Windsurfers</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="zodiac" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="zodiac" class="dark">
+	<div id="zodiac_d" class="dark">
 		<h2>Zodiac</h2>
 		<p>
 			GTSC keeps a small zodiac at LLSC in slot C-018.
