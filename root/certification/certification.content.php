@@ -1,10 +1,4 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('laws');"></a></li>
-	<li><a onclick="scrollTo('responsibilities');"></a></li>
-	<li><a onclick="scrollTo('lakehosts');"></a></li>
-	<li><a onclick="scrollTo('qualification');"></a></li>
-</ul>
-<div class="fixed">
+<div id="skipper" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
 	<div id="certification" class="dark">
 		<h2>Skipper Certification</h2>
@@ -22,9 +16,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="420" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="420" class="dark">
+	<div id="420_d" class="dark">
 		<h2>420 Certification</h2>
 		<div>
 			<p>
@@ -62,9 +56,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="keelboat" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="keelboat" class="dark">
+	<div id="keelboat_d" class="dark">
 		<h2>Keelboat Certification</h2>
 		<div>
 			<p>
@@ -103,9 +97,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="Laser" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="Laser" class="dark">
+	<div id="Laser_d" class="dark">
 		<h2>Laser Certification</h2>
 		<div>
 			<p>
@@ -124,9 +118,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="hobie" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="hobie" class="dark">
+	<div id="hobie_d" class="dark">
 		<h2>Hobie Certification</h2>
 		<div>
 			<p>
@@ -144,9 +138,9 @@
 		</div>
 	</div>
 </div>
-<div class="fixed">
+<div id="windsurf" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="windsurf" class="dark">
+	<div id="windsurf_d" class="dark">
 		<h2>Windsurf Certification</h2>
 		<div>
 			<p>

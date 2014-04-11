@@ -1,23 +1,18 @@
-<ul id="scrollnav">
-	<li><a onclick="scrollTo('what_we_do');"></a></li>
-	<li><a onclick="scrollTo('whenever');"></a></li>
-	<li><a onclick="scrollTo('raceteam');"></a></li>
-</ul>
-<div class="fixed">
+<div id="activity" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="activity" class="dark">
+	<div id="activity_d" class="dark">
 		<h2>Many Regattas Every Semester</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="practices" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="practices" class="dark">
+	<div id="practices_d" class="dark">
 		<h2>Weekly Practices</h2>
 	</div>
 </div>
-<div class="fixed">
+<div id="funding" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="funding" class="dark">
+	<div id="funding_d" class="dark">
 		<h2>School Funding</h2>
 		<p>
 			As far as traveling to regattas goes, Georgia Tech only funds 2/3 of the gas for 4 regattas every year.
