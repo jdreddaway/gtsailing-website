@@ -59,8 +59,6 @@ div.dynamic > * {
 .fixed > div  h2 {
 	margin:0;
 	padding:.1em;
-	/* background-color:rgba(0, 43, 69, 0.7); */
-	/* background-color:rgba(224, 170, 15, .7); */
 }
 
 .fixed > div.dark {
@@ -96,6 +94,8 @@ img.background {
 	font-size:0px;
 	z-index:-1;
 	padding:0;
+	
+	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
 }
 
 .medimg {
@@ -121,8 +121,15 @@ img.background {
 
 #scrollnav a {
 	display: block;
-	background-image:url("/images/little circle gold.png");
-	width:20px;
-	height:20px;
+	width:14px;
+	height:14px;
+	border: solid 2px rgba(255, 235, 0, 0.4);
+	border-radius:8px;
+	margin:4px 0 4px 0;
 	cursor:pointer;
+}
+
+#scrollnav a.active {
+	background-color: rgba(255, 235, 0, 0.4);
+	border-color:rgba(0, 0, 0, 0);
 }
