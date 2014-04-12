@@ -127,6 +127,8 @@ img.background {
 	border-radius:8px;
 	margin:4px 0 4px 0;
 	cursor:pointer;
+	
+	transition-duration:1s;
 }
 
 #scrollnav a.active {
