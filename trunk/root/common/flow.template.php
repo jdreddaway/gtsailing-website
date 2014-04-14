@@ -23,5 +23,13 @@
 	<script type="text/javascript">
 		setUpScrollNav();
 	</script>
+	
+	<div class="dynamic" id="footer">
+		<ul>
+			<li><a href="/contact/">Contact</a></li>
+			<li><a href="/calendar/">Calendar</a></li>
+			<li><a href="/rules/">Rules</a></li>
+		</ul>
+	</div>
 </body>
 </html>
