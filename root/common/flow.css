@@ -135,3 +135,26 @@ img.background {
 	background-color: rgba(255, 235, 0, 0.4);
 	border-color:rgba(0, 0, 0, 0);
 }
+
+#footer {
+	background-color: #002b45;
+}
+
+#footer > ul {
+	-webkit-column-count:3; /* Chrome, Safari, Opera */
+	-moz-column-count:3; /* Firefox */
+	column-count:3; /* surprisingly, IE is the only one this actually works for */
+	
+	width:50%;
+	padding:0;
+	
+	list-style-type:none;
+}
+
+#footer  li {
+	text-align:center;
+}
+
+#footer a:link, #footer a:visited, #footer a:visited {
+	color:white;
+}
