@@ -1,7 +1,8 @@
 var currentlyActiveScrollLink = null;
 
 function scrollTo(elementID) {
-	$("#" + elementID).scrollintoview({duration: 1000});
+	var element = document.getElementById(elementID);
+	$.scrollTo(element, 1000);
 }
 
 function setUpScrollNav() {

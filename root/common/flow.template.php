@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="<?php print("/$pageName/$pageName.css");?>" />
 	<script type="text/javascript" src="/common/client-scripts.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="/common/jquery.scrollintoview.min.js"></script>
+	<script type="text/javascript" src="/common/jquery.scrollTo.min.js"></script>
 </head>
 <body>
 	<?php requireOnce("/$pageName/$pageName.content.php"); ?>
