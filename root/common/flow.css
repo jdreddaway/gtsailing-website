@@ -8,7 +8,11 @@
 @font-face {
    font-family: "Lane Narrow Light"; 
    src: url('/fonts/Lane Narrow Light.ttf');
-} 
+}
+
+a:link, a:visited {
+	transition-duration:500ms;
+}
 
 h2 {
 	text-align:center;
