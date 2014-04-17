@@ -65,6 +65,10 @@ div.dynamic > * {
 	color:white;
 }
 
+.fixed > div.dark a:link, .fixed > div.dark a:visited {
+	color: #DDD;
+}
+
 .fixed > div.dark > div, .fixed > div.dark > p {
 	background-color:rgba(0, 0, 0, .6);
 }
@@ -73,8 +77,16 @@ div.dynamic > * {
 	color:black;
 }
 
+.fixed > div.light a:link, .fixed > div.light a:visited {
+	color: #002b45;
+}
+
 .fixed > div.light p {
 	background-color:rgba(255, 255, 255, 0.6);
+}
+
+.fixed > div.dark a:hover, .fixed > div.light a:hover {
+	color: #CFB53B;
 }
 
 .fixed > div > div, .fixed > div > p {
