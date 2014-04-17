@@ -1,5 +1,5 @@
 <div id="activity" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<img alt="420s downwind" class="background" src="/images/backgrounds/saisa open fall 2013 upwind.jpg" />
 	<div id="activity_d" class="dark">
 		<h2>Many Regattas Every Semester</h2>
 	</div>
@@ -10,8 +10,8 @@
 		<h2>Weekly Practices</h2>
 	</div>
 </div>
-<div id="funding" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+<div id="funding" class="dynamic">
+	<img id="sga" alt="420s downwind" src="/images/backgrounds/SGA-3.jpg" />
 	<div id="funding_d" class="dark">
 		<h2>School Funding</h2>
 		<p>
