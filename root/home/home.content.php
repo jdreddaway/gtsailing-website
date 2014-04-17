@@ -17,7 +17,7 @@
 		<h2>Whenever We Want</h2>
 		<p>
 			GT Sailing owns a large number of boats at Lake Lanier Sailing Club.
-			LLSC student members called <a href="#">"lakehosts"</a> can take members of GTSC sailing any time, any day, any month. 
+			LLSC student members called <a href="/rules/#lakehosts">"lakehosts"</a> can take members of GTSC sailing any time, any day, any month. 
 		</p>
 	</div>
 </div>
@@ -26,7 +26,7 @@
 	<div id="raceteam" class="light">
 		<h2>Collegiate Race Team</h2>
 		<p>
-			The GT Sailing Race Team competes against other schools nearly every weekend during the Fall and Spring semesters.
+			The GT Sailing <a href="/raceteam/">Race Team</a> competes against other schools nearly every weekend during the Fall and Spring semesters.
 		</p>
 	</div>
 </div>
