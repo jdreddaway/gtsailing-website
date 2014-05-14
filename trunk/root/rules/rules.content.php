@@ -31,12 +31,12 @@
 				In addition, a lakehost should be:
 			</p>
 			<ul>
-				<li>at least 420 or windsurf <a href="#qualification">skipper qualified</a></li>
+				<li>at least 420 or windsurf <a href="#certification">skipper certified</a></li>
 				<li>a member of GTSC for at least one year</li>
 				<li>plan on being a member of GTSC for at least one more year</li>
 			</ul>
 			<p>
-				To become a lakehost, a student must be appointed by GTSC exec and must complete the <a href="documents/LLSC_Member_Application.pdf" target="_blank">LLSC membership application form</a> and submit it to the current secretary of LLSC.
+				To become a lakehost, a student must be appointed by GTSC exec and must complete the <a href="/documents/LLSC_Member_Application.pdf" target="_blank">LLSC membership application form</a> and submit it to the current secretary of LLSC.
 			</p>
 		</div>
 	</div>
@@ -46,9 +46,9 @@
 	<div id="cert" class="dark">
 		<h2>Skipper Certification</h2>
 		<p>
-			In order to protect our <a href="#">equipment</a> and our members, we have developed a strict skipper certification process.
+			In order to protect our <a href="/fleet">equipment</a> and our members, we have developed a strict skipper certification process.
 			Each fleet has a different process that is intended to ensure that only members who have demonstrated mastery of the skills required to sail that specific boat.
-			For more information about skipper certification, <a href="#">click here</a>.
+			For more information about skipper certification, <a href="/certification">click here</a>.
 		</p>
 	</div>
 </div>
