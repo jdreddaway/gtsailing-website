@@ -1,0 +1,10 @@
+#calendar {
+	width: 100%;
+	height:700px;
+	display:block;
+}
+
+#content {
+	background-color:white;
+	min-width:500px;
+}
