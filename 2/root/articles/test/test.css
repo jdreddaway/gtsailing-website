@@ -1,0 +1,10 @@
+#calendar > iframe {
+	width: 80%;
+	min-width:500px;
+	height:700px;
+	margin:0 auto;
+	display:block;
+	padding:2em;
+	background-color:white;
+	border-radius:1em;
+}

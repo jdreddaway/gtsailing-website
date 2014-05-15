@@ -1,0 +1,15 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+.fixed > div {
+	top:1em;
+	left:2em;
+}
+
+#funding_d {
+	margin:auto, auto, auto, auto;
+}
+
+#sga {
+	float:right;
+}
