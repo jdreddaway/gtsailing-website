@@ -1,0 +1,45 @@
+#page {
+	min-width:32em; /* card width + card padding + card margin */
+}
+
+#exec img {
+	width: 103px;
+	height: 154px;
+	margin-right:1em;
+}
+
+#cards > div {
+	display:inline-block;
+	margin:.4em;
+	width:28em;
+	
+	background-color:white;
+	border-radius:0.3em;
+	padding:1em;
+}
+
+#cards > div > * {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#lists table {
+	border-spacing:1em;
+}
+
+#lists th {
+	text-align:right;
+}
+
+#social img{
+	vertical-align:middle;
+}
+
+#sites {
+	text-align:center;
+}
+
+#sites * {
+	display:inline-block;
+	margin: 0 1em;
+}

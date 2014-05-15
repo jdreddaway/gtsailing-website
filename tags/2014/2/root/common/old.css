@@ -1,0 +1,63 @@
+body {
+	background: #010028 url(/images/body_bg.jpg) repeat-x;
+	color:#000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 10px 10px;
+	padding: 0px;
+}
+
+#page {
+	margin:0 auto;
+
+	/* override these styles in the specific page's css if necessary */
+	max-width:90%;
+	min-width:20em;
+}
+
+#content {
+	background-color:#E3E5DB;
+	padding:.5em 1em;
+}
+
+#navbar {
+	background-color:#9F823C;
+	border: 3px solid #FFFFFF;
+	margin:1em 0 0 0;
+	padding:0;
+	text-align:center;
+}
+
+#navbar li{
+	display:inline-block;	
+}
+
+#navbar a{
+	text-decoration:none;
+	color:#FFFFFF;
+	display:inline-block;
+	padding:0.3em 1em;
+}
+#navbar a:hover{
+	text-decoration:underline;
+	color:#28556b;
+}
+
+#header {
+	width:712px; /* banner width */
+	margin:0 auto;
+}
+
+#header img{
+	display:block;
+}
+
+#banner {
+	border: 2px solid white;
+	border-radius:4px;
+	width: 712px;
+}
+
+h3 {
+	margin-top:2em;
+}
