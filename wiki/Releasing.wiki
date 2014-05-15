@@ -2,7 +2,7 @@
 
 = Rules for Releases =
 
-  * *Links to unfinished pages should link to `construction.html` instead.* Nothing should link to `construction.html` when in the root.
+  * *Links to unfinished pages should link to `construction.php` instead.* Nothing should link to `construction.php` when in the root.
   * *Pages should be mostly finished.* It is ok to release unfinished pages if you want feedback for them, but be aware that the public will be able to see it.
 
 = Version Naming Scheme =
