@@ -10,6 +10,11 @@
 	margin:auto, auto, auto, auto;
 }
 
+#funding_bg {
+	background-color:white;
+	float:left;
+}
+
 #sga {
 	float:right;
 }

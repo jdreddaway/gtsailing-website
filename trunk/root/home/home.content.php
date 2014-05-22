@@ -1,6 +1,31 @@
-<div class="dynamic">
-	<h2>Sailing Club at Georgia Tech</h2>
-	<img class="medimg" alt="GT Sailing Burgee" src="/images/backgrounds/burgee.png" />
+<div id="intro" class="fixed">
+	<img alt="sunset at llsc" class="background" src="/images/sunset-cropped.jpg" />
+	<div id="intro_content">
+		<div id="top">
+			<img id="logo" src="/images/gt-sails logo.png" alt="GT Sailing Logo" />
+			<h2 id="title">
+				Sailing Club at Georgia Tech
+			</h2>
+		</div>
+		<ul id="nav">
+			<!--<li><a href="/news.php">News</a></li>-->
+			<li><a href="/calendar.php">Calendar</a></li>
+			<li><a href="/contact/">Contact Us</a></li>
+			<li><a href="/rules/">Rules</a></li>
+		</ul>
+		<div id="fb-root"></div>
+		<script type="text/javascript">
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=664212880267915";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<div class="fb-like" style="display: block;" data-href="https://www.facebook.com/gtsailingclub" data-width="300px" data-layout="standard" data-action="like" data-show-faces="true" data-share="false">
+		</div>
+	</div>
 </div>
 <div id="what" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
