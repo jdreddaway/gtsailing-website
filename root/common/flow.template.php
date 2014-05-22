@@ -29,7 +29,9 @@
 	</script>
 	
 	<div class="dynamic" id="footer">
-		<?php requireOnce("/common/footer.php"); ?>
+		<div>
+			<?php requireOnce("/common/footer.php"); ?>
+		</div>
 	</div>
 </body>
 </html>

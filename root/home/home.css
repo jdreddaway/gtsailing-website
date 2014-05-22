@@ -1,6 +1,10 @@
 /* old gold: #E0AA0F */
 /* navy: #002b45 */
 
+#intro {
+	min-height:30em;
+}
+
 #what_we_do {
 	top:50px;
 	left:60px;
@@ -19,4 +23,89 @@
 #raceteam {
 	right:30px;
 	top: 100px;
+}
+
+/************************/
+/* Intro Content Styles */
+/************************/
+
+#intro_content
+{
+	background-color:rgba(255, 255, 255, 0.7);
+	width: 20em;
+	min-height: 20em;
+	margin:0px;
+	padding: 1em;
+	border-radius: 1em;
+	
+	right:25%;
+	top: 10%;
+}
+
+#top
+{
+	position:relative;
+}
+
+#title
+{
+	position:absolute;
+	width:70%;
+	right:0.5em;
+	top:12%;
+	
+	font-size:xx-large;
+	font-family: Arial, Sans-serif;
+}
+
+#logo
+{
+	width:50%; /* TODO make smaller image */
+}
+
+#nav
+{
+	margin:0;
+	padding:0;
+	display: block;
+	list-style-type: none;
+	text-align:center;
+}
+
+#nav li
+{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	margin: .4em .2em;
+}
+
+#nav a
+{
+	display: inline-block;
+	padding: .4em .4em;
+	text-align: center;
+	background-color: white;
+	
+	border-color: black;
+	border-width: 1px;
+	border-radius: .3em;
+}
+
+#nav a:link,  #nav a:hover, #nav a:visited
+{
+	text-decoration: none;
+	color: black;
+	font-size: large;
+}
+
+#nav a:hover {
+	transition-duration:1s;
+	background-color: #E0AA0F;
+}
+
+.fb-like
+{
+	width: 300px; /* must match what is in html */
+	margin: 1em auto 0px auto;
 }
