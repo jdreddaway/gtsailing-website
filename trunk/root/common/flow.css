@@ -12,8 +12,8 @@
    src: url('/fonts/Lane Narrow Light.ttf');
 }
 
-a:link, a:visited {
-	transition-duration:500ms;
+a[target="_blank"] {
+	color:inherit;
 }
 
 h2 {
@@ -29,12 +29,16 @@ body {
 	position:relative;
 }
 
+/* tile */
 body > div {
 	width:100%;
 	min-width:40em;
-	box-shadow: 0px 0px 150px 50px rgba(0, 43, 69, 0.8);
+	box-shadow:
+		inset 0px 150px 150px -100px rgba(0, 43, 69, 0.8), /* top */
+		inset 0px -150px 150px -100px rgba(0, 43, 69, 0.8); /* bottom */
 }
 
+/* words on tile */
 body > div > div > div, body > div > div > p {
 	padding:1em;
 }
@@ -77,9 +81,6 @@ div.dynamic  h2 {
 
 /* background-color div */
 div.dynamic > div {
-	position:relative; /* enables z-index */
-	z-index:-1;
-	
 	padding:5em 0;
 }
 
@@ -99,6 +100,10 @@ div.dynamic > div > * {
 
 .fixed > div.dark {
 	color:white;
+}
+
+.fixed > div > a {
+	transition-duration:500ms;
 }
 
 .fixed > div.dark a:link, .fixed > div.dark a:visited {
@@ -139,8 +144,9 @@ img.background {
 	position:relative;
 	width:100%;
 	font-size:0px;
-	z-index:-1; /* allows box shadow to work as desired */
 	padding:0;
+
+	z-index:-1; /* makes box-shadows work */
 	
 	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
 }
