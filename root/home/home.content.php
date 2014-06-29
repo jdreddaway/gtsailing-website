@@ -1,5 +1,5 @@
 <div id="intro" class="fixed">
-	<img alt="sunset at llsc" class="background" src="/images/sunset-cropped.jpg" />
+	<img alt="sunset at llsc" class="background" src="/images/backgrounds/sunset-cropped.jpg" />
 	<div id="intro_content">
 		<div id="top">
 			<img id="logo" src="/images/gt-sails logo.png" alt="GT Sailing Logo" />
@@ -55,3 +55,18 @@
 		</p>
 	</div>
 </div>
+<div id="organization" class="fixed">
+	<img alt="" class="background" src="/images/backgrounds/DSCF1487.jpg" />
+	<div id="org_d" class="dark">
+		<h2>Organization</h2>
+		<p>
+			We are a legitimate tier 3 sports club at Georgia Tech, which means that, upon other things, we have an <a href="http://sga.gatech.edu/" target="_blank">SGA</a> budget.
+			We have an awesome <a href="/structure">exec board</a>, which manages the club and plans our events.
+		</p>
+	</div>
+</div>
+<!-- TODO finish
+<div id="alumni" class="fixed">
+
+</div>
+-->
