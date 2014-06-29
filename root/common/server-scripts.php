@@ -6,4 +6,9 @@
 			require_once($path);
 		}
 	}
+	
+	function underConstruction() {
+		http_response_code(307);
+		header('Location: /construction.php');
+	}
 ?>

@@ -59,10 +59,16 @@
 	<img alt="" class="background" src="/images/backgrounds/DSCF1487.jpg" />
 	<div id="org_d" class="dark">
 		<h2>Organization</h2>
-		<p>
-			We are a legitimate tier 3 sports club at Georgia Tech, which means that, upon other things, we have an <a href="http://sga.gatech.edu/" target="_blank">SGA</a> budget.
-			We have an awesome <a href="/structure">exec board</a>, which manages the club and plans our events.
-		</p>
+		<div>
+			<p>
+				We are a legitimate tier 3 sports club at Georgia Tech, which means that, upon other things, we have an <a href="http://sga.gatech.edu/" target="_blank">SGA</a> budget.
+				We have an awesome <a href="/structure">exec board</a>, which manages the club and plans our events.
+			</p>
+			<p>
+				Currently, we meet in CRC 251 at 7:30 on Mondays.
+				Come stop by to learn more!
+			</p>
+		</div>
 	</div>
 </div>
 <!-- TODO finish
