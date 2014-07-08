@@ -25,6 +25,10 @@ body {
 	position:relative;
 }
 
+ul {
+	list-style-position:inside;
+}
+
 /* tile */
 body > div {
 	width:100%;
@@ -32,17 +36,37 @@ body > div {
 	box-shadow:
 		inset 0px 150px 150px -100px rgba(0, 43, 69, 0.8), /* top */
 		inset 0px -150px 150px -100px rgba(0, 43, 69, 0.8); /* bottom */
+	float:left; /* allows box-shadow to work */
+}
+
+body > div > div  a {
+	transition-duration:500ms;
+}
+
+body > div > div  h2 {
+	margin:0;
+}
+
+div.dark {
+	color:white;
+}
+
+div.dark a:link, div.dark a:visited {
+	color: #DDD;
+}
+
+div.light > * {
+	color:black;
+}
+
+div.light a:link, div.light a:visited {
+	color: #002b45;
 }
 
 /* contains multiple description paragraphs */
 body > div.fixed > div > div  {
 	padding:1px 1em;
 	margin:1em;
-}
-
-/* tile description */
-body > div.fixed > div > p {
-	padding:1em;
 }
 
 /*
@@ -64,6 +88,14 @@ div.fixed > * {
 	position:absolute;
 }
 
+.fixed > div.dark > div, .fixed > div.dark > p {
+	background-color:rgba(0, 0, 0, .6);
+}
+
+.fixed > div.light > div, .fixed > div.light > p {
+	background-color:rgba(255, 255, 255, 0.6);
+}
+
 /*
 	HTML STRUCTURE:
 	<div class="dynamic">
@@ -72,8 +104,9 @@ div.fixed > * {
 		</div>
 	</div>
 */
+
 div.dynamic {
-	float:left; /* for floated images to not overflow */
+	pointer-events:none; /* since the content is below this element */
 }
 
 div.dynamic  h2 {
@@ -84,56 +117,22 @@ div.dynamic  h2 {
 /* background-color div */
 div.dynamic > div {
 	padding:5em 0;
-}
-
-div.dynamic > div > * {
-	margin: 0 auto;
-	display:block;
-	/* another class must specify the width in order to center */
+	width:100%;
+	float:left; /* for floated images to not overflow */
+	
+	z-index:-1; /* for the box-shadow */
+	position:relative; /* allows z-index to work */
+	pointer-events:auto; /* makes content clickable since it was turned off in div.dynamic */
 }
 
 .fixed > div {
 	max-width:50em;
-}
-
-.fixed > div  h2 {
-	margin:0;
-}
-
-.fixed > div.dark {
-	color:white;
-}
-
-.fixed > div  a {
-	transition-duration:500ms;
-}
-
-.fixed > div.dark a:link, .fixed > div.dark a:visited {
-	color: #DDD;
-}
-
-.fixed > div.dark > div, .fixed > div.dark > p {
-	background-color:rgba(0, 0, 0, .6);
-}
-
-.fixed > div.light {
-	color:black;
-}
-
-.fixed > div.light a:link, .fixed > div.light a:visited {
-	color: #002b45;
-}
-
-.fixed > div.light p {
-	background-color:rgba(255, 255, 255, 0.6);
-}
-
-.fixed > div.dark a:hover, .fixed > div.light a:hover {
-	color: #CFB53B;
+	padding:1em;
 }
 
 .fixed > div > div, .fixed > div > p {
 	border-radius:5px;
+	padding:1em;
 }
 
 .fixed > div  p {
@@ -191,6 +190,11 @@ img.background {
 	border-color:rgba(0, 0, 0, 0);
 }
 
+#footer {
+	clear: both;
+	box-shadow:none;
+}
+
 #footer > div {
 	background-color: #002b45;
 }
@@ -201,6 +205,7 @@ img.background {
 	column-count:3; /* surprisingly, IE is the only one this actually works for */
 	
 	width:50%;
+	margin:0 auto;
 	padding:0;
 	
 	list-style-type:none;
@@ -214,6 +219,15 @@ img.background {
 	color:white;
 }
 
-a[target="_blank"]:link, a[target="_blank"]:visited , .fixed > div.dark a[target="_blank"]:link, .fixed > div.dark a[target="_blank"]:visited {
+div.dark a:hover, div.light a:hover, #footer a:hover{ /* must have class in order for priority to work */
+	color: #CFB53B;
+}
+
+body > div > div  a[target="_blank"]:link,
+body > div > div  a[target="_blank"]:visited ,
+body > div  > div a[target="_blank"]:link,
+body > div > div  a[target="_blank"]:visited,
+body > div > div  a[target="_blank"]:hover
+{
 	color:inherit;
 }
