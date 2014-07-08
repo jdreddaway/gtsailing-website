@@ -199,20 +199,19 @@ img.background {
 	background-color: #002b45;
 }
 
-#footer  ul {
-	-webkit-column-count:3; /* Chrome, Safari, Opera */
-	-moz-column-count:3; /* Firefox */
-	column-count:3; /* surprisingly, IE is the only one this actually works for */
-	
-	width:50%;
+#footer  table {	
+	width:75%;
 	margin:0 auto;
 	padding:0;
 	
 	list-style-type:none;
+	
+	table-layout:fixed;
 }
 
-#footer  li {
+#footer  td {
 	text-align:center;
+	margin:1em;
 }
 
 #footer a:link, #footer a:visited, #footer a:visited {
