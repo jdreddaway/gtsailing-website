@@ -1,4 +1,4 @@
-var currentlyActiveScrollLink = null;
+var currentlyActiveScrollLink = undefined;
 
 function scrollTo(elementID) {
 	var element = document.getElementById(elementID);
@@ -6,28 +6,38 @@ function scrollTo(elementID) {
 }
 
 function setUpScrollNav() {
-	var scrollNav = document.createElement("ul");
-	scrollNav.setAttribute("id", "scrollnav");
+	sections = findSections()
 	
+	if (sections.length > 1) {
+		var scrollNav = document.createElement("ul");
+		scrollNav.setAttribute("id", "scrollnav");
+		
+		for (var i = 0; i < sections.length; i++) {
+			sections[i].addEventListener("mouseover", function() { setActiveScrollLink(this.id); });
+			
+			var link = createScrollNavLink(sections[i].id);
+			scrollNav.appendChild(link);
+		}
+		
+		document.body.appendChild(scrollNav);
+		
+		setActiveScrollLink(sections[0].id)
+	}
+}
+
+function findSections() {
 	var children = document.body.children;
-	var numSections = 0;
+	var sections = [];
 	
 	for (var i = 0; i < children.length; i++) {
 		section = children[i];
 	
 		if (section.tagName == "DIV" && section.id != "") {
-			var link = createScrollNavLink(section.id);
-			scrollNav.appendChild(link);
-			
-			section.addEventListener("mouseover", function() { setActiveScrollLink(this.id); });
-			
-			numSections++;
+			sections.push(section);
 		}
 	}
 	
-	if (numSections > 1) {
-		document.body.appendChild(scrollNav);
-	}
+	return sections;
 }
 
 function createScrollNavLink(targetID) {
@@ -42,7 +52,7 @@ function createScrollNavLink(targetID) {
 }
 
 function setActiveScrollLink(sectionID) {
-	if (currentlyActiveScrollLink !== null) {
+	if (currentlyActiveScrollLink !== undefined) {
 		currentlyActiveScrollLink.className = "";
 	}
 	

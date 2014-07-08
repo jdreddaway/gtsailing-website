@@ -67,6 +67,7 @@
 			<p>
 				Currently, we meet in CRC 251 at 7:30 on Mondays.
 				Come stop by to learn more!
+				If you can't make a meeting, feel free to <a href="/contact">contact</a> us!
 			</p>
 		</div>
 	</div>

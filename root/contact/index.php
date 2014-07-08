@@ -4,5 +4,5 @@
 	static $pageName = "contact";
 	static $title = "Contact Us";
 	
-	requireOnce("/common/old.template.php");
+	requireOnce("/common/flow.template.php");
 ?>
