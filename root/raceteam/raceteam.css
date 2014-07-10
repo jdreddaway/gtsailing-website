@@ -6,15 +6,21 @@
 	left:2em;
 }
 
+#club_d {
+	right:5em;
+	left:auto;
+}
+
 #funding_d {
-	margin:auto, auto, auto, auto;
+	margin: auto auto;
+	max-width:75%;
 }
 
 #funding_bg {
 	background-color:white;
-	float:left;
 }
 
 #sga {
 	float:right;
+	margin:0 2em;
 }

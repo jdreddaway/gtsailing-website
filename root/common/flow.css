@@ -105,17 +105,17 @@ div.fixed > * {
 	</div>
 */
 
-div.dynamic {
+.dynamic {
 	pointer-events:none; /* since the content is below this element */
 }
 
-div.dynamic  h2 {
+.dynamic  h2 {
 	width:75%;
 	text-align:center;
 }
 
 /* background-color div */
-div.dynamic > div {
+.dynamic > div {
 	padding:5em 0;
 	width:100%;
 	float:left; /* for floated images to not overflow */
@@ -123,6 +123,10 @@ div.dynamic > div {
 	z-index:-1; /* for the box-shadow */
 	position:relative; /* allows z-index to work */
 	pointer-events:auto; /* makes content clickable since it was turned off in div.dynamic */
+}
+
+.dynamic > div > div {
+	padding: 0 1em;
 }
 
 .fixed > div {
