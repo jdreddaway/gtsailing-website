@@ -37,7 +37,6 @@
 #intro_content
 {
 	background-color:rgba(255, 255, 255, 0.7);
-	width: 20em;
 	min-height: 20em;
 	margin:0px;
 	padding: 1em;
@@ -61,11 +60,6 @@
 	
 	font-size:xx-large;
 	font-family: Arial, Sans-serif;
-}
-
-#logo
-{
-	width:50%; /* TODO make smaller image */
 }
 
 #nav
