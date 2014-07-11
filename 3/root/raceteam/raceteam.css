@@ -1,0 +1,26 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+.fixed > div {
+	top:1em;
+	left:2em;
+}
+
+#club_d {
+	right:5em;
+	left:auto;
+}
+
+#funding_d {
+	margin: auto auto;
+	max-width:75%;
+}
+
+#funding_bg {
+	background-color:white;
+}
+
+#sga {
+	float:right;
+	margin:0 2em;
+}
