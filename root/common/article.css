@@ -40,19 +40,16 @@ h1 {
 	width:100%;
 }
 
-#footer > ul {
-	-webkit-column-count:3; /* Chrome, Safari, Opera */
-	-moz-column-count:3; /* Firefox */
-	column-count:3; /* surprisingly, IE is the only one this actually works for */
-	
-	width:50%;
+#footer > table {
+	width:75%;
 	padding:0;
 	margin:3em auto;
 	
 	list-style-type:none;
+	table-layout:fixed;
 }
 
-#footer  li {
+#footer  td {
 	text-align:center;
 }
 
