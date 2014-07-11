@@ -23,11 +23,12 @@
 	</div>
 </div>
 <div id="windsurfers" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="windsurfer_d" class="dark">
+	<img alt="420s downwind" class="background" src="/images/backgrounds/tobias 2013 summer nmbbq.jpg" />
+	<div id="windsurfer_d" class="light">
 		<h2>Windsurfers</h2>
 	</div>
 </div>
+<!--
 <div id="zodiac" class="fixed">
 	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
 	<div id="zodiac_d" class="dark">
@@ -40,3 +41,4 @@
 		</p>
 	</div>
 </div>
+-->

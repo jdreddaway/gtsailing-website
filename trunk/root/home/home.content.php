@@ -46,6 +46,16 @@
 		</p>
 	</div>
 </div>
+<div id="fleet" class="fixed">
+	<img alt="" class="background" src="/images/backgrounds/DSC09563 fall break 2012.jpg" />
+	<div id="fleet_d" class="dark">
+		<h2><a href="/fleet/">Lots of Boats</a></h2>
+		<p>
+			Over the years we have acquired a variety of different boats&mdash;from dinghies to keelboats to windsurfers.
+			You should check out our <a href="/fleet/">fleet</a>.
+		</p>
+	</div>
+</div>
 <div id="racing" class="fixed">
 	<img alt="collegiate race team" class="background" src="/images/backgrounds/saisa open fall 2013.jpg" />
 	<div id="raceteam" class="light">
