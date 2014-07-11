@@ -19,6 +19,10 @@ h2 {
 	font-family:"Lane Narrow Light", "Helvetica Neue Light", Helvetica, Arial, "sans-serif";
 }
 
+h2 a {
+	text-decoration:none;
+}
+
 body {
 	margin:0;
 	background-color:black;

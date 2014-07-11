@@ -49,7 +49,7 @@
 <div id="racing" class="fixed">
 	<img alt="collegiate race team" class="background" src="/images/backgrounds/saisa open fall 2013.jpg" />
 	<div id="raceteam" class="light">
-		<h2>Collegiate Race Team</h2>
+		<h2><a href="/raceteam/">Collegiate Race Team</a></h2>
 		<p>
 			The GT Sailing <a href="/raceteam/">Race Team</a> competes against other schools nearly every weekend during the Fall and Spring semesters.
 		</p>
