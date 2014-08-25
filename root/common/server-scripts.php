@@ -1,4 +1,6 @@
 <?php
+	$DEBUG = true;
+
 	function requireOnce($path) {
 		if ($path[0] == '/') {
 			require_once($_SERVER['DOCUMENT_ROOT'] . $path);
@@ -8,7 +10,11 @@
 	}
 	
 	function underConstruction() {
-		header("HTTP/1.1 307 Temporary Redirect");
-		header('Location: /construction.php');
+		global $DEBUG;
+		
+		if (!$DEBUG) {
+			header("HTTP/1.1 307 Temporary Redirect");
+			header('Location: /construction.php');
+		}
 	}
 ?>
