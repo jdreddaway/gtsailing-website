@@ -9,7 +9,7 @@
 		</div>
 		<ul id="nav">
 			<!--<li><a href="/news.php">News</a></li>-->
-			<li><a href="/calendar.php">Calendar</a></li>
+			<li><a href="/calendar/">Calendar</a></li>
 			<li><a href="/contact/">Contact Us</a></li>
 			<li><a href="/rules/">Rules</a></li>
 		</ul>
