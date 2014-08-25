@@ -8,7 +8,7 @@
 	}
 	
 	function underConstruction() {
-		http_response_code(307);
+		header("HTTP/1.1 307 Temporary Redirect");
 		header('Location: /construction.php');
 	}
 ?>
