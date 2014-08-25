@@ -1,0 +1,1 @@
+crop flow background images to have a 1.6:1 ratio (the ratio of a common computer screen)
