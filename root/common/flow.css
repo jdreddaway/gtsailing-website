@@ -25,7 +25,8 @@ h2 a {
 
 body {
 	margin:0;
-	background-color:black;
+	background-color:#00263a;
+	background-image:url(/images/backgrounds/honeycomb.png);
 	position:relative;
 }
 
@@ -37,10 +38,15 @@ ul {
 body > div {
 	width:100%;
 	min-width:40em;
-	box-shadow:
-		inset 0px 150px 150px -100px rgba(0, 43, 69, 0.8), /* top */
-		inset 0px -150px 150px -100px rgba(0, 43, 69, 0.8); /* bottom */
-	float:left; /* allows box-shadow to work */
+	margin:-3em 0 -3em 0;
+}
+
+body > div:first-child {
+	margin-top:0;
+}
+
+body > div:last-child {
+	margin-bottom:0;
 }
 
 body > div > div  a {
@@ -109,10 +115,6 @@ div.fixed > * {
 	</div>
 */
 
-.dynamic {
-	pointer-events:none; /* since the content is below this element */
-}
-
 .dynamic  h2 {
 	width:75%;
 	text-align:center;
@@ -122,11 +124,8 @@ div.fixed > * {
 .dynamic > div {
 	padding:5em 0;
 	width:100%;
-	float:left; /* for floated images to not overflow */
 	
-	z-index:-1; /* for the box-shadow */
-	position:relative; /* allows z-index to work */
-	pointer-events:auto; /* makes content clickable since it was turned off in div.dynamic */
+	float:left; /* prevents overflow of inner elements */
 }
 
 .dynamic > div > div {
@@ -154,8 +153,6 @@ img.background {
 	width:100%;
 	font-size:0px;
 	padding:0;
-
-	z-index:-1; /* makes box-shadows work */
 	
 	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
 }
@@ -175,8 +172,6 @@ img.background {
 	
 	border-radius:3px;
 	border:1px solid rgba(128, 128, 128, 0.2);
-	
-	z-index:2; /* fixes weird bug where links go behind other images */
 	
 	background-color:rgba(0, 43, 69, 0.1);
 }
@@ -200,11 +195,7 @@ img.background {
 
 #footer {
 	clear: both;
-	box-shadow:none;
-}
-
-#footer > div {
-	background-color: #002b45;
+	margin:0;
 }
 
 #footer  table {	

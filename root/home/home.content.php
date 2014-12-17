@@ -1,5 +1,5 @@
 <div id="intro" class="fixed">
-	<img alt="sunset at llsc" class="background" src="/images/backgrounds/sunset-cropped.jpg" />
+	<img alt="sunset at llsc" class="background" src="/images/backgrounds/sunset-cropped.png" />
 	<div id="intro_content">
 		<div id="top">
 			<img id="logo" src="/images/gt-sails logo.png" alt="GT Sailing Logo" />
@@ -28,7 +28,7 @@
 	</div>
 </div>
 <div id="what" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.png" />
 	<div id="what_we_do" class="dark">
 		<h2>What do we do?</h2>
 	</div>
@@ -37,7 +37,7 @@
 	</div>
 </div>
 <div id="sailing" class="fixed">
-	<img alt="llsc beach" class="background" src="/images/backgrounds/beach.jpg" />
+	<img alt="llsc beach" class="background" src="/images/backgrounds/beach.png" />
 	<div id="whenever" class="dark">
 		<h2>Whenever We Want</h2>
 		<p>
@@ -47,7 +47,7 @@
 	</div>
 </div>
 <div id="fleet" class="fixed">
-	<img alt="" class="background" src="/images/backgrounds/DSC09563 fall break 2012.jpg" />
+	<img alt="" class="background" src="/images/backgrounds/DSC09563 fall break 2012.png" />
 	<div id="fleet_d" class="dark">
 		<h2><a href="/fleet/">Lots of Boats</a></h2>
 		<p>
@@ -57,7 +57,7 @@
 	</div>
 </div>
 <div id="racing" class="fixed">
-	<img alt="collegiate race team" class="background" src="/images/backgrounds/saisa open fall 2013.jpg" />
+	<img alt="collegiate race team" class="background" src="/images/backgrounds/saisa open fall 2013.png" />
 	<div id="raceteam" class="light">
 		<h2><a href="/raceteam/">Collegiate Race Team</a></h2>
 		<p>
@@ -66,7 +66,7 @@
 	</div>
 </div>
 <div id="organization" class="fixed">
-	<img alt="" class="background" src="/images/backgrounds/DSCF1487.jpg" />
+	<img alt="" class="background" src="/images/backgrounds/DSCF1487.png" />
 	<div id="org_d" class="dark">
 		<h2>Organization</h2>
 		<div>
