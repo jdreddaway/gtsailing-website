@@ -6,32 +6,32 @@
 }
 
 #what_we_do {
-	top:50px;
+	top:10%;
 	left:60px;
 }
 
 #we_sail {
 	right:90px;
-	bottom: 130px;
+	bottom: 12%;
 }
 
 #whenever {
 	right:75px;
-	top:50px;
+	top:25%;
 }
 
 #fleet_d {
-	top:5%;
+	top:15%;
 	left:5%;
 }
 
 #raceteam {
 	right:30px;
-	top: 100px;
+	top: 15%;
 }
 
 #org_d {
-	top:5%;
+	top:30%;
 	right:5%;
 }
 
@@ -48,7 +48,7 @@
 	border-radius: 1em;
 	
 	right:25%;
-	top: 10%;
+	top: 15%;
 }
 
 #top

@@ -2,13 +2,18 @@
 /* navy: #002b45 */
 
 .fixed > div {
-	top:1em;
+	top:10%;
 	left:2em;
 }
 
+#activity_d {
+	top:10%;
+}
+
 #club_d {
+	top:10%;
 	right:5em;
-	left:auto;
+	left:initial;
 }
 
 #funding_d {
@@ -17,7 +22,8 @@
 }
 
 #funding_bg {
-	background-color:white;
+	box-shadow:0 0 50px 50px rgba(255, 255, 255, 0.7);
+	background-color:rgba(255, 255, 255, 0.7);
 }
 
 #sga {

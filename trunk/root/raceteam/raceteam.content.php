@@ -1,5 +1,5 @@
 <div id="club" class="fixed">
-	<img alt="Wilmington Upwind" class="background" src="/images/backgrounds/IMG_2025.jpg" />
+	<img alt="Wilmington Upwind" class="background" src="/images/backgrounds/IMG_2025.png" />
 	<div id="club_d" class="light">
 		<h2>Club Team</h2>
 		<div>
@@ -22,7 +22,7 @@
 </div>
 
 <div id="activity" class="fixed">
-	<img alt="SAISA Open Fall 2013 upwind" class="background" src="/images/backgrounds/saisa open fall 2013 upwind.jpg" />
+	<img alt="SAISA Open Fall 2013 upwind" class="background" src="/images/backgrounds/saisa open fall 2013 upwind.png" />
 	<div id="activity_d" class="light">
 		<h2>Many Regattas Every Semester</h2>
 		<p>
@@ -31,14 +31,14 @@
 	</div>
 </div>
 <div id="practices" class="fixed">
-	<img alt="racing upwind at LLSC" class="background" src="/images/backgrounds/racing upwind llsc.jpg" />
+	<img alt="racing upwind at LLSC" class="background" src="/images/backgrounds/racing upwind llsc.png" />
 	<div id="practices_d" class="dark">
 		<h2>Weekly Practices</h2>
 	</div>
 </div>
 <div id="funding" class="dynamic">
 	<div id="funding_bg">
-		<img id="sga" alt="sga" src="/images/backgrounds/SGA-3.jpg" />
+		<img id="sga" alt="sga" src="/images/backgrounds/SGA-3.png" />
 		<div id="funding_d" class="light">
 			<h2>School Funding</h2>
 			<p>
@@ -53,7 +53,7 @@
 
 <!-- TODO add this when collegesailing.org starts working again
 <div id="collegesailing" class="fixed">
-	<img alt="glass at eckerd" class="background" src="/images/backgrounds/glass%20at%20eckerd.jpg" />
+	<img alt="glass at eckerd" class="background" src="/images/backgrounds/glass%20at%20eckerd.png" />
 	<div id="icsa" class="dark">
 		<h2>Inter-Collegiate Sailing Association</h2>
 		<p>

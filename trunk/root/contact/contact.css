@@ -15,8 +15,7 @@ a.profile > img {
 }
 
 #email > div {
-	background-color:#E0AA0F;
-	background-color:white;
+	background-color:rgba(255, 255, 255, 0.7);
 }
 
 #email > div > div {
@@ -35,7 +34,7 @@ table {
 }
 
 #facebook_content {
-	background-color:#3B5998;
+	background-color:rgba(59, 89, 152, 0.7);
 }
 
 #fb_vertical {
@@ -50,7 +49,8 @@ table {
 }
 
 #twitter_content {
-	background-color:#3DB8E4;
+	background-color:rgba(61, 184, 228, 0.7);
+	box-shadow:0 100px 100px 100px rgba(61, 184, 228, 0.7);
 }
 
 #twitter_content > * {
@@ -63,22 +63,30 @@ table {
 }
 
 #commodore_lbl {
+	top:8%;
 	max-width:650px;
 }
 
 #vice_profile {
-	top:10%;
+	top:15%;
+	left:10%;
+}
+
+#vice {
+	top:12%;
 	right:10%;
+	left:initial;
 }
 
 #captain_profile {
 	left:10%;
-	top:10%;
+	top:15%;
 }
 
 #captain {
 	right:1%;
-	left:auto;
+	left:initial;
+	top:12%;
 }
 
 #captain > div {
@@ -87,28 +95,28 @@ table {
 }
 
 #social_profile {
-	left:5%;
-	top:5%;
+	right:8%;
+	top:15%;
 }
 
 #social {
-	right:1%;
-	left:auto;
+	top:12%;
 }
 
 #fleet_captain_profile {
 	left:5%;
-	top:5%;
+	top:12%;
 }
 
 #fleet_captain_lbl {
 	right:1%;
 	left:auto;
+	top:12%;
 }
 
 #treasurer_profile {
-	right:5%;
-	top:5%;
+	right:10%;
+	top:15%;
 }
 
 #treasurer_lbl {
@@ -120,17 +128,18 @@ table {
 }
 
 #secretary_profile {
-	top:5%;
-	left:5%;
+	top:15%;
+	right:8%;
 }
 
 #secretary_lbl {
 	left:auto;
-	right:5%;
+	top:10%;
 }
 
 #mailing_content {
-	background-color:black;
+	background-color:rgba(0, 0, 0, 0.7);
+	box-shadow:0 0 50px 50px rgba(0, 0, 0, 0.7);
 }
 
 #mailing_content > div {
