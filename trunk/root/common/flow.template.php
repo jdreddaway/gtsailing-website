@@ -13,6 +13,7 @@
 	<title>GT Sailing - <?php print($title); ?></title>
 	
 	<meta charset="UTF-8" />
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 	
 	<link rel="stylesheet" href="/common/flow.css" />
 	<link rel="stylesheet" href="<?php print("/$pageName/$pageName.css");?>" />
