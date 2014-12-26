@@ -39,6 +39,7 @@ body > div {
 	width:100%;
 	min-width:40em;
 	margin:-3em 0 -3em 0;
+	clear:both; /* needed to make scrollnav work */
 }
 
 body > div:first-child {
