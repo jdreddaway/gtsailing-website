@@ -124,6 +124,7 @@ div.fixed > * {
 .dynamic > div {
 	padding:5em 0;
 	width:100%;
+	margin:1em 0;
 	
 	float:left; /* prevents overflow of inner elements */
 }

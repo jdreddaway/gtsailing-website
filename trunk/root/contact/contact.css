@@ -16,6 +16,7 @@ a.profile > img {
 
 #email > div {
 	background-color:rgba(255, 255, 255, 0.7);
+	box-shadow:0 0 1em 1em rgba(255, 255, 255, 0.7);
 }
 
 #email > div > div {
@@ -35,6 +36,7 @@ table {
 
 #facebook_content {
 	background-color:rgba(59, 89, 152, 0.7);
+	box-shadow:0 0 1em 1em rgba(59, 89, 152, 0.7);
 }
 
 #fb_vertical {
@@ -49,8 +51,8 @@ table {
 }
 
 #twitter_content {
-	background-color:rgba(61, 184, 228, 0.7);
-	box-shadow:0 100px 100px 100px rgba(61, 184, 228, 0.7);
+	background-color:rgba(61, 184, 228, 0.7);	
+	box-shadow:0 100px 70px 70px rgba(61, 184, 228, 0.7), 0 -1.5em 1em 1em rgba(61, 184, 228, 0.7);
 }
 
 #twitter_content > * {
