@@ -198,6 +198,11 @@ img.background {
 	margin:0;
 }
 
+#footer > div {
+	background-color:rgba(0, 38, 58, 0.7);
+	box-shadow:0 0 5em 2.5em rgba(0, 38, 58, 0.7);
+}
+
 #footer  table {	
 	width:75%;
 	margin:0 auto;
