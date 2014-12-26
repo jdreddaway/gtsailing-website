@@ -51,6 +51,10 @@
 	top: 15%;
 }
 
+#logo {
+	width:15em;
+}
+
 #top
 {
 	position:relative;
@@ -61,10 +65,11 @@
 	position:absolute;
 	width:70%;
 	right:0.5em;
-	top:12%;
+	top:57%;
 	
 	font-size:xx-large;
 	font-family: Arial, Sans-serif;
+	color: #523f05;
 }
 
 #nav

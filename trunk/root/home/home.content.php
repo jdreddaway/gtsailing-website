@@ -2,7 +2,7 @@
 	<img alt="sunset at llsc" class="background" src="/images/backgrounds/sunset-cropped.png" />
 	<div id="intro_content">
 		<div id="top">
-			<img id="logo" src="/images/gt-sails logo.png" alt="GT Sailing Logo" />
+			<img id="logo" src="/images/waving burgee.png" alt="GT Sailing Logo" />
 			<h2 id="title">
 				Sailing Club at Georgia Tech
 			</h2>
