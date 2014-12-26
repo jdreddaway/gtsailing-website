@@ -10,7 +10,7 @@
 
 <html>
 <head>
-	<title>GT Sailing - <?php print($title); ?></title>
+	<title><?php print($title); ?></title>
 	
 	<meta charset="UTF-8" />
 	<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
