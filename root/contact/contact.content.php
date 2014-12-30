@@ -131,7 +131,7 @@
 </div>
 
 <div id="race_captain" class="fixed">
-	<img src="/images/backgrounds/chris walton cover.png" class="background" alt="" />
+	<img src="/images/backgrounds/pitchatent.png" class="background" />
 	<a href="https://www.facebook.com/chris.walton.790" target="_blank" class="profile" id="captain_profile">
 		<img src="/images/exec/chris-walton.jpg" alt="Chris Walton" />
 	</a>
@@ -173,11 +173,11 @@
 </div>
 
 <div id="fleet_captain" class="fixed">
-	<img src="/images/backgrounds/mike cover.png" class="background" alt="" />
+	<img src="/images/backgrounds/FUJI1137.png" class="background" />
 	<a href="https://www.facebook.com/quantumlemur" target="_blank" class="profile" id="fleet_captain_profile">
 		<img src="/images/exec/mike-roberts.jpg" alt="Mike Roberts" />
 	</a>
-	<div id="fleet_captain_lbl" class="dark">
+	<div id="fleet_captain_lbl" class="light">
 		<h2>Fleet Captain</h2>
 		<div>
 			<h3><a href="https://www.facebook.com/quantumlemur" target="_blank">Mike Roberts</a></h3>
@@ -231,7 +231,7 @@
 			<h3><a href="https://www.facebook.com/joshua.kim.969" target="_blank">Josh Kim</a></h3>
 			<p>
 				Josh is a Mechanical Engineering major and a member of the freshman class of 2013.
-				Originally from Kazakhstan, Josh is trilingual: he speaks Russian, English, and Korean.
+				Originally from Kazakhstan, Josh fluently speaks Russian and English and also knows a tad of Korean and Turkish.
 				He joined the GT Sailing Club as a freshman, and it quickly became one of his passions.
 				He became one of the most active sailors on the race team and has many ideas on how to improve the club.
 			</p>
