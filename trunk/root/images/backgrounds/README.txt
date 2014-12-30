@@ -1,1 +1,2 @@
 crop flow background images to have a 1.6:1 ratio (the ratio of a common computer screen)
+use the background-maker program in the utilities folder to make the images semi-transparent. Currently images are 30% transparent with maximum transparency of 100%.
