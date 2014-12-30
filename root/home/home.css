@@ -6,13 +6,14 @@
 }
 
 #what_we_do {
-	top:10%;
+	top:15%;
 	left:60px;
 }
 
+
 #we_sail {
-	right:90px;
-	bottom: 12%;
+	right:13%;
+	bottom: 11%;
 }
 
 #whenever {
@@ -26,13 +27,20 @@
 }
 
 #raceteam {
-	right:30px;
-	top: 15%;
+	left:10%;
+	top: 10%;
+	max-width:75%;
 }
 
 #org_d {
 	top:30%;
 	right:5%;
+}
+
+#next_d {
+	top:10%;
+	left:10%;
+	max-width:75%;
 }
 
 /************************/
@@ -47,7 +55,7 @@
 	padding: 1em;
 	border-radius: 1em;
 	
-	right:25%;
+	left:25%;
 	top: 15%;
 }
 
