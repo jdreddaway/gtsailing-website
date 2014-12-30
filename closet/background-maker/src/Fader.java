@@ -2,7 +2,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 
 
-public class BGTransformer {
+public class Fader {
 
 	private final double transparencyRatio; // a number between 0 and 1
 	private final double maxTransparencyRatio;
@@ -11,7 +11,7 @@ public class BGTransformer {
 	 * @param transparencyRatio The ratio of the picture to be affected. Should be between 0 and 1.
 	 * @param maxTransparencyRatio Must be between 0 and 1
 	 */
-	public BGTransformer(double transparencyRatio, double maxTransparencyRatio) {
+	public Fader(double transparencyRatio, double maxTransparencyRatio) {
 		this.transparencyRatio = transparencyRatio;
 		this.maxTransparencyRatio = maxTransparencyRatio;
 	}

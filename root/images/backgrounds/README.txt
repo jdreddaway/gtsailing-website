@@ -1,2 +1,3 @@
-crop flow background images to have a 1.6:1 ratio (the ratio of a common computer screen)
-use the background-maker program in the utilities folder to make the images semi-transparent. Currently images are 30% transparent with maximum transparency of 100%.
+1) Crop flow background images to have a 16:10 ratio. (TODO consider making 16:9 and 1080 px height; would need to change for all backgrounds)
+3) Use the background-maker program in the utilities folder to resize the images and make them semi-transparent. Currently images have a width of 1024px and are 30% transparent with maximum transparency of 100%.
+3) Compress the pictures. I used Paint.net to save them with an 8-bit depth.

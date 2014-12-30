@@ -9,12 +9,14 @@ import javax.imageio.ImageIO;
 public class ImageProcessor {
 
 	private final Path outputDirectory;
-	private final BGTransformer transformer;
+	private final Fader transformer;
 	private final String imageFormat;
+	private final Resizer resizer;
 
-	public ImageProcessor(Path outputDirectory, String imageFormat, BGTransformer transformer) {
+	public ImageProcessor(Path outputDirectory, String imageFormat, Resizer resizer, Fader transformer) {
 		this.outputDirectory = outputDirectory;
 		this.imageFormat = imageFormat;
+		this.resizer = resizer;
 		this.transformer = transformer;
 	}
 	
@@ -31,7 +33,8 @@ public class ImageProcessor {
 		System.out.println("Processing " + file.getName());
 		try {
 			BufferedImage original = ImageIO.read(file);
-			BufferedImage processed = transformer.transform(original);
+			BufferedImage resized = resizer.resize(original);
+			BufferedImage processed = transformer.transform(resized);
 
 			Path fullOutputDir = imagesDir.resolve(outputDirectory);
 			File outputDir = fullOutputDir.toFile();
