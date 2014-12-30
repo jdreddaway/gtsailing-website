@@ -6,8 +6,18 @@
 	left:2em;
 }
 
+#logo{
+	position:absolute;
+	left:0;
+	top:9%;
+	
+	width:30%;
+}
+
 #activity_d {
-	top:10%;
+	top:12%;
+	right:7%;
+	left:initial;
 }
 
 #club_d {

@@ -1,5 +1,10 @@
+<div id="intro" class="fixed">
+	<img class="background" src="/images/backgrounds/FUJI1103-2.png" />
+	<img id="logo" alt="GT Sailing Raceteam" src="/images/Race Team Logo 1 shrunk.png" />
+</div>
+
 <div id="club" class="fixed">
-	<img alt="Wilmington Upwind" class="background" src="/images/backgrounds/IMG_2025.png" />
+	<img class="background" src="/images/backgrounds/IMG_2025.png" />
 	<div id="club_d" class="light">
 		<h2>Club Team</h2>
 		<div>
@@ -22,12 +27,22 @@
 </div>
 
 <div id="activity" class="fixed">
-	<img alt="SAISA Open Fall 2013 upwind" class="background" src="/images/backgrounds/saisa open fall 2013 upwind.png" />
+	<img class="background" src="/images/backgrounds/FUJI1779.png" />
 	<div id="activity_d" class="light">
 		<h2>Many Regattas Every Semester</h2>
-		<p>
-			During the 2013-2014 year, we went to 9 regattas in the Fall and 8 in the Spring&mdash;and we plan to attend even more next year!
-		</p>
+		<div>
+			<p>
+				During the 2013-2014 year, we went to 9 regattas in the Fall and 8 in the Spring&mdash;and we plan to attend even more next year!
+			</p>
+			<p>
+				The race team primarily competes in the co-ed double-handed dinghy regattas.
+				However, there is a lot of interest in starting a women's team, a single-handed team, and possibly a team-racing team.
+				In addition to college sailing, we also participate in <a target="_blank" href="http://www.llsc.com">LLSC</a> events, such as the Frostbite series in Lasers.
+			</p>
+			<p>
+				If you would like to check out the scores, head over to <a target="_blank" href="http://scores.collegesailing.org">CollegeSailing.org</a>
+			</p>
+		</div>
 	</div>
 </div>
 <div id="practices" class="fixed">
