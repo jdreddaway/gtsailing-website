@@ -41,7 +41,7 @@
 	<div id="whenever" class="dark">
 		<h2>Whenever We Want</h2>
 		<p>
-			GT Sailing owns a large number of boats at <a href="http://www.llsc.com" target="_blank">Lake Lanier Sailing Club</a>.
+			GT Sailing owns a large <a href="/fleet">fleet</a> of boats at <a href="http://www.llsc.com" target="_blank">Lake Lanier Sailing Club</a>.
 			LLSC student members called <a href="/rules/#lakehosts">"lakehosts"</a> can take members of GTSC sailing any time, any day, any month. 
 		</p>
 	</div>

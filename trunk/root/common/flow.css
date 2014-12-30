@@ -201,8 +201,8 @@ img.background {
 }
 
 #footer > div {
-	background-color:rgba(0, 38, 58, 0.7);
-	box-shadow:0 0 5em 2.5em rgba(0, 38, 58, 0.7);
+	background-color:rgba(0, 38, 58, 0.9);
+	box-shadow:0 0 5em 2.5em rgba(0, 38, 58, 0.9);
 }
 
 #footer  table {	

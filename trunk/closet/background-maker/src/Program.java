@@ -11,23 +11,38 @@ public class Program {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		File imagesLocation = getImagesLocation(scan);
+		File imagesLocation = readImagesLocation(scan);
+		
+		System.out.println("What should the new height of the images be?");
+		int newHeight = readPositiveInt(scan);
 
 		System.out.println("What percentage of the image should be transparent? (0-100)");
-		double ratio = getPercentage(scan);
+		double ratio = readPercentage(scan);
 		
 		System.out.println("What is the maximum transparency level (0-100)");
-		double maxTransparency = getPercentage(scan);
+		double maxTransparency = readPercentage(scan);
 
-		BGTransformer transformer = new BGTransformer(ratio / 100, maxTransparency / 100);
-		ImageProcessor processor = new ImageProcessor(Paths.get("output/"), "PNG", transformer);
+		Resizer resizer = new Resizer(newHeight);
+		Fader fader = new Fader(ratio / 100, maxTransparency / 100);
+		ImageProcessor processor = new ImageProcessor(Paths.get("output/"), "PNG", resizer, fader);
 
 		processor.processDirectory(imagesLocation);
 		
 		scan.close();
 	}
 	
-	private static double getPercentage(Scanner scan) {
+	private static int readPositiveInt(Scanner scan) {
+		int val = scan.nextInt();
+		
+		while (val <= 0) {
+			System.out.println("Must be greater than 0.");
+			val = scan.nextInt();
+		}
+		
+		return val;
+	}
+	
+	private static double readPercentage(Scanner scan) {
 		double percent = scan.nextDouble();
 		
 		while (percent < 0 || percent > 100) {
@@ -38,7 +53,7 @@ public class Program {
 		return percent;
 	}
 
-	private static File getImagesLocation(Scanner scan) {
+	private static File readImagesLocation(Scanner scan) {
 		System.out.println("Where are the original background images located?");
 		
 		String strImgLoc = scan.nextLine();
