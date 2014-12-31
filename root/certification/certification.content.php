@@ -1,24 +1,24 @@
 <div id="skipper" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<img class="background" src="/images/backgrounds/FUJI1475.png" />
 	<div id="certification" class="dark">
 		<h2>Skipper Certification</h2>
 		<div>
 			<p>
 				In order to protect our equipment and our members, we have developed a strict skipper certification process.
 				Each fleet has a unique and specific process, all of which are documented on this page.
-				Each process is intended to ensure that only members who have demonstrated mastery of fleet-specific boat handling skills may take out crew or equipment.
-				For a flowchart of all fleet certification processes, <a href="">click here</a>.
+				Each process is intended to ensure that only members who have demonstrated mastery of fleet-specific boat handling may take out crew or equipment.
+				For a flowchart of all fleet certification processes, <a href="/documents/Qualification_Flowchart.pdf">click here</a>.
 			</p>
 			<p>
 				The Vice Commodore maintains test administration, test results, and certification status.
-				Contact the <a href="#">Vice Commodore</a> for more information or to schedule a time to take a test.
+				Contact the <a href="/contact#vice_commodore">Vice Commodore</a> for more information or to schedule a time to take a test.
 			</p>
 		</div>
 	</div>
 </div>
-<div id="420" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="420_d" class="dark">
+<div id="c420" class="fixed">
+	<img class="background" src="/images/backgrounds/FUJI1124.png" />
+	<div id="c420_d" class="light">
 		<h2>420 Certification</h2>
 		<div>
 			<p>
@@ -27,8 +27,6 @@
 			</p>
 			<p>
 				The written test focuses on parts of the boat, right of way rules, and points of sail.
-			</p>
-			<p>
 				After taking the written test, you may attempt the on-the-water test with a GTSC 420 instructor.
 				The on-the-water test involves demonstrating the following skills:
 				<ul>
@@ -57,16 +55,16 @@
 	</div>
 </div>
 <div id="keelboat" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<img class="background" src="/images/backgrounds/PANO_1_EDITED.png" />
 	<div id="keelboat_d" class="dark">
 		<h2>Keelboat Certification</h2>
 		<div>
 			<p>
 				Keelboat Certification requires a much higher level of qualification to become a skipper.
 				Like 420 certification, there is a written exam and a on-the-water test.
-				The "Advanced Sailing" written exam covers the topics listed in the <a href="#">Keel Certification Requirements</a> document;
-				the on-the-water test covers the topics listed in the <a href="#">On the Water Test Checklist</a> document.
-				The Vice Commodore may only administer the written exam once per semester&mdash;so don't mess up!
+				The "Advanced Sailing" written exam covers the topics listed in the <a href="/documents/J24-certification/03_GTSC_J24_Certification_Requirements.pdf">Keel Certification Requirements</a> document;
+				the on-the-water test covers the topics listed in the <a href="/documents/J24-certification/J24_On-the-water-test_Checklist.pdf">On the Water Test Checklist</a> document.
+				The <a href="/contact#vice_commodore">Vice Commodore</a> may only administer the written exam once per semester&mdash;so don't mess up!
 				The on-the-water test must be taken with a keelboat instructor in a J-24 with a spinnaker.
 			</p>
 			<p>
@@ -92,14 +90,14 @@
 				Failure to meet any of these requirements is grounds for an executive vote to remove full skipper status.
 			</p>
 			<p>
-				Both full and intermediate skippers must submit an updated <a href="#">Keelboat Skipper Application Form</a> to the Vice Commodore once per year to be reviewed by exec.
+				Both full and intermediate skippers must submit an updated <a href="/documents/J24-certification/02_GTSC_J24_Skipper_Application.pdf">Keelboat Skipper Application Form</a> to the <a href="/contact#vice_commodore">Vice Commodore</a> once per year to be reviewed by exec.
 			</p>
 		</div>
 	</div>
 </div>
-<div id="Laser" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="Laser_d" class="dark">
+<div id="laser" class="fixed">
+	<img class="background" src="/images/backgrounds/DSC09674 lasers fall break 2012.png" />
+	<div id="laser_d" class="dark">
 		<h2>Laser Certification</h2>
 		<div>
 			<p>
@@ -119,8 +117,8 @@
 	</div>
 </div>
 <div id="hobie" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
-	<div id="hobie_d" class="dark">
+	<img class="background" src="/images/backgrounds/DSC01246 2013 fall nmbbq.png" />
+	<div id="hobie_d" class="light">
 		<h2>Hobie Certification</h2>
 		<div>
 			<p>
@@ -139,7 +137,7 @@
 	</div>
 </div>
 <div id="windsurf" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<img class="background" src="/images/backgrounds/DSC09908 2013 summer nmbbq.png" />
 	<div id="windsurf_d" class="dark">
 		<h2>Windsurf Certification</h2>
 		<div>
