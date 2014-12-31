@@ -3,6 +3,10 @@
 	<img id="logo" alt="GT Sailing Raceteam" src="/images/Race Team Logo 1 shrunk.png" />
 </div>
 
+<div id="video" class="dynamic">
+	<iframe width="853" height="480" src="//www.youtube.com/embed/TXPJyXbfqtQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <div id="club" class="fixed">
 	<img class="background" src="/images/backgrounds/IMG_2025.png" />
 	<div id="club_d" class="light">
