@@ -14,6 +14,16 @@
 	width:30%;
 }
 
+#video {
+	background-color:rgba(0, 0, 0, 0.8);
+	box-shadow:0 0 5em 2.5em rgba(0, 0, 0, 0.8);
+}
+
+#video > * {
+	display:block;
+	margin: 5em auto;
+}
+
 #activity_d {
 	top:12%;
 	right:7%;
