@@ -1,0 +1,234 @@
+/*
+	gold: #E0AA0F (224, 170, 15)
+	gold on gatech.edu: #eeb211
+	navy: #002b45 (0, 43, 69)
+	old gold: #CFB53B (207, 181, 59)
+	vegas gold: #C5B358
+	gray on gatech.edu: #E6E6E6
+*/
+
+@font-face {
+   font-family: "Lane Narrow Light"; 
+   src: url('/fonts/Lane Narrow Light.ttf');
+}
+
+h2 {
+	text-align:center;
+	font-size:6.5vw;
+	font-weight:lighter;
+	font-family:"Lane Narrow Light", "Helvetica Neue Light", Helvetica, Arial, "sans-serif";
+}
+
+h2 a {
+	text-decoration:none;
+}
+
+body {
+	margin:0;
+	background-color:#00263a;
+	background-image:url(/images/backgrounds/honeycomb.png);
+	position:relative;
+}
+
+/* tile */
+body > div {
+	width:100%;
+	min-width:40em;
+	margin:-3em 0 -3em 0;
+	clear:both; /* needed to make scrollnav work */
+}
+
+body > div:first-child {
+	margin-top:0;
+}
+
+body > div:last-child {
+	margin-bottom:0;
+}
+
+body > div > div  a {
+	transition-duration:500ms;
+}
+
+body > div > div  h2 {
+	margin:0;
+}
+
+div.dark {
+	color:white;
+}
+
+div.dark a:link, div.dark a:visited {
+	color: #DDD;
+}
+
+div.light > * {
+	color:black;
+}
+
+div.light a:link, div.light a:visited {
+	color: #002b45;
+}
+
+/* contains multiple description paragraphs */
+body > div.fixed > div > div  {
+	padding:1px 1em;
+	margin:1em;
+}
+
+/*
+	HTML STRUCURE:
+	<div class="fixed">
+		<img class="background" alt="..." src="..." />
+		<div id="...">
+			<h2>heading</h2>
+			[<p>description</p>]
+		</div>
+	</div>
+*/
+div.fixed {
+	position: relative;
+	clear:both;
+}
+
+div.fixed > * {
+	position:absolute;
+}
+
+.fixed > div.dark > div, .fixed > div.dark > p {
+	background-color:rgba(0, 0, 0, .6);
+}
+
+.fixed > div.light > div, .fixed > div.light > p {
+	background-color:rgba(255, 255, 255, 0.6);
+}
+
+/*
+	HTML STRUCTURE:
+	<div class="dynamic">
+		<div id="[background_color_div]">
+			<!-- put content here -->
+		</div>
+	</div>
+*/
+
+.dynamic  h2 {
+	width:75%;
+	text-align:center;
+}
+
+/* background-color div */
+.dynamic > div {
+	padding:5em 0;
+	width:100%;
+	margin:1em 0;
+	
+	float:left; /* prevents overflow of inner elements */
+}
+
+.dynamic > div > div {
+	padding: 0 1em;
+}
+
+.fixed > div {
+	max-width:50em;
+	padding:1em;
+}
+
+.fixed > div > div, .fixed > div > p {
+	border-radius:5px;
+	padding:1em;
+}
+
+.fixed > div  p {
+	font-family:"Arial" "sans-serif";
+}
+
+/* This exists so that each block is as big as the background image */
+img.background {
+	display:block;
+	position:relative;
+	width:100%;
+	font-size:0px;
+	padding:0;
+	
+	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
+}
+
+.medimg {
+	width:20em;
+}
+
+#scrollnav {
+	position:fixed;
+	right:10px;
+	top:45%;
+	
+	list-style-type:none;
+	margin:0;
+	padding:.1em .3em;
+	
+	border-radius:3px;
+	border:1px solid rgba(128, 128, 128, 0.2);
+	
+	background-color:rgba(0, 43, 69, 0.1);
+}
+
+#scrollnav a {
+	display: block;
+	width:14px;
+	height:14px;
+	border: solid 2px rgba(255, 235, 0, 0.4);
+	border-radius:8px;
+	margin:4px 0 4px 0;
+	cursor:pointer;
+	
+	transition-duration:1s;
+}
+
+#scrollnav a.active {
+	background-color: rgba(255, 235, 0, 0.4);
+	border-color:rgba(0, 0, 0, 0);
+}
+
+#footer {
+	clear: both;
+	margin:0;
+}
+
+#footer > div {
+	background-color:rgba(0, 38, 58, 0.9);
+	box-shadow:0 0 5em 2.5em rgba(0, 38, 58, 0.9);
+}
+
+#footer  table {	
+	width:75%;
+	margin:0 auto;
+	padding:0;
+	
+	list-style-type:none;
+	
+	table-layout:fixed;
+}
+
+#footer  td {
+	text-align:center;
+	margin:1em;
+}
+
+#footer a:link, #footer a:visited, #footer a:visited {
+	color:white;
+}
+
+div.dark a:hover, div.light a:hover, #footer a:hover{ /* must have class in order for priority to work */
+	color: #CFB53B;
+}
+
+body > div > div  a[target="_blank"]:link,
+body > div > div  a[target="_blank"]:visited ,
+body > div  > div a[target="_blank"]:link,
+body > div > div  a[target="_blank"]:visited,
+body > div > div  a[target="_blank"]:hover
+{
+	color:inherit;
+}

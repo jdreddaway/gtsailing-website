@@ -1,0 +1,36 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+#certification {
+	top:15%;
+	left:4%;
+}
+
+#c420_d {
+	top:10%;
+	left:4%;
+	max-width:80%;
+}
+
+#keelboat_d {
+	top:10%;
+	right:5%;
+	max-width:75%;
+}
+
+#laser_d {
+	top:25%;
+	right:5%;
+}
+
+#hobie_d {
+	top:10%;
+	right:5%;
+}
+
+#windsurf_d {
+	left:5%;
+	top:15%;
+	
+	max-width:40%;
+}

@@ -1,0 +1,128 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+#intro {
+	min-height:30em;
+}
+
+#what_we_do {
+	top:15%;
+	left:60px;
+}
+
+
+#we_sail {
+	right:13%;
+	bottom: 11%;
+}
+
+#whenever {
+	right:75px;
+	top:25%;
+}
+
+#fleet_d {
+	top:15%;
+	left:5%;
+}
+
+#raceteam {
+	left:10%;
+	top: 10%;
+	max-width:75%;
+}
+
+#org_d {
+	top:30%;
+	right:5%;
+}
+
+#next_d {
+	top:10%;
+	left:10%;
+	max-width:75%;
+}
+
+/************************/
+/* Intro Content Styles */
+/************************/
+
+#intro_content
+{
+	background-color:rgba(255, 255, 255, 0.7);
+	min-height: 20em;
+	margin:0px;
+	padding: 1em;
+	border-radius: 1em;
+	
+	left:25%;
+	top: 15%;
+}
+
+#logo {
+	width:15em;
+}
+
+#top
+{
+	position:relative;
+}
+
+#title
+{
+	position:absolute;
+	width:70%;
+	right:0.5em;
+	top:57%;
+	
+	font-size:xx-large;
+	font-family: Arial, Sans-serif;
+	color: #523f05;
+}
+
+#nav
+{
+	margin:0;
+	padding:0;
+	display: block;
+	list-style-type: none;
+	text-align:center;
+}
+
+#nav li
+{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	margin: .4em .2em;
+}
+
+#nav a
+{
+	display: inline-block;
+	padding: .4em .4em;
+	text-align: center;
+	background-color: white;
+	
+	border-color: black;
+	border-width: 1px;
+	border-radius: .3em;
+}
+
+#nav a:link,  #nav a:hover, #nav a:visited
+{
+	text-decoration: none;
+	color: black;
+	font-size: large;
+}
+
+#nav a:hover {
+	transition-duration:1s;
+	background-color: #E0AA0F;
+}
+
+.fb-like
+{
+	width: 300px; /* must match what is in html */
+	margin: 1em auto 0px auto;
+}
