@@ -1,0 +1,25 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+#laws_d {
+	top:8%;
+	max-width:55%;
+}
+
+#exec_d {
+	top:22%;
+	right:5%;
+	
+	max-width:40%;
+}
+
+#lakehosts_d {
+	top:8%;
+	right:3%;
+	max-width:55%;
+}
+
+#cert {
+	right:3%;
+	top:38%;
+}

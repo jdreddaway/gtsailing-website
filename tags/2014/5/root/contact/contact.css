@@ -1,0 +1,154 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+ 
+a.profile {
+	position:absolute;
+}
+
+a.profile > img {
+	border: solid white 2px;
+}
+
+.fixed > div {
+	top:1em;
+	left:2em;
+}
+
+#email > div {
+	background-color:rgba(255, 255, 255, 0.9);
+	box-shadow:0 0 1em 1em rgba(255, 255, 255, 0.9);
+}
+
+#email > div > div {
+	width:50%;
+	margin:0 auto;
+}
+
+#email > div > div > h2 {
+	width:100%;
+	text-align:center;
+	margin:0;
+}
+
+table {
+	border-spacing:1em;
+}
+
+#facebook_content {
+	background-color:rgba(59, 89, 152, 0.9);
+	box-shadow:0 0 1em 1em rgba(59, 89, 152, 0.9);
+}
+
+#fb_vertical {
+	float:left;
+}
+
+.fb-like {
+	background-color:white;
+	padding:1em;
+	border-radius:.5em;
+	float:left;
+}
+
+#twitter_content {
+	background-color:rgba(61, 184, 228, 0.9);	
+	box-shadow:0 100px 70px 70px rgba(61, 184, 228, 0.9), 0 -1.5em 1em 1em rgba(61, 184, 228, 0.9);
+}
+
+#twitter_content > * {
+	vertical-align:middle;
+}
+
+#commodore_profile {
+	top:20%;
+	right:10%;
+}
+
+#commodore_lbl {
+	top:8%;
+	max-width:650px;
+}
+
+#vice_profile {
+	top:15%;
+	left:10%;
+}
+
+#vice {
+	top:12%;
+	right:10%;
+	left:initial;
+}
+
+#captain_profile {
+	right:10%;
+	top:12%;
+}
+
+#captain {
+	left:1%;
+	top:10%;
+}
+
+#captain > div {
+	width:75%;
+	margin:0 auto;
+}
+
+#social_profile {
+	right:8%;
+	top:15%;
+}
+
+#social {
+	top:12%;
+}
+
+#fleet_captain_profile {
+	right:5%;
+	left:initial;
+	top:12%;
+}
+
+#fleet_captain_lbl {
+	left:0%;
+	top:30%;
+}
+
+#treasurer_profile {
+	right:10%;
+	top:15%;
+}
+
+#treasurer_lbl {
+	top:10%;
+}
+
+#treasurer_lbl > div {
+	width:550px;
+}
+
+#secretary_profile {
+	top:15%;
+	right:8%;
+}
+
+#secretary_lbl {
+	left:auto;
+	top:10%;
+}
+
+#mailing_content {
+	background-color:rgba(0, 0, 0, 0.9);
+	box-shadow:0 0 5em 2.5em rgba(0, 0, 0, 0.9);
+}
+
+#mailing_content > div {
+	width:50%;
+	margin: 0 auto;
+}
+
+#mailing_content > div > * {
+	width:100%;
+	text-align:center;
+}

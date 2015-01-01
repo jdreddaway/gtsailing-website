@@ -1,0 +1,40 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+.fixed > div {
+	top:1em;
+	left:2em;
+}
+
+#intro_d {
+	top:12%;
+	left:20%;
+}
+
+#c420_d {
+	top:10%;
+	right:5%;
+	left:initial;
+}
+
+#j24_d {
+	top:12%;
+	left:10%;
+}
+
+#laser_d  {
+	top:35%;
+	left:15%;
+	max-width:70%;
+}
+
+#hobies_d {
+	top:30%;
+	left:initial;
+	right:5%;
+	max-width:30%;
+}
+
+#windsurfer_d {
+	top:12%;
+}
