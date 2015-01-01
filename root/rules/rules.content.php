@@ -46,7 +46,7 @@
 				According to the <a href="/documents/Constitution_Bylaws_2011.pdf">bylaws</a>, a lakehost must be:
 			</p>
 			<ul>
-				<li>at least 420 or windsurf <a href="#certification">skipper certified</a>,</li>
+				<li>at least 420 or windsurf <a href="/certification">skipper certified</a>,</li>
 				<li>a member of GTSC for at least two semesters,</li>
 				<li>currently a member of GTSC,</li>
 				<li>

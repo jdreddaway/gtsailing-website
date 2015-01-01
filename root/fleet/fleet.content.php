@@ -5,6 +5,7 @@
 		<div>
 			<p>
 				Georgia Tech owns a surprising large number of sailboats, which are stored at <a href="http://www.llsc.com" target="_blank">Lake Lanier Sailing Club</a>.
+				We also have a shed with a bunch of life jackets, boots, wet suits, etc. that anyone in the club can borrow.
 				Scroll down to see all the different boats that we own!
 			</p>
 		</div>
