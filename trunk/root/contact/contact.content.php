@@ -248,8 +248,8 @@
 			<h2>Mailing Address</h2>
 			<p>Please send any mail or dues checks to the following address:</p>
 			<p>
-				Georgia Tech Sailing Club<br />
-				350292 Georgia Tech Station<br />
+				Sailing Club<br />
+				750 Ferst Dr.<br />
 				Atlanta, GA 30332
 			</p>
 		</div>
