@@ -161,9 +161,11 @@
 		<div>
 			<h3><a href="https://www.facebook.com/gina.d.holden" target="_blank">Gina Holden</a></h3>
 			<p>
-				Gina is a Computer Science major and a member of the freshman class of 2011.
-				She joined the sailing club during her 3rd year after meeting Chris Walton while studying abroad in Oxford.
-				Gina quickly became very active in the club, and is very enthusiastic about having fun.
+				Gina is a fourth year Computer Engineering student who has been sailing her entire life.
+				She started out on her family's Knarr, which is a 32 foot wooden keelboat on the Potomac River in MD.
+				She also had a lot of fun sailing her Sunfish and her friends' keelboats in Wednesday night races at Solomons Island Yacht Club.
+				She was a on her high school sailing team, hosted by Sailing Club Chesapeake, where she sailed FJ's.
+				She joined GT Sailing Club when she found out about it her junior year at Tech.
 			</p>
 			<p>
 				Email: <a href="mailto:gina.m.holden+sailing@gmail.com">gina.m.holden+sailing@gmail.com</a>
