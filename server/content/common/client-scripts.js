@@ -25,6 +25,10 @@ function setUpScrollNav() {
 	}
 }
 
+function hasClass( elem, klass ) {
+	return (" " + elem.className + " " ).indexOf( " "+klass+" " ) > -1;
+}
+
 function findSections() {
 	var children = document.body.children;
 	var sections = [];
@@ -32,7 +36,7 @@ function findSections() {
 	for (var i = 0; i < children.length; i++) {
 		section = children[i];
 	
-		if (section.tagName == "DIV" && section.id != "") {
+		if (section.tagName == "DIV" && (hasClass(section, "fixed") || hasClass(section, "dynamic"))) {
 			sections.push(section);
 		}
 	}
