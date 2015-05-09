@@ -18,8 +18,12 @@
 	
 	<link rel="stylesheet" href="/common/article.css" />
 	<link rel="stylesheet" href="<?php print("/$path/$pageName.css");?>" />
+	<link rel="stylesheet" href="/common/header.css" />
 </head>
 <body>
+	<?php requireOnce("/common/login-header.php"); ?>
+	<div id="login_placeholder"></div>
+	
 	<div id="content-wrapper">
 		<div id="content">
 			<?php requireOnce("/$path/$pageName.content.php"); ?>

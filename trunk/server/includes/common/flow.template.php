@@ -17,12 +17,16 @@
 	
 	<link rel="stylesheet" href="/common/flow.css" />
 	<link rel="stylesheet" href="<?php print("/$pageName/$pageName.css");?>" />
+	<link rel="stylesheet" href="/common/header.css" />
 	
 	<script type="text/javascript" src="/common/client-scripts.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="/common/jquery.scrollTo.min.js"></script>
 </head>
 <body>
+	<?php requireOnce("/common/login-header.php"); ?>
+	<div id="login_placeholder"></div>
+	
 	<?php requireOnce("/$pageName/$pageName.content.php"); ?>
 	
 	<script type="text/javascript">

@@ -1,0 +1,29 @@
+/* Login Header */
+
+#login_placeholder {
+  height:1.8em; /* matches login_header height */
+}
+
+#login_header {
+  position:fixed;
+  height: 1.8em; /* must match placeholder height */
+  width:100%;
+  text-align:right;
+  color:white;
+  background-color:rgba(0, 0, 0, 0.6);
+  z-index:1;
+}
+
+#login_header > * {
+  margin:0 2em;
+  height:1.8em;
+  line-height:1.8em;
+}
+
+#login_header > div > div {
+  display:inline-block;
+}
+
+.fb_iframe_widget span {
+  vertical-align:middle !important; /* for some reason FB wants it to be on the bottom; see FB's inline style code */
+}

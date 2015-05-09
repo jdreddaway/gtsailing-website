@@ -31,26 +31,26 @@ body {
 }
 
 /* tile */
-body > div {
+div.dynamic, div.fixed {
 	width:100%;
 	min-width:40em;
 	margin:-3em 0 -3em 0;
 	clear:both; /* needed to make scrollnav work */
 }
 
-body > div:first-child {
+div.dynamic:first-child, div.fixed:first-child {
 	margin-top:0;
 }
 
-body > div:last-child {
+div.dynamic:last-child, div.fixed.last-child {
 	margin-bottom:0;
 }
 
-body > div > div  a {
+div.dynamic > div  a, div.fixed > div a {
 	transition-duration:500ms;
 }
 
-body > div > div  h2 {
+div.dynamic > div  h2, div.fixed > div h2 {
 	margin:0;
 }
 
