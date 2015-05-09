@@ -1,0 +1,1 @@
+Our goal is to create a website that is attractive to both beginner and advanced sailors and that is functional for everyone in the club.
