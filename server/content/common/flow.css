@@ -145,15 +145,26 @@ div.fixed > * {
 }
 
 /* This exists so that each block is as big as the background image */
-img.background {
-	display:block;
+
+div.background {
+	position:relative;
+	padding:0;
+	max-width:none;
+}
+
+img.background { /* TODO delete img.background */
 	position:relative;
 	width:100%;
 	font-size:0px;
 	padding:0;
-	
+}
+
+div.background > img {
+	display:block;
+	width:100%;
 	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
 }
+
 
 .medimg {
 	width:20em;

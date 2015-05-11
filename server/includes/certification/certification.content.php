@@ -17,7 +17,11 @@
 	</div>
 </div>
 <div id="c420" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1124.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1124_top.png" />
+		<img src="/images/backgrounds/FUJI1124_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1124_bot.png" />
+	</div>
 	<div id="c420_d" class="light">
 		<h2>420 Certification</h2>
 		<div>
