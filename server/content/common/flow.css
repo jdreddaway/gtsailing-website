@@ -79,7 +79,11 @@ body > div.fixed > div > div  {
 /*
 	HTML STRUCURE:
 	<div class="fixed">
-		<img class="background" alt="..." src="..." />
+		<div class="background">
+			<img alt="..." src="..._top.png" />
+			<img alt="..." src="..._mid.jpg" />
+			<img alt="..." src="..._bot.png" />
+		</div>
 		<div id="...">
 			<h2>heading</h2>
 			[<p>description</p>]
@@ -150,13 +154,7 @@ div.background {
 	position:relative;
 	padding:0;
 	max-width:none;
-}
-
-img.background { /* TODO delete img.background */
-	position:relative;
-	width:100%;
-	font-size:0px;
-	padding:0;
+	font-size:0; /* messes up flow with dynamic and fixed tiles if absent */
 }
 
 div.background > img {

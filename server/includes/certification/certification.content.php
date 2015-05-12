@@ -1,5 +1,9 @@
 <div id="skipper" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1475.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1475_top.png" />
+		<img src="/images/backgrounds/FUJI1475_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1475_bot.png" />
+	</div>
 	<div id="certification" class="dark">
 		<h2>Skipper Certification</h2>
 		<div>
@@ -59,7 +63,11 @@
 	</div>
 </div>
 <div id="keelboat" class="fixed">
-	<img class="background" src="/images/backgrounds/PANO_1_EDITED.png" />
+	<div class="background">
+		<img src="/images/backgrounds/PANO_1_EDITED_top.png" />
+		<img src="/images/backgrounds/PANO_1_EDITED_mid.jpg" />
+		<img src="/images/backgrounds/PANO_1_EDITED_bot.png" />
+	</div>
 	<div id="keelboat_d" class="dark">
 		<h2>Keelboat Certification</h2>
 		<div>
@@ -100,7 +108,11 @@
 	</div>
 </div>
 <div id="laser" class="fixed">
-	<img class="background" src="/images/backgrounds/DSC09674 lasers fall break 2012.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_top.png" />
+		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_mid.jpg" />
+		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_bot.png" />
+	</div>
 	<div id="laser_d" class="dark">
 		<h2>Laser Certification</h2>
 		<div>
@@ -121,7 +133,11 @@
 	</div>
 </div>
 <div id="hobie" class="fixed">
-	<img class="background" src="/images/backgrounds/DSC01246 2013 fall nmbbq.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_top.png" />
+		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_mid.jpg" />
+		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_bot.png" />
+	</div>
 	<div id="hobie_d" class="light">
 		<h2>Hobie Certification</h2>
 		<div>
@@ -141,7 +157,11 @@
 	</div>
 </div>
 <div id="windsurf" class="fixed">
-	<img class="background" src="/images/backgrounds/DSC09908 2013 summer nmbbq.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_top.png" />
+		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_mid.jpg" />
+		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_bot.png" />
+	</div>
 	<div id="windsurf_d" class="dark">
 		<h2>Windsurf Certification</h2>
 		<div>

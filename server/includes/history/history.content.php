@@ -1,5 +1,9 @@
 <div id="history" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="history_d" class="dark">
 		<h2>History</h2>
 		<p>
