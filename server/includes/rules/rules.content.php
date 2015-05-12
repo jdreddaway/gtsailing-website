@@ -1,6 +1,10 @@
 <div id="laws" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1464-2.png" />
-	<div id="laws_d" class="dark">
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1464-2_top.png" />
+		<img src="/images/backgrounds/FUJI1464-2_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1464-2_bot.png" />
+	</div>
+	<div id="laws_d" class="light">
 		<h2>Constitution and Bylaws</h2>
 		<p>
 			Each member is expected to obey the club <a href="/documents/Constitution_Bylaws_2011.pdf">constitution and bylaws</a>.
@@ -12,7 +16,11 @@
 </div>
 
 <div id="exec" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1959.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1959_top.png" />
+		<img src="/images/backgrounds/FUJI1959_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1959_bot.png" />
+	</div>
 	<div id="exec_d" class="dark">
 		<h2><a href="/structure">Executive Board</a></h2>
 		<div>
@@ -30,7 +38,11 @@
 </div>
 
 <div id="lakehosts" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI0328.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI0328_top.png" />
+		<img src="/images/backgrounds/FUJI0328_mid.jpg" />
+		<img src="/images/backgrounds/FUJI0328_bot.png" />
+	</div>
 	<div id="lakehosts_d" class="light">
 		<h2>Lakehosts</h2>
 		<div>
@@ -74,7 +86,11 @@
 	</div>
 </div>
 <div id="certification" class="fixed">
-	<img class="background" src="/images/backgrounds/DSC09795.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSC09795_top.png" />
+		<img src="/images/backgrounds/DSC09795_mid.jpg" />
+		<img src="/images/backgrounds/DSC09795_bot.png" />
+	</div>
 	<div id="cert" class="dark">
 		<h2><a href="/certification">Skipper Certification</a></h2>
 		<div>

@@ -1,0 +1,9 @@
+/closet/background-maker/bin/*.class
+/closet/background-maker/input
+/server/apache2
+/server/lang
+/server/mysql
+/server/php
+/server/phpmyadmin
+/server/settings
+/server/usbwebserver.exe

@@ -16,7 +16,7 @@ public class Fader {
 		this.maxTransparencyRatio = maxTransparencyRatio;
 	}
 	
-	public BufferedImage transform(BufferedImage in) {
+	public FadedImage transform(BufferedImage in) {
 		int numRowsToAffect = (int) (transparencyRatio / 2 * in.getHeight());
 		final double alphaChangePerRow = 255.0 * maxTransparencyRatio / numRowsToAffect;
 		BufferedImage out = new BufferedImage(in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
@@ -34,8 +34,22 @@ public class Fader {
 			changeAlphaOnRow(out, alpha, currentAlpha, row);
 			currentAlpha -= alphaChangePerRow;
 		}
+
+		return splitImage(out, numRowsToAffect);
+	}
+	
+	private FadedImage splitImage(BufferedImage img, int numRowsSemiTransparent) {
+		BufferedImage top = new BufferedImage(img.getWidth(), numRowsSemiTransparent, BufferedImage.TYPE_INT_ARGB);
+		top.createGraphics().drawImage(img, 0, 0, null);
 		
-		return out;
+		BufferedImage middle = new BufferedImage(img.getWidth(), img.getHeight() - 2 * numRowsSemiTransparent,
+				BufferedImage.TYPE_INT_RGB);
+		middle.createGraphics().drawImage(img, 0, -numRowsSemiTransparent, null);
+		
+		BufferedImage bottom = new BufferedImage(img.getWidth(), numRowsSemiTransparent, BufferedImage.TYPE_INT_ARGB);
+		bottom.createGraphics().drawImage(img, 0, -img.getHeight() + numRowsSemiTransparent, null);
+		
+		return new FadedImage(top, middle, bottom);
 	}
 
 	private void changeAlphaOnRow(BufferedImage out, WritableRaster alphaRaster, double alpha, int row) {

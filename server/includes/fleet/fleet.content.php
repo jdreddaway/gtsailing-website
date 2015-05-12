@@ -1,5 +1,9 @@
 <div id="intro" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1656.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1656_top.png" />
+		<img src="/images/backgrounds/FUJI1656_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1656_bot.png" />
+	</div>
 	<div id="intro_d" class="light">
 		<h2>Our Fleet</h2>
 		<div>
@@ -13,7 +17,11 @@
 </div>
 
 <div id="c420s" class="fixed">
-	<img class="background" src="/images/backgrounds/P1090065-X2.png" />
+	<div class="background">
+		<img src="/images/backgrounds/P1090065-X2_top.png" />
+		<img src="/images/backgrounds/P1090065-X2_mid.jpg" />
+		<img src="/images/backgrounds/P1090065-X2_bot.png" />
+	</div>
 	<div id="c420_d" class="light">
 		<h2>6 Club Rigged 420s</h2>
 		<div>
@@ -31,7 +39,11 @@
 	</div>
 </div>
 <div id="j24s" class="fixed">
-	<img class="background" src="/images/backgrounds/DSCF0972.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSCF0972_top.png" />
+		<img src="/images/backgrounds/DSCF0972_mid.jpg" />
+		<img src="/images/backgrounds/DSCF0972_bot.png" />
+	</div>
 	<div id="j24_d" class="light">
 		<h2>2 J/24s</h2>
 		<div>
@@ -48,7 +60,11 @@
 	</div>
 </div>
 <div id="lasers" class="fixed">
-	<img class="background" src="/images/backgrounds/LaserDownwindPanorama4.png" />
+	<div class="background">
+		<img src="/images/backgrounds/LaserDownwindPanorama4_top.png" />
+		<img src="/images/backgrounds/LaserDownwindPanorama4_mid.jpg" />
+		<img src="/images/backgrounds/LaserDownwindPanorama4_bot.png" />
+	</div>
 	<div id="laser_d" class="light">
 		<h2>5 Lasers</h2>
 		<div>
@@ -71,7 +87,11 @@
 	</div>
 </div>
 <div id="hobies" class="fixed">
-	<img class="background" src="/images/backgrounds/DSC09695_ed fall break 2012.png" />
+	<div class="background">
+		<img src="/images/backgrounds/DSC09695_ed fall break 2012_top.png" />
+		<img src="/images/backgrounds/DSC09695_ed fall break 2012_mid.jpg" />
+		<img src="/images/backgrounds/DSC09695_ed fall break 2012_bot.png" />
+	</div>
 	<div id="hobies_d" class="dark">
 		<h2>3 Hobies</h2>
 		<div>
@@ -88,7 +108,11 @@
 	</div>
 </div>
 <div id="windsurfers" class="fixed">
-	<img class="background" src="/images/backgrounds/tobias 2013 summer nmbbq.png" />
+	<div class="background">
+		<img src="/images/backgrounds/tobias 2013 summer nmbbq_top.png" />
+		<img src="/images/backgrounds/tobias 2013 summer nmbbq_mid.jpg" />
+		<img src="/images/backgrounds/tobias 2013 summer nmbbq_bot.png" />
+	</div>
 	<div id="windsurfer_d" class="light">
 		<h2>Windsurfers</h2>
 		<div>
@@ -106,7 +130,7 @@
 </div>
 <!--
 <div id="zodiac" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.png" />
+	<img alt="420s downwind" src="/images/backgrounds/glass at eckerd.png" />
 	<div id="zodiac_d" class="dark">
 		<h2>Zodiac</h2>
 		<p>

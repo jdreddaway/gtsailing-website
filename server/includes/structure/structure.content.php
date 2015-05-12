@@ -1,5 +1,9 @@
 <div id="execboard" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="board" class="dark">
 		<h2>Executive Board</h2>
 		<p>
@@ -9,7 +13,11 @@
 	</div>
 </div>
 <div id="commodore" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="commodore_d" class="dark">
 		<h2>Commodore</h2>
 		<p>
@@ -18,7 +26,11 @@
 	</div>
 </div>
 <div id="vice" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="vc" class="dark">
 		<h2>Vice Commodore</h2>
 		<p>
@@ -27,7 +39,11 @@
 	</div>
 </div>
 <div id="treasurer" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="treasurer_d" class="dark">
 		<h2>Treasurer</h2>
 		<p>
@@ -36,7 +52,11 @@
 	</div>
 </div>
 <div id="secretary" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="secretary_d" class="dark">
 		<h2>Secretary</h2>
 		<p>
@@ -45,7 +65,11 @@
 	</div>
 </div>
 <div id="fleetcaptain" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="fleet" class="dark">
 		<h2>Fleet Captain</h2>
 		<p>
@@ -54,7 +78,11 @@
 	</div>
 </div>
 <div id="racecaptain" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="race" class="dark">
 		<h2>Race Team Captain</h2>
 		<p>
@@ -63,7 +91,11 @@
 	</div>
 </div>
 <div id="socialchair" class="fixed">
-	<img alt="420s downwind" class="background" src="/images/backgrounds/glass at eckerd.jpg" />
+	<div class="background">
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
+		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
+	</div>
 	<div id="social" class="dark">
 		<h2>Membership Chair</h2>
 		<p>

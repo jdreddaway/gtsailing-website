@@ -1,5 +1,9 @@
 <div id="intro" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1103-2.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1103-2_top.png" />
+		<img src="/images/backgrounds/FUJI1103-2_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1103-2_bot.png" />
+	</div>
 	<img id="logo" alt="GT Sailing Raceteam" src="/images/Race Team Logo 1 shrunk.png" />
 </div>
 
@@ -8,7 +12,11 @@
 </div>
 
 <div id="club" class="fixed">
-	<img class="background" src="/images/backgrounds/IMG_2025.png" />
+	<div class="background">
+		<img src="/images/backgrounds/IMG_2025_top.png" />
+		<img src="/images/backgrounds/IMG_2025_mid.jpg" />
+		<img src="/images/backgrounds/IMG_2025_bot.png" />
+	</div>
 	<div id="club_d" class="light">
 		<h2>Club Team</h2>
 		<div>
@@ -31,7 +39,11 @@
 </div>
 
 <div id="activity" class="fixed">
-	<img class="background" src="/images/backgrounds/FUJI1779.png" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1779_top.png" />
+		<img src="/images/backgrounds/FUJI1779_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1779_bot.png" />
+	</div>
 	<div id="activity_d" class="light">
 		<h2>Many Regattas Every Semester</h2>
 		<div>
@@ -50,7 +62,11 @@
 	</div>
 </div>
 <div id="practices" class="fixed">
-	<img alt="racing upwind at LLSC" class="background" src="/images/backgrounds/racing upwind llsc.png" />
+	<div class="background">
+		<img alt="racing upwind at LLSC" src="/images/backgrounds/P1090074-X2_top.png" />
+		<img alt="racing upwind at LLSC" src="/images/backgrounds/P1090074-X2_mid.jpg" />
+		<img alt="racing upwind at LLSC" src="/images/backgrounds/P1090074-X2_bot.png" />
+	</div>
 	<div id="practices_d" class="dark">
 		<h2>Weekly Practices</h2>
 	</div>

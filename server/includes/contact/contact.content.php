@@ -84,7 +84,11 @@
 </div>
 
 <div id="commodore" class="fixed">
-	<img src="/images/backgrounds/DSCF1341.png" class="background" alt="JD standing on shoulders" />
+	<div class="background">
+		<img src="/images/backgrounds/DSCF1341_top.png" alt="JD standing on shoulders" />
+		<img src="/images/backgrounds/DSCF1341_mid.jpg" alt="JD standing on shoulders" />
+		<img src="/images/backgrounds/DSCF1341_bot.png" alt="JD standing on shoulders" />
+	</div>
 	<a id="commodore_profile" href="https://www.facebook.com/JDReddaway" class="profile" target="_blank" /><img src="/images/exec/jd-reddaway.jpg" alt="JD Reddaway" /></a>
 	<div id="commodore_lbl" class="light">
 		<h2>Commodore</h2>
@@ -111,7 +115,11 @@
 </div>
 
 <div id="vice_commodore" class="fixed">
-	<img src="/images/backgrounds/alex cover photo.png" class="background" alt="Alex on J-24" />
+	<div class="background">
+		<img src="/images/backgrounds/alex cover photo_top.png" alt="Alex on J-24" />
+		<img src="/images/backgrounds/alex cover photo_mid.jpg" alt="Alex on J-24" />
+		<img src="/images/backgrounds/alex cover photo_bot.png" alt="Alex on J-24" />
+	</div>
 	<a href="https://www.facebook.com/alexskye.richardson" target="_blank" class="profile" id="vice_profile">
 		<img src="/images/exec/alex-richardson.jpg" alt="Alex Richardson" />
 	</a>
@@ -131,7 +139,11 @@
 </div>
 
 <div id="race_captain" class="fixed">
-	<img src="/images/backgrounds/pitchatent.png" class="background" />
+	<div class="background">
+		<img src="/images/backgrounds/pitchatent_top.png" />
+		<img src="/images/backgrounds/pitchatent_mid.jpg" />
+		<img src="/images/backgrounds/pitchatent_bot.png" />
+	</div>
 	<a href="https://www.facebook.com/chris.walton.790" target="_blank" class="profile" id="captain_profile">
 		<img src="/images/exec/chris-walton.jpg" alt="Chris Walton" />
 	</a>
@@ -152,7 +164,11 @@
 </div>
 
 <div id="social_chair" class="fixed">
-	<img src="/images/backgrounds/clemson spring 2014.png" class="background" alt="" />
+	<div class="background">
+		<img src="/images/backgrounds/clemson spring 2014_top.png" alt="" />
+		<img src="/images/backgrounds/clemson spring 2014_mid.jpg" alt="" />
+		<img src="/images/backgrounds/clemson spring 2014_bot.png" alt="" />
+	</div>
 	<a href="https://www.facebook.com/gina.d.holden" target="_blank" class="profile" id="social_profile">
 		<img src="/images/exec/gina-holden.jpg" alt="Gina Holden" />
 	</a>
@@ -175,7 +191,11 @@
 </div>
 
 <div id="fleet_captain" class="fixed">
-	<img src="/images/backgrounds/FUJI1137.png" class="background" />
+	<div class="background">
+		<img src="/images/backgrounds/FUJI1137_top.png" />
+		<img src="/images/backgrounds/FUJI1137_mid.jpg" />
+		<img src="/images/backgrounds/FUJI1137_bot.png" />
+	</div>
 	<a href="https://www.facebook.com/quantumlemur" target="_blank" class="profile" id="fleet_captain_profile">
 		<img src="/images/exec/mike-roberts.jpg" alt="Mike Roberts" />
 	</a>
@@ -196,7 +216,11 @@
 </div>
 
 <div id="treasurer" class="fixed">
-	<img src="/images/backgrounds/DSCF1513.png" class="background" alt="" />
+	<div class="background">
+		<img src="/images/backgrounds/DSCF1513_top.png" alt="" />
+		<img src="/images/backgrounds/DSCF1513_mid.jpg" alt="" />
+		<img src="/images/backgrounds/DSCF1513_bot.png" alt="" />
+	</div>
 	<a href="https://www.facebook.com/justin.eisenberg" target="_blank" class="profile" id="treasurer_profile">
 		<img src="/images/exec/justin-eisenberg.jpg" alt="Justin Eisenberg" />
 	</a>
@@ -223,7 +247,11 @@
 </div>
 
 <div id="secretary" class="fixed">
-	<img src="/images/backgrounds/DSCF1227.png" class="background" alt="" />
+	<div class="background">
+		<img src="/images/backgrounds/DSCF1227_top.png" alt="" />
+		<img src="/images/backgrounds/DSCF1227_mid.jpg" alt="" />
+		<img src="/images/backgrounds/DSCF1227_bot.png" alt="" />
+	</div>
 	<a href="https://www.facebook.com/joshua.kim.969" target="_blank" class="profile" id="secretary_profile">
 		<img src="/images/exec/josh-kim.jpg" alt="Josh Kim" />
 	</a>

@@ -79,7 +79,11 @@ body > div.fixed > div > div  {
 /*
 	HTML STRUCURE:
 	<div class="fixed">
-		<img class="background" alt="..." src="..." />
+		<div class="background">
+			<img alt="..." src="..._top.png" />
+			<img alt="..." src="..._mid.jpg" />
+			<img alt="..." src="..._bot.png" />
+		</div>
 		<div id="...">
 			<h2>heading</h2>
 			[<p>description</p>]
@@ -145,15 +149,20 @@ div.fixed > * {
 }
 
 /* This exists so that each block is as big as the background image */
-img.background {
-	display:block;
+
+div.background {
 	position:relative;
-	width:100%;
-	font-size:0px;
 	padding:0;
-	
+	max-width:none;
+	font-size:0; /* messes up flow with dynamic and fixed tiles if absent */
+}
+
+div.background > img {
+	display:block;
+	width:100%;
 	-moz-user-select: none; /* fixes firefox weirdness where clicking once selects the image */
 }
+
 
 .medimg {
 	width:20em;

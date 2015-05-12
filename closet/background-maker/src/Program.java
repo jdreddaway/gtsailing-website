@@ -24,7 +24,7 @@ public class Program {
 
 		Resizer resizer = new Resizer(newHeight);
 		Fader fader = new Fader(ratio / 100, maxTransparency / 100);
-		ImageProcessor processor = new ImageProcessor(Paths.get("output/"), "PNG", resizer, fader);
+		ImageProcessor processor = new ImageProcessor(Paths.get("output/"), "PNG", "JPG", resizer, fader);
 
 		processor.processDirectory(imagesLocation);
 		

@@ -10,12 +10,15 @@ public class ImageProcessor {
 
 	private final Path outputDirectory;
 	private final Fader transformer;
-	private final String imageFormat;
+	private final String transparentImgFormat;
 	private final Resizer resizer;
+	private final String opaqueImgFormat;
 
-	public ImageProcessor(Path outputDirectory, String imageFormat, Resizer resizer, Fader transformer) {
+	public ImageProcessor(Path outputDirectory, String transparentImgFormat, String opaqueImgFormat,
+			Resizer resizer, Fader transformer) {
 		this.outputDirectory = outputDirectory;
-		this.imageFormat = imageFormat;
+		this.transparentImgFormat = transparentImgFormat;
+		this.opaqueImgFormat = opaqueImgFormat;
 		this.resizer = resizer;
 		this.transformer = transformer;
 	}
@@ -34,7 +37,7 @@ public class ImageProcessor {
 		try {
 			BufferedImage original = ImageIO.read(file);
 			BufferedImage resized = resizer.resize(original);
-			BufferedImage processed = transformer.transform(resized);
+			FadedImage processed = transformer.transform(resized);
 
 			Path fullOutputDir = imagesDir.resolve(outputDirectory);
 			File outputDir = fullOutputDir.toFile();
@@ -46,8 +49,17 @@ public class ImageProcessor {
 			}
 
 			try {
-				File outputFile = createOutputFile(fullOutputDir, file.getName());
-				ImageIO.write(processed, imageFormat, outputFile);
+				File topFile = createOutputFile(
+						fullOutputDir, file.getName(), "top", transparentImgFormat.toLowerCase());
+				ImageIO.write(processed.top, transparentImgFormat, topFile);
+				
+				File midFile = createOutputFile(
+						fullOutputDir, file.getName(), "mid", opaqueImgFormat.toLowerCase());
+				ImageIO.write(processed.middle, opaqueImgFormat, midFile);
+				
+				File botFile = createOutputFile(
+						fullOutputDir, file.getName(), "bot", transparentImgFormat.toLowerCase());
+				ImageIO.write(processed.bottom, transparentImgFormat, botFile);
 			} catch (IOException e) {
 				System.out.println("Could not write file.");
 				e.printStackTrace();
@@ -58,8 +70,9 @@ public class ImageProcessor {
 		}
 	}
 	
-	private File createOutputFile(Path fullOutputDir, String currentImageName) throws IOException {
-		Path outputPath = fullOutputDir.resolve(getNewName(currentImageName));
+	private File createOutputFile(Path fullOutputDir, String currentImageName, String part, String extension)
+			throws IOException {
+		Path outputPath = fullOutputDir.resolve(getNewName(currentImageName, part, extension));
 		File outputFile = outputPath.toFile();
 
 		if (!outputFile.exists()) {
@@ -70,7 +83,13 @@ public class ImageProcessor {
 		return outputFile;
 	}
 	
-	private String getNewName(String originalName) {
+	/**
+	 * 
+	 * @param originalName
+	 * @param part Which part of the image this image belongs to; should be either top, mid, or bot
+	 * @return
+	 */
+	private String getNewName(String originalName, String part, String extension) {
 		int iPeriod = originalName.lastIndexOf('.');
 		String noExtensionName;
 		if (iPeriod > 0) {
@@ -78,6 +97,6 @@ public class ImageProcessor {
 		} else {
 			noExtensionName = originalName;
 		}
-		return noExtensionName + "." + imageFormat.toLowerCase();
+		return noExtensionName + "_" + part + "." + extension;
 	}
 }
