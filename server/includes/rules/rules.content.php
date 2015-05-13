@@ -7,7 +7,7 @@
 	<div id="laws_d" class="light">
 		<h2>Constitution and Bylaws</h2>
 		<p>
-			Each member is expected to obey the club <a href="/documents/Constitution_Bylaws_2011.pdf">constitution and bylaws</a>.
+			Each member is expected to obey the club <a href="/documents/Constitution_Bylaws.pdf">constitution and bylaws</a>.
 			It is every member's responsibility to call out other members who do not do so.
 			The constitution may be amended by a 2/3 vote of the executive board and 2/3 vote of the general membership.
 			Below are explanations of some important rules for general members.
@@ -27,7 +27,7 @@
 			<p>
 				The <a href="/structure">executive board</a> consists of the Commodore, Vice Commodore, Treasurer, Race Team Captain, Secretary, Social Chair, and Fleet Captain.
 				All of these people but the Fleet Captain are elected by the general membership to be responsible for the activities and operation of the club.
-				The exec board can amend the <a href="/documents/Constitution_Bylaws_2011.pdf">bylaws</a> with a majority vote.
+				The exec board can amend the <a href="/documents/Constitution_Bylaws.pdf">bylaws</a> with a majority vote.
 				If the general membership disagrees with an exec decision, it may reverse it with a majority vote provided that a quorum of 1/3 of membership is present.
 			</p>
 			<p>
@@ -55,7 +55,7 @@
 			<p>
 				When appointing lakehosts, exec generally looks for students who are outgoing and actively involved in both sailing and maintaining our fleets.
 				Lakehosts should be willing to take people up to the lake often and help them learn to sail.
-				According to the <a href="/documents/Constitution_Bylaws_2011.pdf">bylaws</a>, a lakehost must be:
+				According to the <a href="/documents/Constitution_Bylaws.pdf">bylaws</a>, a lakehost must be:
 			</p>
 			<ul>
 				<li>at least 420 or windsurf <a href="/certification">skipper certified</a>,</li>

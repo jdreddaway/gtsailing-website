@@ -1,0 +1,43 @@
+/* old gold: #E0AA0F */
+/* navy: #002b45 */
+
+div.widget_container {
+  width:100%;
+  text-align:center;
+}
+
+div.widget_container > div {
+  background-color:#E0AA0F;
+  border-radius:1em;
+  padding:1em;
+  display:inline-block;
+  margin:1em;
+
+  width:13em;
+  height:15em;
+  vertical-align:middle;
+}
+
+div.widget_container > div > * {
+  margin:0;
+
+  /* vertical align */
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+div.widget_container ul {
+  list-style-type:none;
+  text-align:left;
+  padding-left:0;
+}
+
+div.widget_container li {
+  text-align:center;
+  padding:.25em;
+}
+
+div.widget_container a:link, div.widget_container a:visited {
+  color:#002b45;
+}

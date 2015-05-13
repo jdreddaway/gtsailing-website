@@ -71,9 +71,9 @@ div.light a:link, div.light a:visited {
 }
 
 /* contains multiple description paragraphs */
-body > div.fixed > div > div  {
+div.fixed > div > div {
 	padding:1px 1em;
-	margin:1em;
+	margin:1em auto;
 }
 
 /*
