@@ -15,6 +15,7 @@
 			<!--<li><a href="/news.php">News</a></li>-->
 			<li><a href="/calendar/">Calendar</a></li>
 			<li><a href="/contact/">Contact Us</a></li>
+			<li><a href="/members/">Members' Section</a></li>
 			<li><a href="/rules/">Rules</a></li>
 		</ul>
 		<div id="fb-root"></div>
