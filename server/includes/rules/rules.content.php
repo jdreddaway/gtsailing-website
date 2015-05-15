@@ -1,9 +1,5 @@
 <div id="laws" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1464-2_top.png" />
-		<img src="/images/backgrounds/FUJI1464-2_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1464-2_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1464-2"); ?>
 	<div id="laws_d" class="light">
 		<h2>Constitution and Bylaws</h2>
 		<p>
@@ -16,11 +12,7 @@
 </div>
 
 <div id="exec" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1959_top.png" />
-		<img src="/images/backgrounds/FUJI1959_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1959_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1959"); ?>
 	<div id="exec_d" class="dark">
 		<h2><a href="/structure">Executive Board</a></h2>
 		<div>
@@ -38,11 +30,7 @@
 </div>
 
 <div id="lakehosts" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI0328_top.png" />
-		<img src="/images/backgrounds/FUJI0328_mid.jpg" />
-		<img src="/images/backgrounds/FUJI0328_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI0328"); ?>
 	<div id="lakehosts_d" class="light">
 		<h2>Lakehosts</h2>
 		<div>
@@ -86,11 +74,7 @@
 	</div>
 </div>
 <div id="certification" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09795_top.png" />
-		<img src="/images/backgrounds/DSC09795_mid.jpg" />
-		<img src="/images/backgrounds/DSC09795_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09795"); ?>
 	<div id="cert" class="dark">
 		<h2><a href="/certification">Skipper Certification</a></h2>
 		<div>

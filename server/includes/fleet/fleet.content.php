@@ -1,9 +1,5 @@
 <div id="intro" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1656_top.png" />
-		<img src="/images/backgrounds/FUJI1656_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1656_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1656"); ?>
 	<div id="intro_d" class="light">
 		<h2>Our Fleet</h2>
 		<div>
@@ -17,11 +13,7 @@
 </div>
 
 <div id="c420s" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/P1090065-X2_top.png" />
-		<img src="/images/backgrounds/P1090065-X2_mid.jpg" />
-		<img src="/images/backgrounds/P1090065-X2_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("P1090065-X2"); ?>
 	<div id="c420_d" class="light">
 		<h2>6 Club Rigged 420s</h2>
 		<div>
@@ -39,11 +31,7 @@
 	</div>
 </div>
 <div id="j24s" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSCF0972_top.png" />
-		<img src="/images/backgrounds/DSCF0972_mid.jpg" />
-		<img src="/images/backgrounds/DSCF0972_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSCF0972"); ?>
 	<div id="j24_d" class="light">
 		<h2>2 J/24s</h2>
 		<div>
@@ -60,11 +48,7 @@
 	</div>
 </div>
 <div id="lasers" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/LaserDownwindPanorama4_top.png" />
-		<img src="/images/backgrounds/LaserDownwindPanorama4_mid.jpg" />
-		<img src="/images/backgrounds/LaserDownwindPanorama4_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("LaserDownwindPanorama4"); ?>
 	<div id="laser_d" class="light">
 		<h2>5 Lasers</h2>
 		<div>
@@ -87,11 +71,7 @@
 	</div>
 </div>
 <div id="hobies" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09695_ed fall break 2012_top.png" />
-		<img src="/images/backgrounds/DSC09695_ed fall break 2012_mid.jpg" />
-		<img src="/images/backgrounds/DSC09695_ed fall break 2012_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09695_ed fall break 2012"); ?>
 	<div id="hobies_d" class="dark">
 		<h2>3 Hobies</h2>
 		<div>
@@ -108,11 +88,7 @@
 	</div>
 </div>
 <div id="windsurfers" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/tobias 2013 summer nmbbq_top.png" />
-		<img src="/images/backgrounds/tobias 2013 summer nmbbq_mid.jpg" />
-		<img src="/images/backgrounds/tobias 2013 summer nmbbq_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("tobias 2013 summer nmbbq"); ?>
 	<div id="windsurfer_d" class="light">
 		<h2>Windsurfers</h2>
 		<div>

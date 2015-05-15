@@ -1,9 +1,5 @@
 <div id="intro" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1939_top.png" />
-		<img src="/images/backgrounds/FUJI1939_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1939_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1939"); ?>
 	<div id="intro_content">
 		<div id="top">
 			<img id="logo" src="/images/waving burgee.png" alt="GT Sailing Logo" />
@@ -33,11 +29,7 @@
 	</div>
 </div>
 <div id="what" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1418_top.png" />
-		<img src="/images/backgrounds/FUJI1418_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1418_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1418"); ?>
 	<div id="what_we_do" class="light">
 		<h2>What do we do?</h2>
 	</div>
@@ -46,11 +38,7 @@
 	</div>
 </div>
 <div id="sailing" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09893 2013 summer nmbbq_top.png" />
-		<img src="/images/backgrounds/DSC09893 2013 summer nmbbq_mid.jpg" />
-		<img src="/images/backgrounds/DSC09893 2013 summer nmbbq_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09893 2013 summer nmbbq"); ?>
 	<div id="whenever" class="dark">
 		<h2>Whenever We Want</h2>
 		<p>
@@ -60,11 +48,7 @@
 	</div>
 </div>
 <div id="fleet" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09563 fall break 2012_top.png" />
-		<img src="/images/backgrounds/DSC09563 fall break 2012_mid.jpg" />
-		<img src="/images/backgrounds/DSC09563 fall break 2012_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09563 fall break 2012"); ?>
 	<div id="fleet_d" class="dark">
 		<h2><a href="/fleet/">Lots of Boats</a></h2>
 		<p>
@@ -74,11 +58,7 @@
 	</div>
 </div>
 <div id="racing" class="fixed">
-	<div class="background">
-		<img alt="collegiate race team" src="/images/backgrounds/FUJI1521_top.png" />
-		<img alt="collegiate race team" src="/images/backgrounds/FUJI1521_mid.jpg" />
-		<img alt="collegiate race team" src="/images/backgrounds/FUJI1521_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1521"); ?>
 	<div id="raceteam" class="light">
 		<h2><a href="/raceteam/">Collegiate Race Team</a></h2>
 		<p>
@@ -88,11 +68,7 @@
 	</div>
 </div>
 <div id="organization" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSCF1487_top.png" />
-		<img src="/images/backgrounds/DSCF1487_mid.jpg" />
-		<img src="/images/backgrounds/DSCF1487_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSCF1487"); ?>
 	<div id="org_d" class="dark">
 		<h2>Organization</h2>
 		<div>
@@ -104,11 +80,7 @@
 	</div>
 </div>
 <div id="next_steps" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI2008-2_top.png" />
-		<img src="/images/backgrounds/FUJI2008-2_mid.jpg" />
-		<img src="/images/backgrounds/FUJI2008-2_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI2008-2"); ?>
 	<div id="next_d" class="light">
 		<h2>What Should I Do?</h2>
 		<div>

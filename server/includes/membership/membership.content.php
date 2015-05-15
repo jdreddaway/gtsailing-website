@@ -1,9 +1,5 @@
 <div id="benefits" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("glass at eckerd"); ?>
 	<div id="benefits_d" class="dark">
 		<h2>Benefits</h2>
 		<div>
@@ -19,11 +15,7 @@
 	</div>
 </div>
 <div id="dues" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("glass at eckerd"); ?>
 	<div id="dues_d" class="dark">
 		<h2>Dues</h2>
 		<p>
@@ -32,11 +24,7 @@
 	</div>
 </div>
 <div id="responsibilities" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("glass at eckerd"); ?>
 	<div id="responsibilities_d" class="dark">
 		<h2>Responsibilities</h2>
 		<div>
