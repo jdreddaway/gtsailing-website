@@ -11,7 +11,7 @@
 					<tr>
 						<th><a href="https://groups.google.com/forum/#!forum/gtsailingexec" target="_blank">gtsailingexec@googlegroups.com</a></th>
 						<td>
-							Only current executive board members are members of this list.
+							Only current <a href="/structure/#exec_board">executive</a> board members are members of this list.
 							Email this list if you have a question or request for the exec board.
 						</td>
 					</tr>
@@ -106,6 +106,9 @@
 			<p>
 				Email: <a href="mailto:jdreddaway+sailing@gatech.edu">jdreddaway+sailing@gatech.edu</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Commodore, <a href="/structure/#commodore">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
@@ -125,6 +128,9 @@
 			</p>
 			<p>
 				Email: <a href="mailto:yellowalex10@yahoo.com">yellowalex10@yahoo.com</a>
+			</p>
+			<p>
+				To learn about the responsibilites of the Vice Commodore, <a href="/structure/#vice">click here</a>.
 			</p>
 		</div>
 	</div>
@@ -146,6 +152,9 @@
 			</p>
 			<p>
 				Email: <a href="mailto:puzzler901@comcast.net">puzzler901@comcast.net</a>
+			</p>
+			<p>
+				To learn about the responsibilites of the Race Team Captain, <a href="/structure/#race_captain">click here</a>.
 			</p>
 		</div>
 	</div>
@@ -170,6 +179,9 @@
 			<p>
 				Email: <a href="mailto:gina.m.holden+sailing@gmail.com">gina.m.holden+sailing@gmail.com</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Social Chair, <a href="/structure/#social_chair">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
@@ -190,6 +202,9 @@
 			</p>
 			<p>
 				Email: <a href="mailto:quantumlemur+sailing@gmail.com">quantumlemur+sailing@gmail.com</a>
+			</p>
+			<p>
+				To learn about the responsibilites of the Fleet Captain, <a href="/structure/#fleet_captain">click here</a>.
 			</p>
 		</div>
 	</div>
@@ -218,6 +233,9 @@
 			<p>
 				Email: <a href="mailto:justin.eisenberg+sailing@gatech.edu">justin.eisenberg+sailing@gatech.edu</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Treasurer, <a href="/structure/#treasurer">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
@@ -239,6 +257,9 @@
 			</p>
 			<p>
 				Email: <a href="mailto:joshua0702+sailing@gmail.com">joshua0702+sailing@gmail.com</a>
+			</p>
+			<p>
+				To learn about the responsibilites of the Secretary, <a href="/structure/#secretary">click here</a>.
 			</p>
 		</div>
 	</div>

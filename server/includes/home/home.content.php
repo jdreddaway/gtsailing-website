@@ -74,7 +74,7 @@
 		<div>
 			<p>
 				We are a tier 3 sports club at Georgia Tech, which means that, upon other things, we have an <a href="http://sga.gatech.edu/" target="_blank">SGA</a> budget.
-				We have an awesome <a href="/structure">exec board</a>, which manages the club and plans our events.
+				We have an awesome <a href="/structure/#exec_board">exec board</a>, which manages the club and plans our events.
 			</p>
 		</div>
 	</div>

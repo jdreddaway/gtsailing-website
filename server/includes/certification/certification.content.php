@@ -45,7 +45,7 @@
 				</ul>
 			</p>
 			<p>
-				After you pass the on-the-water test, your instructor will send a formal recommendation to the executive board.
+				After you pass the on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add 420 qualification to your GTSC Skipper card.
 			</p>
 			<p>
@@ -71,7 +71,9 @@
 				Because the J-24 exams are so rigorous, there are two types of keelboat certification: intermediate and full.
 			</p>
 			<p>
-				Intermediate skippers are those who have passed the "Advanced Sailing" exam, have participated in at least one instruction day with a keelboat skipper or instructor, and have received approval from a majority of exec.
+				Intermediate skippers are those who have passed the "Advanced Sailing" exam,
+				have participated in at least one instruction day with a keelboat skipper or instructor,
+				and have received approval from a majority of <a href="/structure/#exec_board">exec</a>.
 				They need not have passed the on-the-water test.
 				There are many restrictions on intermediate skippers compared to full skippers:
 				<ul>
@@ -103,7 +105,7 @@
 			<p>
 				Any 420-certified skipper may become Laser-certified if they pass an on-the-water test given by a Laser instructor.
 				The on-the-water test is very similar to the 420 on-the-water test, except you will be sailing a Laser (duh).
-				Upon passing the on-the-water test, your instructor will send a formal recommendation to the executive board.
+				Upon passing the on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add Laser qualification to your skipper card.
 			</p>
 			<p>
@@ -123,7 +125,7 @@
 		<div>
 			<p>
 				Any 420-certified skipper may become Hobie-certified if they pass an on-the-water test given by a Hobie instructor.
-				Upon passing the Hobie on-the-water test, your instructor will send a formal recommendation to the executive board.
+				Upon passing the Hobie on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add Hobie qualification to your skipper card.
 			</p>
 			<p>
@@ -143,7 +145,7 @@
 		<div>
 			<p>
 				There are three steps involved in becoming windsurf certified: a written test, an on-the-water test, and a swim test.
-				After passing these three tests, your instructor will send a formal recommendation to the executive board.
+				After passing these three tests, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add windsurf qualification to your skipper card.
 			</p>
 			<p>
