@@ -1,9 +1,5 @@
 <div id="overview" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("IMG_6573"); ?>
 	<div id="oview" class="dark">
 		<h2>Structure Overview</h2>
 		<p>
@@ -16,11 +12,7 @@
 	</div>
 </div>
 <div id="exec_board" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("IMG_7059"); ?>
 	<div id="board" class="dark">
 		<h2>Executive Board</h2>
 		<div>
@@ -41,12 +33,8 @@
 	</div>
 </div>
 <div id="commodore" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="commodore_d" class="dark">
+	<?php addFlowBackgroundImage("DSCF1342"); ?>
+	<div id="commodore_d" class="light">
 		<h2>Commodore</h2>
 		<div>
 			<p>
@@ -61,11 +49,7 @@
 	</div>
 </div>
 <div id="vice" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("IMG_6354"); ?>
 	<div id="vc" class="dark">
 		<h2>Vice Commodore</h2>
 		<div>
@@ -86,11 +70,7 @@
 	</div>
 </div>
 <div id="treasurer" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("Justin & Wreck"); ?>
 	<div id="treasurer_d" class="dark">
 		<h2>Treasurer</h2>
 		<div>
@@ -107,12 +87,8 @@
 	</div>
 </div>
 <div id="secretary" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="secretary_d" class="dark">
+	<?php addFlowBackgroundImage("IMG_6445"); ?>
+	<div id="secretary_d" class="light">
 		<h2>Secretary</h2>
 		<div>
 			<p>
@@ -132,11 +108,7 @@
 	</div>
 </div>
 <div id="race_captain" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("IMG_6913"); ?>
 	<div id="race" class="dark">
 		<h2>Race Team Captain</h2>
 		<div>
@@ -153,12 +125,8 @@
 	</div>
 </div>
 <div id="social_chair" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="social" class="dark">
+	<?php addFlowBackgroundImage("IMG_6307"); ?>
+	<div id="social" class="light">
 		<h2>Membership Chair</h2>
 		<div>
 			<p>
@@ -172,12 +140,8 @@
 	</div>
 </div>
 <div id="fleet_captain" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="fleet" class="dark">
+	<?php addFlowBackgroundImage("IMG_20140507_200305"); ?>
+	<div id="fleet" class="light">
 		<h2>Fleet Captain</h2>
 		<div>
 			<p>
@@ -193,12 +157,8 @@
 	</div>
 </div>
 <div id="lakehosts" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="host" class="dark">
+	<?php addFlowBackgroundImage("20150106_173546"); ?>
+	<div id="host" class="light">
 		<h2>Lakehosts</h2>
 		<p>
 			The executive board appoints lakehosts.
@@ -209,11 +169,7 @@
 	</div>
 </div>
 <div id="instructors" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("IMG_20140507_191943"); ?>
 	<div id="cert" class="dark">
 		<h2>Instructors</h2>
 		<div>
@@ -229,12 +185,8 @@
 	</div>
 </div>
 <div id="skippers" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
-	<div id="cert" class="dark">
+	<?php addFlowBackgroundImage("IMG_7132"); ?>
+	<div id="skip" class="light">
 		<h2>Skipper Certified Sailors</h2>
 		<p>
 			Skipper certified sailors are allowed to skipper GT Sailing boats any time, provided that a <a href="/rules/#lakehosts">lakehost</a> is present.
@@ -243,11 +195,7 @@
 	</div>
 </div>
 <div id="regulars" class="fixed">
-	<div class="background">
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_top.png" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_mid.jpg" />
-		<img alt="420s downwind" src="/images/backgrounds/glass at eckerd_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC01156 summer 2013 sunset"); ?>
 	<div id="reg" class="dark">
 		<h2>Regular Members</h2>
 		<p>

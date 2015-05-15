@@ -13,4 +13,14 @@
 			header('Location: /construction.php');
 		}
 	}
+
+	function addFlowBackgroundImage($imageName) {
+		print("
+			<div class='background'>
+				<img src='/images/backgrounds/${imageName}_top.png' />
+				<img src='/images/backgrounds/${imageName}_mid.jpg' />
+				<img src='/images/backgrounds/${imageName}_bot.png' />
+			</div>
+		");
+	}
 ?>

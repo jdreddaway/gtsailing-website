@@ -1,7 +1,69 @@
 /* old gold: #E0AA0F */
 /* navy: #002b45 */
 
-.fixed > div {
-	top:1em;
-	left:2em;
+#oview {
+  top:12%;
+  left:2%;
+}
+
+#board {
+  top:10%;
+  left:2%;
+}
+
+#commodore_d {
+  top:12%;
+  right:5%;
+}
+
+#vc {
+  top:19%;
+  right:2em;
+}
+
+#treasurer_d {
+  left:18%;
+  top:20%;
+  max-width:40em;
+}
+
+#secretary_d {
+  left:20%;
+  top:16%;
+}
+
+#race {
+  top:12%;
+  right:2em;
+}
+
+#social {
+  top:15%;
+  right:2em;
+}
+
+#fleet {
+  top:12%;
+  right:3em;
+}
+
+#host {
+  top:12%;
+  left:10%;
+}
+
+#cert {
+  top:15%;
+  left:2%;
+}
+
+#skip { 
+  top:12%;
+  left:5%;
+  max-width:70em;
+}
+
+#reg {
+  top:12%;
+  left:4%;
 }
