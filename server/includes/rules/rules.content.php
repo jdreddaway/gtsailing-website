@@ -1,31 +1,23 @@
 <div id="laws" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1464-2_top.png" />
-		<img src="/images/backgrounds/FUJI1464-2_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1464-2_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1464-2"); ?>
 	<div id="laws_d" class="light">
 		<h2>Constitution and Bylaws</h2>
 		<p>
 			Each member is expected to obey the club <a href="/documents/Constitution_Bylaws.pdf">constitution and bylaws</a>.
 			It is every member's responsibility to call out other members who do not do so.
-			The constitution may be amended by a 2/3 vote of the executive board and 2/3 vote of the general membership.
+			The constitution may be amended by a 2/3 vote of the <a href="/structure/#exec_board">executive board</a> and 2/3 vote of the general membership.
 			Below are explanations of some important rules for general members.
 		</p>
 	</div>
 </div>
 
 <div id="exec" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1959_top.png" />
-		<img src="/images/backgrounds/FUJI1959_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1959_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1959"); ?>
 	<div id="exec_d" class="dark">
-		<h2><a href="/structure">Executive Board</a></h2>
+		<h2><a href="/structure/#exec_board">Executive Board</a></h2>
 		<div>
 			<p>
-				The <a href="/structure">executive board</a> consists of the Commodore, Vice Commodore, Treasurer, Race Team Captain, Secretary, Social Chair, and Fleet Captain.
+				The <a href="/structure/#exec_board">executive board</a> consists of the Commodore, Vice Commodore, Treasurer, Race Team Captain, Secretary, Social Chair, and Fleet Captain.
 				All of these people but the Fleet Captain are elected by the general membership to be responsible for the activities and operation of the club.
 				The exec board can amend the <a href="/documents/Constitution_Bylaws.pdf">bylaws</a> with a majority vote.
 				If the general membership disagrees with an exec decision, it may reverse it with a majority vote provided that a quorum of 1/3 of membership is present.
@@ -38,11 +30,7 @@
 </div>
 
 <div id="lakehosts" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI0328_top.png" />
-		<img src="/images/backgrounds/FUJI0328_mid.jpg" />
-		<img src="/images/backgrounds/FUJI0328_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI0328"); ?>
 	<div id="lakehosts_d" class="light">
 		<h2>Lakehosts</h2>
 		<div>
@@ -50,7 +38,7 @@
 				We keep all our boats and equipment at <a target="_blank" href="http://www.llsc.com">Lake Lanier Sailing Club (LLSC)</a>.
 				Only members of LLSC are allowed on the grounds, so GT Sailing holds 10 student memberships with them.
 				Each year, our executive board appoints 10 students to receive our LLSC memberships.
-				These 10 students are known as lakehosts.
+				These 10 students are known as <a href="/structure/#lakehosts">lakehosts</a>.
 			</p>
 			<p>
 				When appointing lakehosts, exec generally looks for students who are outgoing and actively involved in both sailing and maintaining our fleets.
@@ -86,11 +74,7 @@
 	</div>
 </div>
 <div id="certification" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09795_top.png" />
-		<img src="/images/backgrounds/DSC09795_mid.jpg" />
-		<img src="/images/backgrounds/DSC09795_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09795"); ?>
 	<div id="cert" class="dark">
 		<h2><a href="/certification">Skipper Certification</a></h2>
 		<div>

@@ -1,9 +1,5 @@
 <div id="skipper" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1475_top.png" />
-		<img src="/images/backgrounds/FUJI1475_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1475_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1475"); ?>
 	<div id="certification" class="dark">
 		<h2>Skipper Certification</h2>
 		<div>
@@ -21,11 +17,7 @@
 	</div>
 </div>
 <div id="c420" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1124_top.png" />
-		<img src="/images/backgrounds/FUJI1124_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1124_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1124"); ?>
 	<div id="c420_d" class="light">
 		<h2>420 Certification</h2>
 		<div>
@@ -53,7 +45,7 @@
 				</ul>
 			</p>
 			<p>
-				After you pass the on-the-water test, your instructor will send a formal recommendation to the executive board.
+				After you pass the on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add 420 qualification to your GTSC Skipper card.
 			</p>
 			<p>
@@ -63,11 +55,7 @@
 	</div>
 </div>
 <div id="keelboat" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/PANO_1_EDITED_top.png" />
-		<img src="/images/backgrounds/PANO_1_EDITED_mid.jpg" />
-		<img src="/images/backgrounds/PANO_1_EDITED_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("PANO_1_EDITED"); ?>
 	<div id="keelboat_d" class="dark">
 		<h2>Keelboat Certification</h2>
 		<div>
@@ -83,7 +71,9 @@
 				Because the J-24 exams are so rigorous, there are two types of keelboat certification: intermediate and full.
 			</p>
 			<p>
-				Intermediate skippers are those who have passed the "Advanced Sailing" exam, have participated in at least one instruction day with a keelboat skipper or instructor, and have received approval from a majority of exec.
+				Intermediate skippers are those who have passed the "Advanced Sailing" exam,
+				have participated in at least one instruction day with a keelboat skipper or instructor,
+				and have received approval from a majority of <a href="/structure/#exec_board">exec</a>.
 				They need not have passed the on-the-water test.
 				There are many restrictions on intermediate skippers compared to full skippers:
 				<ul>
@@ -108,18 +98,14 @@
 	</div>
 </div>
 <div id="laser" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_top.png" />
-		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_mid.jpg" />
-		<img src="/images/backgrounds/DSC09674 lasers fall break 2012_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09674 lasers fall break 2012"); ?>
 	<div id="laser_d" class="dark">
 		<h2>Laser Certification</h2>
 		<div>
 			<p>
 				Any 420-certified skipper may become Laser-certified if they pass an on-the-water test given by a Laser instructor.
 				The on-the-water test is very similar to the 420 on-the-water test, except you will be sailing a Laser (duh).
-				Upon passing the on-the-water test, your instructor will send a formal recommendation to the executive board.
+				Upon passing the on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add Laser qualification to your skipper card.
 			</p>
 			<p>
@@ -133,17 +119,13 @@
 	</div>
 </div>
 <div id="hobie" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_top.png" />
-		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_mid.jpg" />
-		<img src="/images/backgrounds/DSC01246 2013 fall nmbbq_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC01246 2013 fall nmbbq"); ?>
 	<div id="hobie_d" class="light">
 		<h2>Hobie Certification</h2>
 		<div>
 			<p>
 				Any 420-certified skipper may become Hobie-certified if they pass an on-the-water test given by a Hobie instructor.
-				Upon passing the Hobie on-the-water test, your instructor will send a formal recommendation to the executive board.
+				Upon passing the Hobie on-the-water test, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add Hobie qualification to your skipper card.
 			</p>
 			<p>
@@ -157,17 +139,13 @@
 	</div>
 </div>
 <div id="windsurf" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_top.png" />
-		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_mid.jpg" />
-		<img src="/images/backgrounds/DSC09908 2013 summer nmbbq_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("DSC09908 2013 summer nmbbq"); ?>
 	<div id="windsurf_d" class="dark">
 		<h2>Windsurf Certification</h2>
 		<div>
 			<p>
 				There are three steps involved in becoming windsurf certified: a written test, an on-the-water test, and a swim test.
-				After passing these three tests, your instructor will send a formal recommendation to the executive board.
+				After passing these three tests, your instructor will send a formal recommendation to the <a href="/structure/#exec_board">executive board</a>.
 				If exec approves, they will add windsurf qualification to your skipper card.
 			</p>
 			<p>

@@ -11,7 +11,7 @@
 					<tr>
 						<th><a href="https://groups.google.com/forum/#!forum/gtsailingexec" target="_blank">gtsailingexec@googlegroups.com</a></th>
 						<td>
-							Only current executive board members are members of this list.
+							Only current <a href="/structure/#exec_board">executive</a> board members are members of this list.
 							Email this list if you have a question or request for the exec board.
 						</td>
 					</tr>
@@ -84,11 +84,7 @@
 </div>
 
 <div id="commodore" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSCF1341_top.png" alt="JD standing on shoulders" />
-		<img src="/images/backgrounds/DSCF1341_mid.jpg" alt="JD standing on shoulders" />
-		<img src="/images/backgrounds/DSCF1341_bot.png" alt="JD standing on shoulders" />
-	</div>
+	<?php addFlowBackgroundImage("DSCF1341"); ?>
 	<a id="commodore_profile" href="https://www.facebook.com/JDReddaway" class="profile" target="_blank" /><img src="/images/exec/jd-reddaway.jpg" alt="JD Reddaway" /></a>
 	<div id="commodore_lbl" class="light">
 		<h2>Commodore</h2>
@@ -110,16 +106,15 @@
 			<p>
 				Email: <a href="mailto:jdreddaway+sailing@gatech.edu">jdreddaway+sailing@gatech.edu</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Commodore, <a href="/structure/#commodore">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="vice_commodore" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/alex cover photo_top.png" alt="Alex on J-24" />
-		<img src="/images/backgrounds/alex cover photo_mid.jpg" alt="Alex on J-24" />
-		<img src="/images/backgrounds/alex cover photo_bot.png" alt="Alex on J-24" />
-	</div>
+	<?php addFlowBackgroundImage("alex cover photo"); ?>
 	<a href="https://www.facebook.com/alexskye.richardson" target="_blank" class="profile" id="vice_profile">
 		<img src="/images/exec/alex-richardson.jpg" alt="Alex Richardson" />
 	</a>
@@ -134,16 +129,15 @@
 			<p>
 				Email: <a href="mailto:yellowalex10@yahoo.com">yellowalex10@yahoo.com</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Vice Commodore, <a href="/structure/#vice">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="race_captain" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/pitchatent_top.png" />
-		<img src="/images/backgrounds/pitchatent_mid.jpg" />
-		<img src="/images/backgrounds/pitchatent_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("pitchatent"); ?>
 	<a href="https://www.facebook.com/chris.walton.790" target="_blank" class="profile" id="captain_profile">
 		<img src="/images/exec/chris-walton.jpg" alt="Chris Walton" />
 	</a>
@@ -159,16 +153,15 @@
 			<p>
 				Email: <a href="mailto:puzzler901@comcast.net">puzzler901@comcast.net</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Race Team Captain, <a href="/structure/#race_captain">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="social_chair" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/clemson spring 2014_top.png" alt="" />
-		<img src="/images/backgrounds/clemson spring 2014_mid.jpg" alt="" />
-		<img src="/images/backgrounds/clemson spring 2014_bot.png" alt="" />
-	</div>
+	<?php addFlowBackgroundImage("clemson spring 2014"); ?>
 	<a href="https://www.facebook.com/gina.d.holden" target="_blank" class="profile" id="social_profile">
 		<img src="/images/exec/gina-holden.jpg" alt="Gina Holden" />
 	</a>
@@ -186,16 +179,15 @@
 			<p>
 				Email: <a href="mailto:gina.m.holden+sailing@gmail.com">gina.m.holden+sailing@gmail.com</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Social Chair, <a href="/structure/#social_chair">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="fleet_captain" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/FUJI1137_top.png" />
-		<img src="/images/backgrounds/FUJI1137_mid.jpg" />
-		<img src="/images/backgrounds/FUJI1137_bot.png" />
-	</div>
+	<?php addFlowBackgroundImage("FUJI1137"); ?>
 	<a href="https://www.facebook.com/quantumlemur" target="_blank" class="profile" id="fleet_captain_profile">
 		<img src="/images/exec/mike-roberts.jpg" alt="Mike Roberts" />
 	</a>
@@ -211,16 +203,15 @@
 			<p>
 				Email: <a href="mailto:quantumlemur+sailing@gmail.com">quantumlemur+sailing@gmail.com</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Fleet Captain, <a href="/structure/#fleet_captain">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="treasurer" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSCF1513_top.png" alt="" />
-		<img src="/images/backgrounds/DSCF1513_mid.jpg" alt="" />
-		<img src="/images/backgrounds/DSCF1513_bot.png" alt="" />
-	</div>
+	<?php addFlowBackgroundImage("DSCF1513"); ?>
 	<a href="https://www.facebook.com/justin.eisenberg" target="_blank" class="profile" id="treasurer_profile">
 		<img src="/images/exec/justin-eisenberg.jpg" alt="Justin Eisenberg" />
 	</a>
@@ -242,16 +233,15 @@
 			<p>
 				Email: <a href="mailto:justin.eisenberg+sailing@gatech.edu">justin.eisenberg+sailing@gatech.edu</a>
 			</p>
+			<p>
+				To learn about the responsibilites of the Treasurer, <a href="/structure/#treasurer">click here</a>.
+			</p>
 		</div>
 	</div>
 </div>
 
 <div id="secretary" class="fixed">
-	<div class="background">
-		<img src="/images/backgrounds/DSCF1227_top.png" alt="" />
-		<img src="/images/backgrounds/DSCF1227_mid.jpg" alt="" />
-		<img src="/images/backgrounds/DSCF1227_bot.png" alt="" />
-	</div>
+	<?php addFlowBackgroundImage("DSCF1227"); ?>
 	<a href="https://www.facebook.com/joshua.kim.969" target="_blank" class="profile" id="secretary_profile">
 		<img src="/images/exec/josh-kim.jpg" alt="Josh Kim" />
 	</a>
@@ -267,6 +257,9 @@
 			</p>
 			<p>
 				Email: <a href="mailto:joshua0702+sailing@gmail.com">joshua0702+sailing@gmail.com</a>
+			</p>
+			<p>
+				To learn about the responsibilites of the Secretary, <a href="/structure/#secretary">click here</a>.
 			</p>
 		</div>
 	</div>
