@@ -1,7 +1,23 @@
 /* old gold: #E0AA0F */
 /* navy: #002b45 */
 
-.fixed > div {
-	top:1em;
-	left:2em;
+#benefits_d {
+  top:12%;
+  right:4em;
+}
+
+#dues_d {
+  top:12%;
+  right:3em;
+}
+
+#responsibilities_d {
+  top:12%;
+  left:5%;
+}
+
+#join_d {
+  top:30%;
+  left:4%;
+  max-width:38em;
 }

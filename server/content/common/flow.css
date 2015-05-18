@@ -30,6 +30,14 @@ body {
 	position:relative;
 }
 
+table {
+	border-spacing: 1em;
+}
+
+td {
+	text-align:center;
+}
+
 /* tile */
 div.dynamic, div.fixed {
 	width:100%;
@@ -144,7 +152,7 @@ div.fixed > * {
 	padding:1em;
 }
 
-.fixed > div  p {
+.fixed > div {
 	font-family:"Arial" "sans-serif";
 }
 
