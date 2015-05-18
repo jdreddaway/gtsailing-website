@@ -94,6 +94,9 @@
 				Stop by to learn more!
 				If you can't make a meeting, feel free to <a href="/contact">contact</a> us!
 			</p>
+			<p>
+				If you are already a member, you should check out the <a href="/members">members' section</a>!
+			</p>
 		</div>
 	</div>
 </div>
