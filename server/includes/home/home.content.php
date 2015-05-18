@@ -86,8 +86,7 @@
 		<div>
 			<p>
 				Feel free to click around the links below or in the sections above to learn more about the club.
-				If you would like to join the club, join our <a href="/contact">mailing list and Facebook groups</a> and come to one of our meetings.
-				The best way to get involved is meeting members and staying connected with them.
+				If you are interested in joining, <a href="membership">click here</a>!
 			</p>
 			<p>
 				Currently, we meet in CRC 251 at 7:30 on Thursdays, but check our <a href="/calendar">calendar</a> to be sure.

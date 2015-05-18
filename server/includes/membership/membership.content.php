@@ -86,14 +86,18 @@
 			</p>
 			<ul>
 				<li>Pay <a href="#dues">dues</a> to our <a href="/contact/#treasurer">treasurer</a> at the meeting. Reach out to him/her if you cannot attend.</li>
+				<li>Join the <a target="_blank" href="https://groups.google.com/forum/#!forum/gtsailing">mailing list</a></li>
 				<li>Join the <a target="_blank" href="https://www.facebook.com/groups/2200495519/">Facebook Group</a></li>
-				<li><a href="/login">Register</a> on the website</li>
+				<!--<li><a href="/login">Register</a> on the website</li>-->
 				<li>
 					Like the Facebook Page
 					<div class="fb-like" data-href="https://www.facebook.com/gtsailingclub" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 				</li>
 				<li><a href="/members"><strong>Go sailing!</strong></a></li>
 			</ul>
+			<p>
+				The best way to get involved is meeting members and staying connected with them, so make sure you come to the meetings!
+			</p>
 		</div>
 	</div>
 </div>
