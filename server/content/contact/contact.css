@@ -43,11 +43,10 @@ table {
 	float:left;
 }
 
-.fb-like {
-	background-color:white;
-	padding:1em;
-	border-radius:.5em;
-	float:left;
+#page_like {
+	display:block !important;
+	width:500px;
+	margin:0 auto;
 }
 
 #twitter_content {

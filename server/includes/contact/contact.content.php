@@ -60,17 +60,13 @@
 			<p>
 				Also like our Facebook page!
 			</p>
-			<div id="fb-root"></div>
-			<script type="text/javascript">
-				(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=664212880267915";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			</script>
-			<div class="fb-like" style="display: block;" data-href="https://www.facebook.com/gtsailingclub" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+			<div id="page_like" class="fb-page" data-href="https://www.facebook.com/gtsailingclub" data-hide-cover="false" data-show-facepile="true" data-show-posts="true" data-width="500">
+				<div class="fb-xfbml-parse-ignore">
+					<blockquote cite="https://www.facebook.com/gtsailingclub">
+						<a href="https://www.facebook.com/gtsailingclub">GT Sailing Club</a>
+					</blockquote>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
