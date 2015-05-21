@@ -1,4 +1,7 @@
 <?php
+
+namespace Endpoints;
+
 abstract class Endpoint {
 
   public abstract function options();
