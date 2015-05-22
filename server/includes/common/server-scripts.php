@@ -1,15 +1,6 @@
 <?php
 	$DEBUG = true;
-
-	function __autoload($className) {
-		$path = $_SERVER['DOCUMENT_ROOT'] . '/../classes/' . $className . '.class.php';
-		if (file_exists($path)) {
-			require($path);
-		} else {
-			throw new Exception("Could not load $className");
-		}
-	}
-
+	
 	function requireOnce($path) {
 		require_once($_SERVER['DOCUMENT_ROOT'] . '/../includes' . $path);
 	}
@@ -32,5 +23,7 @@
 			</div>
 		");
 	}
+
+	requireOnce("/../vendor/autoload.php");
 
 ?>
