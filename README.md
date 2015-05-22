@@ -28,9 +28,17 @@
 ## Technology
 * The code is in PHP, HTML, CSS, and javascript.
 * Some utilities are written in Java.
-* I use [USBWebServer](http://www.usbwebserver.net/en/) (also located in the utilites folder) to run the site locally, but any PHP host should work.
+* I use [XAMPP](https://www.apachefriends.org/index.html) to run the site locally, but any PHP host should work.
 Make sure to make the `server/content/` folder the root of the server.
 * Manage the website using www.websitesettings.com. Credentials are located on t-square.
+
+## Developer Setup (using XAMPP)
+
+1. Clone the git project onto your local computer.
+1. Download [XAMPP](https://www.apachefriends.org/index.html)
+1. Intall XAMPP in `trunk/server/xampp`
+1. Change `DocumentRoot` to `<path_to_trunk>/server/content` in `trunk/server/xampp/apache/conf/extra/httpd-ssl.conf`
+1. Change `DocumentRoot` and `<Directory ...>` to `<path_to_trunk>/server/content` in `trunk/server/xampp/apache/conf/httpd.conf`
 
 ## Structure
 ### Organization
