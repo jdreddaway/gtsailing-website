@@ -4,16 +4,18 @@
 	fbInitializedEvent.hasOccurred = false;
 
 	window.fbAsyncInit = function() {
+		FB.Event.subscribe("auth.statusChange", sayHello);
+
 		FB.init({
 			appId      : '1498857583704986', // local_dev
 			//appId      : '1498792513711493', // prod
 			xfbml      : true,
-			version    : 'v2.1'
+			version    : 'v2.3',
+			status: true
 		});
 	
 		fbInitializedEvent.hasOccurred = true;
 		document.dispatchEvent(fbInitializedEvent);
-		sayHello();
 	};
 
 	(function(d, s, id) {
@@ -24,19 +26,17 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	} (document, 'script', 'facebook-jssdk'));
 
-	function sayHello() {
-		FB.getLoginStatus(function(statusResponse) {
-			var greetingSpan = document.getElementById('greeting');
-			
-			if (statusResponse.status === 'connected') {
-				// Logged into your app and Facebook.
-				FB.api('/me', function(meResponse) {
-					greetingSpan.innerHTML = "<span>Hello " + meResponse.name + "!</span>";
-				});
-			} else {
-				greetingSpan.innerHTML = "";
-			}
-		});
+	function sayHello(statusResponse) {
+		var greetingSpan = document.getElementById('greeting');
+		
+		if (statusResponse.status === 'connected') {
+			// Logged into your app and Facebook.
+			FB.api('/me', function(meResponse) {
+				greetingSpan.innerHTML = "<span>Hello " + meResponse.name + "!</span>";
+			});
+		} else {
+			greetingSpan.innerHTML = "";
+		}
 	}
 
 </script>

@@ -33,36 +33,4 @@
 		");
 	}
 
-	/**
-	 * Calls the appropriate method on $endpoint to handle the request.
-	 *
-	 * @param Endpoint $endpoint
-	*/
-	function handleApiRequest($endpoint) {
-		$method = $_SERVER['REQUEST_METHOD'];
-
-		switch ($method) {
-			case 'OPTIONS':
-				$endpoint->options();
-				break;
-			case 'GET':
-				$endpoint->get();
-				break;
-			case 'HEAD':
-				$endpoint->head();
-				break;
-			case 'POST':
-				$endpoint->post();
-				break;
-			case 'PUT':
-				$endpoint->put();
-				break;
-			case 'DELETE':
-				$endpoint->delete();
-				break;
-			default:
-				throw new Exception("Unrecognized method $method");
-		}
-	
-	}
 ?>
