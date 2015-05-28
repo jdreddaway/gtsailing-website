@@ -3,11 +3,14 @@
 namespace GTSailing;
 
 use GTSailing\RequestException as RequestException;
+use GTSailing\Endpoints\Endpoint;
+use GTSailing\Endpoints\ResponseWriter;
 
 class ApiRouter {
 
-  function __construct($endpoint) {
+  function __construct(Endpoint $endpoint, ResponseWriter $responseWriter) {
     $this->endpoint = $endpoint;
+    $this->responseWriter = $responseWriter;
   }
 
   /**
@@ -41,7 +44,8 @@ class ApiRouter {
         default:
           throw new \Exception("Unrecognized method $method");
       }
-    } catch (RequestException $re) {
+    } catch (\GTSailing\Endpoints\RequestException $re) {
+      $this->responseWriter->writeException($re);
       return;
     }
   }

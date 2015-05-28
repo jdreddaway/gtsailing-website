@@ -1,7 +1,5 @@
 <?php
 
-  require_once("test_init.php");
-
   use GTSailing\Endpoints\Endpoint as Endpoint;
 
   class EndpointTest extends PHPUnit_Framework_TestCase {

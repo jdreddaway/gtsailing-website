@@ -2,9 +2,20 @@
 
 namespace GTSailing\Endpoints;
 
-use GTSailing\Endpoints\Endpoint as Endpoint;
+use Facebook\FacebookJavaScriptLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookSession;
+use Facebook\GraphUser;
+
+use GTSailing\Mills\UserMill;
 
 class UserEndpoint extends Endpoint {
+
+  public function __construct(UserMill $userMill, JsonSerializer $serializer, ResponseWriter $responseWriter) {
+    $this->userMill = $userMill;
+    $this->serializer = $serializer;
+    $this->responseWriter = $responseWriter;
+  }
 
   public function options() {
     $this->returnNotImplemented();
@@ -14,7 +25,16 @@ class UserEndpoint extends Endpoint {
    * Returns the user from GT Sailing's database
   */
   public function get() {
-    $this->returnNotImplemented();
+    if (!isset($_GET['accessToken'])) {
+      throw new BadRequestException('accessToken query parameter must be set.');
+    }
+
+    $user = $this->userMill->getUserByFBAccessToken($_GET['accessToken']);
+    $userResource = new UserResource($user);
+    $body = $this->serializer->serialize($userResource);
+
+    $this->responseWriter->setStatusCode(200);
+    $this->responseWriter->writeBody($body);
   }
 
   public function head() {

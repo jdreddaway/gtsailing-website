@@ -1,12 +1,12 @@
 set myPath=%~dp0
 
 call "%myPath%../set_up_path.bat"
-php composer.phar install -d "%myPath%../server"
+REM php composer.phar install -d "%myPath%../server"
 
 REM Below updates packages to latest version
-REM php composer.phar update
+php composer.phar update -d "%myPath%../server"
 
 REM Below fetches packages for deployment. Before running, delete the vendor folder.
-REM php composer.phar install --no-dev
+REM php composer.phar install -d "%myPath%../server" --no-dev
 
 pause

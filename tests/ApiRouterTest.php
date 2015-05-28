@@ -1,10 +1,8 @@
 <?php
 
-require_once("test_init.php");
-
-use GTSailing\ApiRouter as ApiRouter;
-use GTSailing\RequestException as RequestException;
-use GTSailing\Endpoints\Endpoint as Endpoint;
+use GTSailing\ApiRouter;
+use GTSailing\Endpoints\BadRequestException;
+use GTSailing\Endpoints\Endpoint;
 
 class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
@@ -12,7 +10,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('get');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'GET';
     $router->handleRequest();
@@ -22,7 +22,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('options');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'OPTIONS';
     $router->handleRequest();
@@ -32,7 +34,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('post');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'POST';
     $router->handleRequest();
@@ -42,7 +46,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('put');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'PUT';
     $router->handleRequest();
@@ -52,7 +58,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('head');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'HEAD';
     $router->handleRequest();
@@ -62,7 +70,9 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
     $endpointMock->expects($this->once())->method('delete');
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'DELETE';
     $router->handleRequest();
@@ -72,16 +82,23 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
    * @expectedException Exception
   */
   public function testHandleRequest_UnknownMethod() {
-    $router = new ApiRouter(null);
+    $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+
+    $router = new ApiRouter($endpointMock, $writerMock);
     $_SERVER['REQUEST_METHOD'] = 'UNKNOWN';
     $router->handleRequest();
   }
 
   public function testHandleBadRequest_Get() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('get')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("huh");
+    $endpointMock->method('get')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'GET';
     $router->handleRequest();
@@ -89,9 +106,13 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
   public function testHandleBadRequest_Post() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('post')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("bad");
+    $endpointMock->expects($this->once())->method('post')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'POST';
     $router->handleRequest();
@@ -99,9 +120,13 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
   public function testHandleBadRequest_Head() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('head')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("bad");
+    $endpointMock->expects($this->once())->method('head')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'HEAD';
     $router->handleRequest();
@@ -109,9 +134,13 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
   public function testHandleBadRequest_Options() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('options')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("bad");
+    $endpointMock->expects($this->once())->method('options')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'OPTIONS';
     $router->handleRequest();
@@ -119,9 +148,13 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
   public function testHandleBadRequest_Put() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('put')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("bad");
+    $endpointMock->expects($this->once())->method('put')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'PUT';
     $router->handleRequest();
@@ -129,9 +162,13 @@ class ApiRouterTest extends PHPUnit_Framework_TestCase {
 
   public function testHandleBadRequest_Delete() {
     $endpointMock = $this->getMockForAbstractClass('GTSailing\Endpoints\Endpoint');
-    $endpointMock->expects($this->any())->method('delete')->will($this->throwException(new RequestException()));
+    $ex = new BadRequestException("bad");
+    $endpointMock->expects($this->once())->method('delete')->will($this->throwException($ex));
 
-    $router = new ApiRouter($endpointMock);
+    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')->setMethods(array('writeException'))->getMock();
+    $writerMock->expects($this->once())->method('writeException')->with($ex);
+
+    $router = new ApiRouter($endpointMock, $writerMock);
 
     $_SERVER['REQUEST_METHOD'] = 'DELETE';
     $router->handleRequest();

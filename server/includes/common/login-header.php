@@ -7,8 +7,7 @@
 		FB.Event.subscribe("auth.statusChange", sayHello);
 
 		FB.init({
-			appId      : '1498857583704986', // local_dev
-			//appId      : '1498792513711493', // prod
+			appId      : <?php global $appID; print($appID); ?>,
 			xfbml      : true,
 			version    : 'v2.3',
 			status: true

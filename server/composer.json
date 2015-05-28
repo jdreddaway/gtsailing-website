@@ -3,9 +3,16 @@
     "facebook/php-sdk-v4" : "4.0.*"
   },
 
+  "require-dev": {
+    "phpunit/phpunit": "4.6.*",
+    "phpunit/dbunit": ">=1.2",
+    "phake/phake": "@stable"
+  },
+
   "autoload": {
     "psr-4": {
-      "GTSailing\\": "classes/"
+      "GTSailing\\": "classes/",
+      "Tests\\": "../tests/"
     }
   }
 }
