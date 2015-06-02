@@ -26,7 +26,8 @@ class DatabaseTestCase extends PHPUnit_Extensions_Database_TestCase
   }
 
   public function getDataSet() {
-    return new PHPUnit_Extensions_Database_DataSet_YamlDataSet(__DIR__.'\data.yml');
+    $data = file_get_contents(__DIR__.'\data.yml');
+    return new PHPUnit_Extensions_Database_DataSet_YamlDataSet($data);
   }
 
   protected static function getPdo() {

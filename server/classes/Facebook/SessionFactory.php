@@ -7,7 +7,7 @@ use Facebook\FacebookSession;
 class SessionFactory {
 
   public function create($accessToken) {
-    return new FacebookSession($_GET['accessToken']);
+    return new FacebookSession($accessToken);
   }
 }
 
