@@ -11,7 +11,7 @@ class UserRepoTest extends Tests\Repositories\DatabaseTestCase {
   }
 
   /**
-   * @expectedException GTSailing\Repositories\NotFoundException
+   * @expectedException GTSailing\Repositories\DoesNotExistException
    */
   public function testLoadByFBID_IDNotFound() {
     $repo = new UserRepo(self::getPdo());

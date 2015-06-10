@@ -8,6 +8,8 @@ use Facebook\FacebookSession;
 use Facebook\GraphUser;
 
 use GTSailing\Mills\UserMill;
+use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Repositories\DoesNotExistException;
 
 class UserEndpoint extends Endpoint {
 
@@ -29,7 +31,14 @@ class UserEndpoint extends Endpoint {
       throw new BadRequestException('accessToken query parameter must be set.');
     }
 
-    $user = $this->userMill->getUserByFBAccessToken($_GET['accessToken']);
+    try {
+      $user = $this->userMill->getUserByFBAccessToken($_GET['accessToken']);
+    } catch (InvalidFBSessionException $fbEx) {
+      throw new BadRequestException($fbEx->getMessage(), $fbEx);
+    } catch (DoesNotExistException $dne) {
+      throw new NotFoundException($dne->getMessage(), $dne);
+    }
+
     $userResource = new UserResource($user);
     $body = $this->serializer->serialize($userResource);
 

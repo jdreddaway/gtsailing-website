@@ -2,10 +2,10 @@
 
 namespace GTSailing\Endpoints;
 
-class BadRequestException extends RequestException {
+class NotFoundException extends RequestException {
 
   function __construct($message, \Exception $previous = null) {
-    parent::__construct(400, $message, $previous);
+    parent::__construct(404, $message, $previous);
   }
 }
 

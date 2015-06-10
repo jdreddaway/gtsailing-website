@@ -1,6 +1,6 @@
 <?php
 
-use GTSailing\Endpoints\BadRequestException;
+use GTSailing\Mills\InvalidFBSessionException;
 use GTSailing\Mills\UserMill;
 
 class UserMillTest extends PHPUnit_Framework_TestCase {
@@ -88,9 +88,9 @@ class UserMillTest extends PHPUnit_Framework_TestCase {
 
     try {
       $mill->getUserByFBAccessToken('super_awesome_token');
-      $this->fail("Should have thrown BadRequestException");
-    } catch (BadRequestException $bre) {
-      $this->assertEquals("bad session", $bre->getMessage());
+      $this->fail("Should have thrown InvalidFBSessionException");
+    } catch (InvalidFBSessionException $ex) {
+      $this->assertEquals("bad session", $ex->getMessage());
     }
   }
 

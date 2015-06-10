@@ -1,12 +1,17 @@
 <?php
 
+use Tests\TestCase;
+
 use GTSailing\Domain\User;
 use GTSailing\Endpoints\JsonSerializer;
 use GTSailing\Endpoints\UserEndpoint;
 use GTSailing\Endpoints\UserResource;
 use GTSailing\Endpoints\ResponseWriter;
+use GTSailing\Endpoints\NotFoundException;
+use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Repositories\DoesNotExistException;
 
-class UserEndpointTest extends PHPUnit_Framework_TestCase {
+class UserEndpointTest extends TestCase {
 
   public function testGet() {
     $_GET['accessToken'] = 'sometoken';
@@ -62,6 +67,40 @@ class UserEndpointTest extends PHPUnit_Framework_TestCase {
       ->getMock();
 
     $endpoint = new UserEndpoint($millMock, $serializerMock, $writerMock);
+    $endpoint->get();
+  }
+
+  /**
+   * @expectedException GTSailing\Endpoints\NotFoundException
+   * @expectedExceptionMessage baddd
+   */
+  function testGet_UserDoesNotExist() {
+    $_GET['accessToken'] = 'super_tok';
+
+    $millProph = $this->prophesize('GTSailing\Mills\UserMill');
+    $millProph->getUserByFBAccessToken('super_tok')->willThrow(new DoesNotExistException('baddd'));
+
+    $serializerProph = $this->prophesize('GTSailing\Endpoints\JsonSerializer');
+    $writerProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+
+    $endpoint = new UserEndpoint($millProph->reveal(), $serializerProph->reveal(), $writerProph->reveal());
+    $endpoint->get();
+  }
+
+  /**
+   * @expectedException GTSailing\Endpoints\BadRequestException
+   * @expectedExceptionMessage baddd
+   */
+  function testGet_InvalidFBSession() {
+    $_GET['accessToken'] = 'super_tok';
+
+    $millProph = $this->prophesize('GTSailing\Mills\UserMill');
+    $millProph->getUserByFBAccessToken('super_tok')->willThrow(new InvalidFBSessionException('baddd'));
+
+    $serializerProph = $this->prophesize('GTSailing\Endpoints\JsonSerializer');
+    $writerProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+
+    $endpoint = new UserEndpoint($millProph->reveal(), $serializerProph->reveal(), $writerProph->reveal());
     $endpoint->get();
   }
 }

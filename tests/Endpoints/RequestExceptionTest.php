@@ -14,12 +14,18 @@ class RequestExceptionTest extends PHPUnit_Framework_TestCase {
     $exception = new RequestExceptionMock(413, "yolo");
     $this->assertEquals('yolo', $exception->getMessage());
   }
+
+  function testGetPrevious() {
+    $prev = new \Exception('haha');
+    $ex = new RequestExceptionMock(413, 'yolo', $prev);
+    $this->assertEquals($prev, $ex->getPrevious());
+  }
 }
 
 class RequestExceptionMock extends RequestException {
 
-  function __construct($statusCode, $message) {
-    parent::__construct($statusCode, $message);
+  function __construct($statusCode, $message, $previous = null) {
+    parent::__construct($statusCode, $message, $previous);
   }
 }
 

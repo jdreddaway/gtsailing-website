@@ -9,8 +9,8 @@ abstract class RequestException extends \Exception {
 
   private $statusCode;
 
-  function __construct($statusCode, $message) {
-    parent::__construct($message);
+  function __construct($statusCode, $message, \Exception $previous = null) {
+    parent::__construct($message, 0, $previous);
     $this->statusCode = $statusCode;
   }
 

@@ -2,8 +2,11 @@
 
 namespace GTSailing\Endpoints;
 
+use GTSailing\Endpoints\NotFoundException;
 use GTSailing\Endpoints\ResponseWriter;
 use GTSailing\Mills\LoginMill;
+use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Repositories\DoesNotExistException;
 
 class LoginEndpoint extends Endpoint {
 
@@ -34,13 +37,22 @@ class LoginEndpoint extends Endpoint {
 
   /**
    * Logs a user in to the system 
+   * @returns 201 if the user is successfully logged in; 404 if the user is not in the GTSailing database
   */
   public function post() {
     if (!isset($_POST['accessToken'])) {
       throw new BadRequestException('accessToken was not set.');
     }
 
-    $this->loginMill->logInByFBAccessToken($_POST['accessToken']);
+    try {
+      $this->loginMill->logInByFBAccessToken($_POST['accessToken']);
+    } catch (InvalidFBSessionException $fbEx) {
+      throw new BadRequestException($fbEx->getMessage(), $fbEx);
+    } catch (DoesNotExistException $dne) {
+      throw new NotFoundException($dne->getMessage(), $dne);
+    }
+
+    $this->writer->setStatusCode(201);
   }
 
   public function put() {

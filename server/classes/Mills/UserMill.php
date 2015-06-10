@@ -4,7 +4,6 @@ namespace GTSailing\Mills;
 
 use Facebook\GraphUser;
 
-use GTSailing\Endpoints\BadRequestException;
 use GTSailing\Facebook\Initializer;
 use GTSailing\Facebook\Requester;
 use GTSailing\Facebook\SessionFactory;
@@ -33,7 +32,7 @@ class UserMill {
       // Exception: Graph API returned info, but it may mismatch the current app or have expired.
       // TODO: handle each exception differently. See https://developers.facebook.com/docs/php/FacebookRequestException/4.0.0
       error_log($ex->getMessage());
-      throw new BadRequestException($ex->getMessage());
+      throw new InvalidFBSessionException($ex->getMessage());
     }
 
     $response = $this->fbRequester->request($session, "GET", "/me");
@@ -41,7 +40,6 @@ class UserMill {
     $fbID = $user->getId();
 
     $gtUser = $this->userRepo->loadByFBID($fbID);
-    //TODO catch when id is not found
 
     return $gtUser;
   }

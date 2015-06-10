@@ -15,7 +15,7 @@ class UserRepo extends Repo {
     $result = $this->connection->query("SELECT * from Users where fb_id=$id");
 
     if ($result->rowCount() == 0) {
-      throw new NotFoundException("Could not find user with FB ID $id.");
+      throw new DoesNotExistException("Could not find user with FB ID $id.");
     }
 
     $row = $result->fetch();

@@ -1,5 +1,9 @@
 var currentlyActiveScrollLink = undefined;
 
+$.ajaxSetup({
+	accepts: "application/json",
+});
+
 function scrollTo(elementID) {
 	var element = document.getElementById(elementID);
 	$.scrollTo(element, 1000);

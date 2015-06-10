@@ -1,6 +1,6 @@
 <div id="fb-root"></div>
 <script>
-	function redirect() {
+	function redirect(loginEvent) {
 		<?php 
 			if (isset($_GET['prev'])) {
 				$url = $_GET['prev'];
@@ -12,9 +12,7 @@
 		window.location.replace("<?php echo $url; ?>");
 	}
 
-	document.addEventListener("fbInitialized", function() {
-		FB.Event.subscribe("auth.statusChange", redirect);
-	});
+	document.addEventListener("login_success", redirect);
 </script>
 <div id="status">
 </div>

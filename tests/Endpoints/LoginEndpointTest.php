@@ -3,6 +3,8 @@
 use Tests\TestCase;
 use GTSailing\Endpoints\LoginEndpoint;
 use GTSailing\Domain\NotLoggedInException;
+use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Repositories\DoesNotExistException;
 
 class LoginEndpointTest extends TestCase {
 
@@ -13,6 +15,7 @@ class LoginEndpointTest extends TestCase {
     $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->shouldBeCalledTimes(1);
 
     $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $responseWriterProph->setStatusCode(201)->shouldBeCalledTimes(1);
 
     $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
     $endpoint->post();
@@ -26,6 +29,37 @@ class LoginEndpointTest extends TestCase {
 
     $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
     $loginMillProph->logInByFBAccessToken()->shouldNotBeCalled();
+
+    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint->post();
+  }
+
+  /**
+   * @expectedException GTSailing\Endpoints\BadRequestException
+   * @expectedExceptionMessage bad_sessionn
+   */
+  function testPost_InvalidFBSession() {
+    $_POST['accessToken'] = 'mysuperfbaccesstoken';
+
+    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
+    $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->willThrow(new InvalidFBSessionException('bad_sessionn'));
+
+    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+
+    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint->post();
+  }
+
+  /**
+   * @expectedException GTSailing\Endpoints\NotFoundException
+   */
+  function testPost_UserNotRegistered() {
+    $_POST['accessToken'] = 'mysuperfbaccesstoken';
+
+    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
+    $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->willThrow(new DoesNotExistException('user not found'));
+
+    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
 
     $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
     $endpoint->post();
