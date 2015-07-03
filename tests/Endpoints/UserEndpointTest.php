@@ -2,7 +2,7 @@
 
 use Tests\TestCase;
 
-use GTSailing\Domain\User;
+use GTSailing\Domain\Account\User;
 use GTSailing\Endpoints\JsonSerializer;
 use GTSailing\Endpoints\UserEndpoint;
 use GTSailing\Endpoints\UserResource;
@@ -16,7 +16,7 @@ class UserEndpointTest extends TestCase {
   public function testGet() {
     $_GET['accessToken'] = 'sometoken';
 
-    $user = new User(57);
+    $user = new User(57, 'first', 'last', 'email', 'phone', 'fbID');
 
     $millMock = $this->getMockBuilder('GTSailing\Mills\UserMill')
       ->setMethods(array('getUserByFBAccessToken'))

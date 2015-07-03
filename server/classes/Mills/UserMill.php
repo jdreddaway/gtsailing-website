@@ -7,7 +7,7 @@ use Facebook\GraphUser;
 use GTSailing\Facebook\Initializer;
 use GTSailing\Facebook\Requester;
 use GTSailing\Facebook\SessionFactory;
-use GTSailing\Repositories\UserRepo;
+use GTSailing\Repositories\Account\UserRepo;
 
 class UserMill {
 
@@ -42,6 +42,10 @@ class UserMill {
     $gtUser = $this->userRepo->loadByFBID($fbID);
 
     return $gtUser;
+  }
+
+  public function createUser($email, $firstName, $lastName, $phone, $hashedPassword, $fbID) {
+    return $this->userRepo->create($email, $firstName, $lastName, $phone, $hashedPassword, $fbID);
   }
 
 }

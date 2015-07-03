@@ -16,10 +16,10 @@ abstract class Endpoint {
 
   public abstract function delete();
 
+  // public function trace() http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.8
+
   protected function returnNotImplemented() {
     http_response_code(501);
   }
-
-  // public function trace() http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.8
 }
 ?>

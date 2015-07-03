@@ -1,11 +1,11 @@
 <?php
 
-use GTSailing\Domain\Session;
+use GTSailing\Domain\Security\Session;
 
 class SessionTest extends Tests\TestCase {
 
   function testSetCurrentUser() {
-    $userProph = $this->prophesize('GTSailing\Domain\User');
+    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
     $session_arr = array();
     $session = new Session($session_arr);
     $session->logUserIn($userProph->reveal());
@@ -14,7 +14,7 @@ class SessionTest extends Tests\TestCase {
   }
 
   function testGetLoggedInUser() {
-    $userProph = $this->prophesize('GTSailing\Domain\User');
+    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
     $session_arr = array('user' => $userProph->reveal());
     $session = new Session($session_arr);
     
@@ -22,10 +22,10 @@ class SessionTest extends Tests\TestCase {
   }
 
   /**
-   * @expectedException GTSailing\Domain\NotLoggedInException
+   * @expectedException GTSailing\Domain\Security\NotLoggedInException
    */
   function testGetLoggedInUser_NoUserLoggedIn() {
-    $userProph = $this->prophesize('GTSailing\Domain\User');
+    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
     $session_arr = array();
     $session = new Session($session_arr);
     $session->getLoggedInUser();

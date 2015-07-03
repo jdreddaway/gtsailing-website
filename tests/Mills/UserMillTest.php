@@ -3,7 +3,7 @@
 use GTSailing\Mills\InvalidFBSessionException;
 use GTSailing\Mills\UserMill;
 
-class UserMillTest extends PHPUnit_Framework_TestCase {
+class UserMillTest extends Tests\TestCase {
 
   function testGetUserByFBAccessToken() {
     $sessionMock = $this->getMockBuilder('Facebook\FacebookSession')
@@ -41,7 +41,7 @@ class UserMillTest extends PHPUnit_Framework_TestCase {
 
     $user = 'someuser';
 
-    $userRepoMock = $this->getMockBuilder('GTSailing\Repositories\UserRepo')
+    $userRepoMock = $this->getMockBuilder('GTSailing\Repositories\Account\UserRepo')
       ->setMethods(array('loadByFBId'))
       ->disableOriginalConstructor()
       ->getMock();
@@ -77,7 +77,7 @@ class UserMillTest extends PHPUnit_Framework_TestCase {
       ->getMock();
     $initializerMock->expects($this->once())->method('initialize');
 
-    $userRepoMock = $this->getMockBuilder('GTSailing\Repositories\UserRepo')
+    $userRepoMock = $this->getMockBuilder('GTSailing\Repositories\Account\UserRepo')
       ->setMethods(array('loadByFBId'))
       ->disableOriginalConstructor()
       ->getMock();
@@ -92,6 +92,20 @@ class UserMillTest extends PHPUnit_Framework_TestCase {
     } catch (InvalidFBSessionException $ex) {
       $this->assertEquals("bad session", $ex->getMessage());
     }
+  }
+
+  function testCreate() {
+    $userRepoProph = $this->prophesize('GTSailing\Repositories\Account\UserRepo');
+    $userRepoProph->create('email@sup.com', 'first', 'last', 'phone', 'pass', 19898)->willReturn(57);
+
+    $fbSessionFactoryProph = $this->prophesize('GTSailing\Facebook\SessionFactory');
+    $requesterProph = $this->prophesize('GTSailing\Facebook\Requester');
+    $initializerProph = $this->prophesize('GTSailing\Facebook\Initializer');
+
+    $mill = new UserMill($userRepoProph->reveal(), $fbSessionFactoryProph->reveal(), $requesterProph->reveal(), $initializerProph->reveal());
+    $id = $mill->createUser('email@sup.com', 'first', 'last', 'phone', 'pass', 19898);
+
+    $this->assertEquals(57, $id);
   }
 
 }

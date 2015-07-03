@@ -11,7 +11,7 @@ class ResponseWriterTest extends PHPUnit_Framework_TestCase {
       ->disableOriginalConstructor()
       ->getMock();
     $exMock->expects($this->once())->method('getStatusCode')->willReturn(414);
-    $exMock->expects($this->once())->method('getMessage')->willReturn('sup homie');
+    $exMock->expects($this->once())->method('getMessage')->willReturn('');
 
     $writer = new ResponseWriter();
     $writer->writeException($exMock);
@@ -21,7 +21,7 @@ class ResponseWriterTest extends PHPUnit_Framework_TestCase {
 
   function testWriteBody() {
     $writer = new ResponseWriter();
-    $writer->writeBody('hai');
+    $writer->writeBody('');
     //can't really assert that something was printed, but at least checks that the method exists
   }
 

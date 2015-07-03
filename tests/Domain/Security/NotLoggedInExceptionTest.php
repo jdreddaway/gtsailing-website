@@ -1,6 +1,6 @@
 <?php
 
-use GTSailing\Domain\NotLoggedInException;
+use GTSailing\Domain\Security\NotLoggedInException;
 
 class NotLoggedInExceptionTest extends Tests\TestCase {
 

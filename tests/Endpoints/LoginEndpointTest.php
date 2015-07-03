@@ -2,7 +2,7 @@
 
 use Tests\TestCase;
 use GTSailing\Endpoints\LoginEndpoint;
-use GTSailing\Domain\NotLoggedInException;
+use GTSailing\Domain\Security\NotLoggedInException;
 use GTSailing\Mills\InvalidFBSessionException;
 use GTSailing\Repositories\DoesNotExistException;
 

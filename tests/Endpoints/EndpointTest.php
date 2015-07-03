@@ -5,11 +5,13 @@
   class EndpointTest extends PHPUnit_Framework_TestCase {
 
     public function testReturnNotImplemented() {
-      $endpoint = new MockEndpoint();
+      $exFactoryProph = $this->prophesize('GTSailing\Endpoints\BadRequestExceptionFactory');
+      $endpoint = new MockEndpoint($exFactoryProph->reveal());
       $endpoint->publicReturnNotImplemented();
 
       $this->assertEquals(501, http_response_code());
     }
+
   }
 
   class MockEndpoint extends Endpoint {
@@ -35,7 +37,6 @@
     public function publicReturnNotImplemented() {
       $this->returnNotImplemented();
     }
-
   }
 
 ?>

@@ -26,7 +26,7 @@ class LoginEndpoint extends Endpoint {
     try {
       $this->loginMill->getLoggedInUser();
       $this->writer->writeBody("true");
-    } catch (\GTSailing\Domain\NotLoggedInException $nlie) {
+    } catch (\GTSailing\Domain\Security\NotLoggedInException $nlie) {
       $this->writer->writeBody('false');
     }
   }

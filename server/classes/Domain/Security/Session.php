@@ -1,6 +1,6 @@
 <?php
 
-namespace GTSailing\Domain;
+namespace GTSailing\Domain\Security;
 
 class Session {
 

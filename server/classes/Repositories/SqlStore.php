@@ -2,7 +2,7 @@
 
 namespace GTSailing\Repositories;
 
-abstract class Repo {
+abstract class SqlStore {
 
   protected $connection;
 

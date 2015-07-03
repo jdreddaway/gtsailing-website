@@ -2,7 +2,7 @@
 
 namespace GTSailing\Repositories;
 
-use GTSailing\Domain\Session;
+use GTSailing\Domain\Security\Session;
 
 class SessionRepo {
 
