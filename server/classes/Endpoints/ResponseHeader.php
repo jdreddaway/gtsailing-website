@@ -1,6 +1,6 @@
 <?php
 
-namespace GTSailing;
+namespace GTSailing\Endpoints;
 
 class ResponseHeader {
 

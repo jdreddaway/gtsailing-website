@@ -1,7 +1,6 @@
 <?php
 
-use GTSailing\ApiRouter;
-use GTSailing\Endpoints\BadRequestException;
+use GTSailing\Endpoints\ApiRouter;use GTSailing\Endpoints\BadRequestException;
 use GTSailing\Endpoints\Endpoint;
 
 class ApiRouterTest extends PHPUnit_Framework_TestCase {

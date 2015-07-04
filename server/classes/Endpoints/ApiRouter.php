@@ -1,10 +1,6 @@
 <?php
 
-namespace GTSailing;
-
-use GTSailing\RequestException as RequestException;
-use GTSailing\Endpoints\Endpoint;
-use GTSailing\Endpoints\ResponseWriter;
+namespace GTSailing\Endpoints;
 
 class ApiRouter {
 
