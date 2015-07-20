@@ -4,6 +4,7 @@ namespace Tests\DI;
 
 use DI\ContainerBuilder;
 use GTSailing\Repositories\UserSqlStore;
+use Prophecy\Prophet;
 use Tests\DI\ThisShouldBeMockedException;
 
 /**
@@ -11,10 +12,10 @@ use Tests\DI\ThisShouldBeMockedException;
  */
 class TestContainerBuilderFactory {
 
-  function create() {
+  function create(Prophet $prophet) {
     $builder = new ContainerBuilder();
     $builder->addDefinitions([
-      UserSqlStore::class => new ThisShouldBeMockedException()
+      UserSqlStore::class => $prophet->prophesize(UserSqlStore::class)->reveal()
     ]);
     return $builder;
   }

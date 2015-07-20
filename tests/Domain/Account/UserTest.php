@@ -7,7 +7,7 @@ use GTSailing\Domain\Account\User;
 class UserTest extends \Tests\TestCase {
 
   function testGetters() {
-    $user = new User(57, 'firstname', 'lastname', 'email', 'phone', 'fb_id');
+    $user = new User(57, 'firstname', 'lastname', 'email', 'phone', 'fb_id', 'hashed_password');
     $this->assertEquals(57, $user->getID());
     $this->assertEquals('firstname', $user->getFirstName());
     $this->assertEquals('lastname', $user->getLastName());

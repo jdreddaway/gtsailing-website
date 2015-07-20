@@ -1,6 +1,6 @@
 <?php
 
-namespace GTSailing\Domain\Account;
+namespace GTSailing\Domain\Validation;
 
 class Validator {
 

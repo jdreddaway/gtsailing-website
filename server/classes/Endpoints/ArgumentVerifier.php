@@ -20,8 +20,4 @@ class ArgumentVerifier {
       $this->badRequestExceptionFactory->throwMissingPostFieldsException($missing);
     }
   }
-
-  public function sanitize($userInput) {
-    //TODO implement (wrap the php function)
-  }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use Tests\DI\ContainerBuilder;
+
 use GTSailing\Mills\InvalidFBSessionException;
 use GTSailing\Mills\UserMill;
 
@@ -108,4 +110,11 @@ class UserMillTest extends Tests\TestCase {
     $this->assertEquals(57, $id);
   }
 
+  function testCreate_InvalidEmail() {
+    //TODO finish; should throw a ValidationError with array of invalid fields
+  }
+
+  function testCreate_InvalidFirstName() {
+    //TODO finish
+  }
 }

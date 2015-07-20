@@ -2,6 +2,8 @@
 
 namespace GTSailing\Domain\Security;
 
+use GTSailing\Domain\Account\User;
+
 class Session {
 
   private $sessionVar;

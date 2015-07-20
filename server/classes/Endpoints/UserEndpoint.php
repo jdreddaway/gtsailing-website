@@ -7,14 +7,22 @@ use Facebook\FacebookRequest;
 use Facebook\FacebookSession;
 use Facebook\GraphUser;
 
+use GTSailing\Domain\Account\UserCreator;
 use GTSailing\Mills\UserMill;
 use GTSailing\Mills\InvalidFBSessionException;
 use GTSailing\Repositories\DoesNotExistException;
+use GTSailing\Repositories\Account\UserRepo;
 
 class UserEndpoint extends Endpoint {
 
-  public function __construct(UserMill $userMill, JsonSerializer $serializer, ResponseWriter $responseWriter) {
+  private $userMill;
+  private $userCreator;
+  private $serializer;
+  private $responseWriter;
+
+  public function __construct(UserMill $userMill, UserCreator $userCreator, JsonSerializer $serializer, ResponseWriter $responseWriter) {
     $this->userMill = $userMill;
+    $this->userCreator = $userCreator;
     $this->serializer = $serializer;
     $this->responseWriter = $responseWriter;
   }
@@ -51,7 +59,16 @@ class UserEndpoint extends Endpoint {
   }
 
   public function post() {
-    $this->returnNotImplemented();
+    $email = $_POST['email'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $fbID = $_POST['fbID'];
+    
+    $user = $this->userCreator->create($email, $firstName, $lastName, $phone, $fbID, $password);
+    $body = $this->serializer->serialize(new UserResource($user));
+    $this->responseWriter->writeBody($body);
   }
 
   public function put() {

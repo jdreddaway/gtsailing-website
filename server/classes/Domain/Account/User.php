@@ -11,8 +11,9 @@ class User extends Entity {
   private $email;
   private $phone;
   private $fbID;
+  private $hashedPassword;
   
-  function __construct($id, $firstName, $lastName, $email, $phone, $fbID) {
+  function __construct($id, $firstName, $lastName, $email, $phone, $fbID, $hashedPassword) {
     parent::__construct($id);
 
     $this->firstName = $firstName;
@@ -20,6 +21,7 @@ class User extends Entity {
     $this->email = $email;
     $this->phone = $phone;
     $this->fbID = $fbID;
+    $this->hashedPassword = $hashedPassword;
   }
 
   public function getFirstName() { return $this->firstName; }
@@ -31,6 +33,14 @@ class User extends Entity {
   public function getFBID() { return $this->fbID; }
 
   public function getPhoneNumber() { return $this->phone; }
+
+  /**
+   * @throws An IncorrectPasswordException if the passwords do not match.
+   * @return a Session
+   */
+  public function logIn($rawPassword) {
+    //TODO implement
+  }
 }
 
 ?>

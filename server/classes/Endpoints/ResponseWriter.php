@@ -2,6 +2,10 @@
 
 namespace GTSailing\Endpoints;
 
+/**
+ * This class interacts with PHP lanuage features, therefore making it difficult to test.
+ * Try to keep testable logic out of this class.
+ */
 class ResponseWriter {
 
   public function writeException($ex) {

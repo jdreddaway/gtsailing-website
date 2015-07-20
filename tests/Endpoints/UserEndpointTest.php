@@ -1,7 +1,13 @@
 <?php
 
-use Tests\TestCase;
+use Prophecy\Argument;
 
+use Tests\TestCase;
+use Tests\DI\TestContainerBuilderFactory;
+use Tests\Repositories\Account\UserRepoTest;
+use Tests\Endpoints\UserResourceMatcherToken;
+
+use GTSailing\DI\ContainerBuilder;
 use GTSailing\Domain\Account\User;
 use GTSailing\Endpoints\JsonSerializer;
 use GTSailing\Endpoints\UserEndpoint;
@@ -9,42 +15,40 @@ use GTSailing\Endpoints\UserResource;
 use GTSailing\Endpoints\ResponseWriter;
 use GTSailing\Endpoints\NotFoundException;
 use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Mills\UserMill;
 use GTSailing\Repositories\DoesNotExistException;
+use GTSailing\Repositories\UserSqlStore;
 
 class UserEndpointTest extends TestCase {
 
   public function testGet() {
     $_GET['accessToken'] = 'sometoken';
 
-    $user = new User(57, 'first', 'last', 'email', 'phone', 'fbID');
+    $user = new User(UserRepoTest::GT_ID, UserRepoTest::FIRST_NAME, UserRepoTest::LAST_NAME,
+      UserRepoTest::EMAIL, UserRepoTest::PHONE, UserRepoTest::FB_ID, 'hashedPass');
 
-    $millMock = $this->getMockBuilder('GTSailing\Mills\UserMill')
-      ->setMethods(array('getUserByFBAccessToken'))
-      ->disableOriginalConstructor()
-      ->getMock();
-    $millMock
-      ->expects($this->once())
-      ->method('getUserByFBAccessToken')
-      ->with('sometoken')
-      ->willReturn($user);
 
-    $serializerMock = $this->getMockBuilder('GTSailing\Endpoints\JsonSerializer')
-      ->setMethods(array('serialize'))
-      ->getMock();
-    $serializerMock
-      ->expects($this->once())
-      ->method('serialize')
-      ->with($this->callback(function($arg) { return $arg instanceof UserResource; }))
-      ->willReturn('json');
+    $userMillProph = $this->prophesize(UserMill::class);
+    $userMillProph->getUserByFBAccessToken('sometoken')->willReturn($user);
 
-    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')
-      ->setMethods(array('setStatusCode', 'writeBody'))
-      ->disableOriginalConstructor()
-      ->getMock();
-    $writerMock->expects($this->at(0))->method('setStatusCode')->with(200);
-    $writerMock->expects($this->at(1))->method('writeBody')->with('json');
+    $serializerProph = $this->prophesize(JsonSerializer::class);
+    $expectedResource = new UserResource($user);
+    $serializerProph->serialize($expectedResource)->willReturn('userjson');
 
-    $endpoint = new UserEndpoint($millMock, $serializerMock, $writerMock);
+    $writerProph = $this->prophesize(ResponseWriter::class);
+    $writerProph->writeBody('userjson')->shouldBeCalledTimes(1);
+    $writerProph->setStatusCode(200)->shouldBeCalledTimes(1);
+
+    $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
+    UserRepoTest::setUpDIForLoad($this->prophet, $containerBuilder);
+    $containerBuilder->addDefinitions([
+      UserMill::class => $userMillProph->reveal(),
+      JsonSerializer::class => $serializerProph->reveal(),
+      ResponseWriter::class => $writerProph->reveal()
+    ]);
+    $container = $containerBuilder->build();
+    $endpoint = $container->get(UserEndpoint::class);
+
     $endpoint->get();
   }
 
@@ -52,21 +56,10 @@ class UserEndpointTest extends TestCase {
    * @expectedException GTSailing\Endpoints\BadRequestException
   */
   function testGet_NoAccessToken() {
-    $millMock = $this->getMockBuilder('GTSailing\Mills\UserMill')
-      ->setMethods(array('getUserByFBAccessToken'))
-      ->disableOriginalConstructor()
-      ->getMock();
+    $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
+    $container = $containerBuilder->build($this->prophet);
+    $endpoint = $container->get(UserEndpoint::class);
 
-    $serializerMock = $this->getMockBuilder('GTSailing\Endpoints\JsonSerializer')
-      ->setMethods(array('serialize'))
-      ->getMock();
-
-    $writerMock = $this->getMockBuilder('GTSailing\Endpoints\ResponseWriter')
-      ->setMethods(array('setStatusCode', 'writeBody'))
-      ->disableOriginalConstructor()
-      ->getMock();
-
-    $endpoint = new UserEndpoint($millMock, $serializerMock, $writerMock);
     $endpoint->get();
   }
 
@@ -77,13 +70,16 @@ class UserEndpointTest extends TestCase {
   function testGet_UserDoesNotExist() {
     $_GET['accessToken'] = 'super_tok';
 
-    $millProph = $this->prophesize('GTSailing\Mills\UserMill');
+    $millProph = $this->prophesize(UserMill::class);
     $millProph->getUserByFBAccessToken('super_tok')->willThrow(new DoesNotExistException('baddd'));
 
-    $serializerProph = $this->prophesize('GTSailing\Endpoints\JsonSerializer');
-    $writerProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
+    $containerBuilder->addDefinitions([
+      UserMill::class => $millProph->reveal()
+    ]);
+    $container = $containerBuilder->build();
+    $endpoint = $container->get(UserEndpoint::class);
 
-    $endpoint = new UserEndpoint($millProph->reveal(), $serializerProph->reveal(), $writerProph->reveal());
     $endpoint->get();
   }
 
@@ -94,15 +90,48 @@ class UserEndpointTest extends TestCase {
   function testGet_InvalidFBSession() {
     $_GET['accessToken'] = 'super_tok';
 
-    $millProph = $this->prophesize('GTSailing\Mills\UserMill');
+    $millProph = $this->prophesize(UserMill::class);
     $millProph->getUserByFBAccessToken('super_tok')->willThrow(new InvalidFBSessionException('baddd'));
 
-    $serializerProph = $this->prophesize('GTSailing\Endpoints\JsonSerializer');
-    $writerProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
-
-    $endpoint = new UserEndpoint($millProph->reveal(), $serializerProph->reveal(), $writerProph->reveal());
+    $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
+    $containerBuilder->addDefinitions([
+      UserMill::class => $millProph->reveal()
+    ]);
+    $container = $containerBuilder->build();
+    $endpoint = $container->get(UserEndpoint::class);
     $endpoint->get();
   }
+
+  function testPost_Success() {
+    $_POST['email'] = UserRepoTest::EMAIL;
+    $_POST['firstName'] = UserRepoTest::FIRST_NAME;
+    $_POST['lastName'] = UserRepoTest::LAST_NAME;
+    $_POST['phone'] = UserRepoTest::PHONE;
+    $_POST['password'] = UserRepoTest::PASSWORD;
+    $_POST['fbID'] = UserRepoTest::FB_ID;
+
+    $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
+    UserRepoTest::setUpDIForCreate($this->prophet, $containerBuilder);
+
+    $serializerProph = $this->prophesize(JsonSerializer::class);
+    $expectedResource = new UserResourceMatcherToken(UserRepoTest::GT_ID, UserRepoTest::FIRST_NAME,
+        UserRepoTest::LAST_NAME, UserRepoTest::EMAIL, UserRepoTest::PHONE);
+    $serializerProph->serialize($expectedResource)->willReturn('userjson');
+
+    $writerProph = $this->prophesize(ResponseWriter::class);
+    $writerProph->writeBody('userjson')->shouldBeCalledTimes(1);
+
+    $containerBuilder->addDefinitions([
+      JsonSerializer::class => $serializerProph->reveal(),
+      ResponseWriter::class => $writerProph->reveal()
+    ]);
+    $container = $containerBuilder->build();
+    $endpoint = $container->get(UserEndpoint::class);
+
+    $endpoint->post();
+  }
+
+  //TODO test validation error
 }
 
 ?>

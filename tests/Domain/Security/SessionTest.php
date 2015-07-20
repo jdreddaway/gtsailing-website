@@ -1,11 +1,12 @@
 <?php
 
 use GTSailing\Domain\Security\Session;
+use GTSailing\Domain\Account\User;
 
 class SessionTest extends Tests\TestCase {
 
   function testSetCurrentUser() {
-    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
+    $userProph = $this->prophesize(User::class);
     $session_arr = array();
     $session = new Session($session_arr);
     $session->logUserIn($userProph->reveal());

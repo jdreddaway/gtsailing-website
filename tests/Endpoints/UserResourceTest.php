@@ -7,7 +7,7 @@ class UserResourceTest extends PHPUnit_Framework_TestCase {
 
   function testUserConstructor() {
     //TODO test better
-    $user = new User(57, 'first', 'last', 'email', 'phone', 117);
+    $user = new User(57, 'first', 'last', 'email', 'phone', 117, 'hashedPassword');
     $resource = new UserResource($user);
     $this->assertEquals(57, $resource->id);
     $this->assertEquals('first', $resource->firstName);

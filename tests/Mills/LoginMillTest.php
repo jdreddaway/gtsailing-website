@@ -2,11 +2,12 @@
 
 use GTSailing\Mills\LoginMill;
 use GTSailing\Domain\Security\NotLoggedInException;
+use GTSailing\Domain\Account\User;
 
 class LoginMillTest extends Tests\TestCase {
 
   function testLoginByFBAccessToken() {
-    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
+    $userProph = $this->prophesize(User::class);
 
     $userMillProph = $this->prophesize('GTSailing\Mills\UserMill');
     $userMillProph->getUserByFBAccessToken('super_super_token')->willReturn($userProph->reveal());
