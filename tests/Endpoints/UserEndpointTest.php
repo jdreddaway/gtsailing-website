@@ -9,13 +9,13 @@ use Tests\Endpoints\UserResourceMatcherToken;
 
 use GTSailing\DI\ContainerBuilder;
 use GTSailing\Domain\Account\User;
+use GTSailing\Domain\Facebook\FBUserRetriever;
+use GTSailing\Domain\Facebook\InvalidFBSessionException;
 use GTSailing\Endpoints\JsonSerializer;
 use GTSailing\Endpoints\UserEndpoint;
 use GTSailing\Endpoints\UserResource;
 use GTSailing\Endpoints\ResponseWriter;
 use GTSailing\Endpoints\NotFoundException;
-use GTSailing\Mills\InvalidFBSessionException;
-use GTSailing\Mills\UserMill;
 use GTSailing\Repositories\DoesNotExistException;
 use GTSailing\Repositories\UserSqlStore;
 
@@ -27,9 +27,8 @@ class UserEndpointTest extends TestCase {
     $user = new User(UserRepoTest::GT_ID, UserRepoTest::FIRST_NAME, UserRepoTest::LAST_NAME,
       UserRepoTest::EMAIL, UserRepoTest::PHONE, UserRepoTest::FB_ID, 'hashedPass');
 
-
-    $userMillProph = $this->prophesize(UserMill::class);
-    $userMillProph->getUserByFBAccessToken('sometoken')->willReturn($user);
+    $fbUserRetrieverProph = $this->prophesize(FBUserRetriever::class);
+    $fbUserRetrieverProph->getUserByFBAccessToken('sometoken')->willReturn($user);
 
     $serializerProph = $this->prophesize(JsonSerializer::class);
     $expectedResource = new UserResource($user);
@@ -42,7 +41,7 @@ class UserEndpointTest extends TestCase {
     $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
     UserRepoTest::setUpDIForLoad($this->prophet, $containerBuilder);
     $containerBuilder->addDefinitions([
-      UserMill::class => $userMillProph->reveal(),
+      FBUserRetriever::class => $fbUserRetrieverProph->reveal(),
       JsonSerializer::class => $serializerProph->reveal(),
       ResponseWriter::class => $writerProph->reveal()
     ]);
@@ -70,12 +69,12 @@ class UserEndpointTest extends TestCase {
   function testGet_UserDoesNotExist() {
     $_GET['accessToken'] = 'super_tok';
 
-    $millProph = $this->prophesize(UserMill::class);
-    $millProph->getUserByFBAccessToken('super_tok')->willThrow(new DoesNotExistException('baddd'));
+    $fbUserRetrieverProph = $this->prophesize(FBUserRetriever::class);
+    $fbUserRetrieverProph->getUserByFBAccessToken('super_tok')->willThrow(new DoesNotExistException('baddd'));
 
     $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
     $containerBuilder->addDefinitions([
-      UserMill::class => $millProph->reveal()
+      FBUserRetriever::class => $fbUserRetrieverProph->reveal()
     ]);
     $container = $containerBuilder->build();
     $endpoint = $container->get(UserEndpoint::class);
@@ -90,12 +89,12 @@ class UserEndpointTest extends TestCase {
   function testGet_InvalidFBSession() {
     $_GET['accessToken'] = 'super_tok';
 
-    $millProph = $this->prophesize(UserMill::class);
-    $millProph->getUserByFBAccessToken('super_tok')->willThrow(new InvalidFBSessionException('baddd'));
+    $fbUserRetrieverProph = $this->prophesize(FBUserRetriever::class);
+    $fbUserRetrieverProph->getUserByFBAccessToken('super_tok')->willThrow(new InvalidFBSessionException('baddd'));
 
     $containerBuilder = (new TestContainerBuilderFactory())->create($this->prophet);
     $containerBuilder->addDefinitions([
-      UserMill::class => $millProph->reveal()
+      FBUserRetriever::class => $fbUserRetrieverProph->reveal()
     ]);
     $container = $containerBuilder->build();
     $endpoint = $container->get(UserEndpoint::class);

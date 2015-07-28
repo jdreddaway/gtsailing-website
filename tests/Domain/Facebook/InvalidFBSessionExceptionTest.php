@@ -1,6 +1,6 @@
 <?php
 
-use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Domain\Facebook\InvalidFBSessionException;
 
 class InvalidFBSessionExceptionTest extends PHPUnit_Framework_TestCase {
 

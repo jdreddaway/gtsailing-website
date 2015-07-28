@@ -21,6 +21,7 @@ class UserRepoTest extends \Tests\TestCase {
   const HASHED_PASSWORD = 'hashedPass';
   const FB_ID = 19898;
   const GT_ID = 57;
+  const GT_ID2 = 10167;
 
   function testLoadByID() {
     $containerBuilder = (new TestContainerBuilderFactory)->create($this->prophet);
@@ -29,12 +30,7 @@ class UserRepoTest extends \Tests\TestCase {
     $repo = $container->get(UserRepo::class);
     $user = $repo->loadByID(self::GT_ID);
 
-    $this->assertEquals(self::GT_ID, $user->getID());
-    $this->assertEquals(self::FIRST_NAME, $user->getFirstName());
-    $this->assertEquals(self::LAST_NAME, $user->getLastName());
-    $this->assertEquals(self::EMAIL, $user->getEmail());
-    $this->assertEquals(self::PHONE, $user->getPhoneNumber());
-    $this->assertEquals(self::FB_ID, $user->getFBID());
+    $this->assertEquals(self::createDefaultUser(), $user);
   }
 
   function testCreate() {
@@ -44,6 +40,24 @@ class UserRepoTest extends \Tests\TestCase {
     $repo = $container->get(UserRepo::class);
     $id = $repo->create(self::EMAIL, self::FIRST_NAME, self::LAST_NAME, self::PHONE, self::PASSWORD, self::FB_ID);
     $this->assertEquals(self::GT_ID, $id);
+  }
+
+  function testLoadByFBID() {
+    $container = self::setUpDiForLoad($this->prophet, $this->containerBuilder)->build();
+    $repo = $container->get(UserRepo::class);
+    $user = $repo->loadByFBID(self::FB_ID);
+    $expected = self::createDefaultUser();
+    $this->assertEquals($expected, $user);
+  }
+
+  public static function createDefaultUser() {
+    return new User(self::GT_ID, self::FIRST_NAME, self::LAST_NAME, self::EMAIL, self::PHONE,
+        self::FB_ID, self::HASHED_PASSWORD);
+  }
+
+  public static function createDefaultUser2() {
+    return new User(self::GT_ID2, self::FIRST_NAME, self::LAST_NAME, self::EMAIL, self::PHONE,
+        self::FB_ID, self::HASHED_PASSWORD);
   }
 
   /**

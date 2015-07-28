@@ -8,20 +8,20 @@ use Facebook\FacebookSession;
 use Facebook\GraphUser;
 
 use GTSailing\Domain\Account\UserCreator;
-use GTSailing\Mills\UserMill;
-use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Domain\Facebook\FBUserRetriever;
+use GTSailing\Domain\Facebook\InvalidFBSessionException;
 use GTSailing\Repositories\DoesNotExistException;
 use GTSailing\Repositories\Account\UserRepo;
 
 class UserEndpoint extends Endpoint {
 
-  private $userMill;
+  private $fbUserRetriever;
   private $userCreator;
   private $serializer;
   private $responseWriter;
 
-  public function __construct(UserMill $userMill, UserCreator $userCreator, JsonSerializer $serializer, ResponseWriter $responseWriter) {
-    $this->userMill = $userMill;
+  public function __construct(FBUserRetriever $fbUserRetriever, UserCreator $userCreator, JsonSerializer $serializer, ResponseWriter $responseWriter) {
+    $this->fbUserRetriever = $fbUserRetriever;
     $this->userCreator = $userCreator;
     $this->serializer = $serializer;
     $this->responseWriter = $responseWriter;
@@ -40,7 +40,7 @@ class UserEndpoint extends Endpoint {
     }
 
     try {
-      $user = $this->userMill->getUserByFBAccessToken($_GET['accessToken']);
+      $user = $this->fbUserRetriever->getUserByFBAccessToken($_GET['accessToken']);
     } catch (InvalidFBSessionException $fbEx) {
       throw new BadRequestException($fbEx->getMessage(), $fbEx);
     } catch (DoesNotExistException $dne) {

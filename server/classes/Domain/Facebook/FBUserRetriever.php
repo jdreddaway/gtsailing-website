@@ -1,15 +1,16 @@
 <?php
 
-namespace GTSailing\Mills;
+namespace GTSailing\Domain\Facebook;
 
 use Facebook\GraphUser;
 
+use GTSailing\Domain\Facebook\FBUser;
 use GTSailing\Facebook\Initializer;
 use GTSailing\Facebook\Requester;
 use GTSailing\Facebook\SessionFactory;
 use GTSailing\Repositories\Account\UserRepo;
 
-class UserMill {
+class FBUserRetriever {
 
   public function __construct(UserRepo $userRepo, SessionFactory $fbSessionFactory, Requester $fbRequester, Initializer $fbInitializer) {
     $this->userRepo = $userRepo;
@@ -37,17 +38,9 @@ class UserMill {
 
     $response = $this->fbRequester->request($session, "GET", "/me");
     $user = $response->getGraphObject(GraphUser::className());
-    $fbID = $user->getId();
 
-    $gtUser = $this->userRepo->loadByFBID($fbID);
-
-    return $gtUser;
+    return new FBUser($user, true);
   }
-
-  public function createUser($email, $firstName, $lastName, $phone, $hashedPassword, $fbID) {
-    return $this->userRepo->create($email, $firstName, $lastName, $phone, $hashedPassword, $fbID);
-  }
-
 }
 
 ?>

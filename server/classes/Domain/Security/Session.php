@@ -16,15 +16,23 @@ class Session {
   }
 
   public function logUserIn(User $user) {
+    if (!$user->isAuthenticated()) {
+      throw new NotAuthenticatedException();
+    }
+    
     $this->sessionVar['user'] = $user;
   }
 
   public function getLoggedInUser() {
-    if (!isset($this->sessionVar['user'])) {
+    if (!$this->userIsLoggedIn()) {
       throw new NotLoggedInException();
     }
     
     return $this->sessionVar['user'];
+  }
+
+  public function userIsLoggedIn() {
+    return isset($this->sessionVar['user']);
   }
 
   public function close() {

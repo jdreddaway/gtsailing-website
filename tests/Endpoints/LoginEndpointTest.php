@@ -1,90 +1,140 @@
 <?php
 
+use DI\ContainerBuilder;
+use Prophecy\Prophet;
+
 use Tests\TestCase;
-use GTSailing\Endpoints\LoginEndpoint;
+use Tests\Domain\Facebook\FBUserRetrieverTest;
+use Tests\Repositories\Account\UserRepoTest;
+use Tests\Domain\Account\UserTest;
+
 use GTSailing\Domain\Security\NotLoggedInException;
-use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Domain\Security\Session;
+use GTSailing\Domain\Facebook\InvalidFBSessionException;
+use GTSailing\Endpoints\BadRequestException;
+use GTSailing\Endpoints\LoginEndpoint;
+use GTSailing\Endpoints\ResponseWriter;
 use GTSailing\Repositories\DoesNotExistException;
+use GTSailing\Repositories\UserSqlStore;
 
 class LoginEndpointTest extends TestCase {
 
   function testPost_WithAccessToken() {
-    $_POST['accessToken'] = 'mysuperfbaccesstoken';
+    $_POST['accessToken'] = FBUserRetrieverTest::ACCESS_TOKEN;
+    UserRepoTest::setUpDiForLoad($this->prophet, $this->containerBuilder);
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->shouldBeCalledTimes(1);
-
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $responseWriterProph = $this->prophesize(ResponseWriter::class);
     $responseWriterProph->setStatusCode(201)->shouldBeCalledTimes(1);
 
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    FBUserRetrieverTest::setUpDIToGetUserByAccessToken($this->prophet, $this->containerBuilder);
+    $sessionArray = array();
+    $session = new Session($sessionArray);
+    $this->containerBuilder->addDefinitions([
+      Session::class => $session,
+      ResponseWriter::class => $responseWriterProph->reveal()
+    ]);
+    $container = $this->containerBuilder->build();
+    $endpoint = $container->get(LoginEndpoint::class);
     $endpoint->post();
+
+    $this->assertEqualsEquals(UserRepoTest::createDefaultUser(), $session->getLoggedInUser());
   }
 
   /**
    * @expectedException GTSailing\Endpoints\BadRequestException
    */
   function testPost_NoToken() {
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $responseWriterProph = $this->prophesize(ResponseWriter::class);
+    $sessionArray = array();
+    $session = new Session($sessionArray);
+    $this->containerBuilder->addDefinitions([
+      ResponseWriter::class => $responseWriterProph->reveal(),
+      Session::class => $session
+    ]);
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->logInByFBAccessToken()->shouldNotBeCalled();
-
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint = $this->containerBuilder->build()->get(LoginEndpoint::class);
     $endpoint->post();
+    $this->assertFalse($session->userIsLoggedIn());
   }
 
-  /**
-   * @expectedException GTSailing\Endpoints\BadRequestException
-   * @expectedExceptionMessage bad_sessionn
-   */
   function testPost_InvalidFBSession() {
-    $_POST['accessToken'] = 'mysuperfbaccesstoken';
+    $_POST['accessToken'] = FBUserRetrieverTest::ACCESS_TOKEN;
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->willThrow(new InvalidFBSessionException('bad_sessionn'));
+    FBUserRetrieverTest::setUpDIToGetUserByAccessToken_InvalidSession(
+      $this->prophet, $this->containerBuilder);
 
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $session = $this->createSession();
+    $this->containerBuilder->addDefinitions([
+      ResponseWriter::class => $this->prophesize(ResponseWriter::class)->reveal(),
+      Session::class => $session
+    ]);
 
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
-    $endpoint->post();
+    $endpoint = $this->containerBuilder->build()->get(LoginEndpoint::class);
+    try {
+      $endpoint->post();
+      $this->fail();
+    } catch (BadRequestException $ex) {}
+
+    $this->assertFalse($session->userIsLoggedIn());
   }
 
   /**
    * @expectedException GTSailing\Endpoints\NotFoundException
    */
   function testPost_UserNotRegistered() {
-    $_POST['accessToken'] = 'mysuperfbaccesstoken';
+    $_POST['accessToken'] = FBUserRetrieverTest::ACCESS_TOKEN;
+    FBUserRetrieverTest::setUpDIToGetUserByAccessToken($this->prophet, $this->containerBuilder);
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->logInByFBAccessToken('mysuperfbaccesstoken')->willThrow(new DoesNotExistException('user not found'));
+    $session = $this->createSession();
+    $userStoreProph = $this->prophesize(UserSqlStore::class);
+    $userStoreProph->loadByFBID(UserRepoTest::FB_ID)->willThrow(DoesNotExistException::class);
+    $this->containerBuilder->addDefinitions([
+      ResponseWriter::class => $this->prophesize(ResponseWriter::class)->reveal(),
+      Session::class => $session,
+      UserSqlStore::class => $userStoreProph->reveal()
+    ]);
 
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
-
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint = $this->containerBuilder->build()->get(LoginEndpoint::class);
     $endpoint->post();
   }
 
   function testGet_UserLoggedIn() {
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $user = UserTest::createAuthenticatedUser($this->prophet);
+    $session_arr = array();
+    $session = new Session($session_arr);
+    $session->logUserIn($user);
+
+    $responseWriterProph = $this->prophesize(ResponseWriter::class);
     $responseWriterProph->writeBody('true')->shouldBeCalledTimes(1);
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->getLoggedInUser()->willReturn('some_user');
+    $this->containerBuilder->addDefinitions([
+      Session::class => $session,
+      ResponseWriter::class => $responseWriterProph->reveal()
+    ]);
 
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint = $this->containerBuilder->build()->get(LoginEndpoint::class);
     $endpoint->get();
   }
 
   function testGet_NoUserLoggedIn() {
-    $responseWriterProph = $this->prophesize('GTSailing\Endpoints\ResponseWriter');
+    $session_arr = array();
+    $session = new Session($session_arr);
+
+    $responseWriterProph = $this->prophesize(ResponseWriter::class);
     $responseWriterProph->writeBody('false')->shouldBeCalledTimes(1);
 
-    $loginMillProph = $this->prophesize('GTSailing\Mills\LoginMill');
-    $loginMillProph->getLoggedInUser()->willThrow(new NotLoggedInException());
+    $this->containerBuilder->addDefinitions([
+      Session::class => $session,
+      ResponseWriter::class => $responseWriterProph->reveal()
+    ]);
 
-    $endpoint = new LoginEndpoint($responseWriterProph->reveal(), $loginMillProph->reveal());
+    $endpoint = $this->containerBuilder->build()->get(LoginEndpoint::class);
     $endpoint->get();
+  }
+
+  private function createSession() {
+    $sessionArray = array();
+    return new Session($sessionArray);
   }
 }
 

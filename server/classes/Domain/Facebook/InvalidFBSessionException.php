@@ -1,6 +1,6 @@
 <?php
 
-namespace GTSailing\Mills;
+namespace GTSailing\Domain\Facebook;
 
 class InvalidFBSessionException extends \Exception {
 }

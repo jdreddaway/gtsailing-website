@@ -3,6 +3,9 @@
 namespace GTSailing\Domain\Account;
 
 use GTSailing\Domain\Entity;
+use GTSailing\Domain\Facebook\FBUser;
+use GTSailing\Domain\Security\PasswordHasher;
+use GTSailing\Domain\Security\Session;
 
 class User extends Entity {
 
@@ -12,6 +15,8 @@ class User extends Entity {
   private $phone;
   private $fbID;
   private $hashedPassword;
+
+  private $isAuthenticated;
   
   function __construct($id, $firstName, $lastName, $email, $phone, $fbID, $hashedPassword) {
     parent::__construct($id);
@@ -22,6 +27,8 @@ class User extends Entity {
     $this->phone = $phone;
     $this->fbID = $fbID;
     $this->hashedPassword = $hashedPassword;
+
+    $this->isAuthenticated = false;
   }
 
   public function getFirstName() { return $this->firstName; }
@@ -30,16 +37,38 @@ class User extends Entity {
 
   public function getEmail() { return $this->email; }
 
-  public function getFBID() { return $this->fbID; }
-
   public function getPhoneNumber() { return $this->phone; }
 
+  public function isAuthenticated() {
+    return $this->isAuthenticated;
+  }
+
+  public function authenticateByFBUser(FBUser $fbUser) {
+    $this->isAuthenticated = $fbUser->isQueryingUser();
+  }
+
+  public function authenticateByPassword(PasswordHasher $hasher, $rawPassword) {
+    //TODO implement
+  }
+
   /**
-   * @throws An IncorrectPasswordException if the passwords do not match.
+   * @throws NotAuthenticatedException if the user has not been authenticated yet
    * @return a Session
    */
-  public function logIn($rawPassword) {
+  public function logIn(Session $session) {
     //TODO implement
+  }
+
+  public function logOut(Session $session) {
+    //TODO implement
+  }
+
+  public function equals($other) {
+    return $this->id == $other->id;
+  }
+
+  public function __toString() {
+    return "user$this->id";
   }
 }
 

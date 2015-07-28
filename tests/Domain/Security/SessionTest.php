@@ -1,25 +1,47 @@
 <?php
 
-use GTSailing\Domain\Security\Session;
 use GTSailing\Domain\Account\User;
+use GTSailing\Domain\Security\NotAuthenticatedException;
+use GTSailing\Domain\Security\Session;
+
+use Tests\Domain\Account\UserTest;
+use Tests\Repositories\Account\UserRepoTest;
+
 
 class SessionTest extends Tests\TestCase {
 
-  function testSetCurrentUser() {
-    $userProph = $this->prophesize(User::class);
+  function testLogUserIn_Authenticated() {
+    $user = UserTest::createAuthenticatedUser($this->prophet);
     $session_arr = array();
     $session = new Session($session_arr);
-    $session->logUserIn($userProph->reveal());
-
-    $this->assertEquals($userProph->reveal(), $session_arr['user']);
+    $session->logUserIn($user);
+    $this->assertEquals($user, $session->getLoggedInUser());
   }
 
-  function testGetLoggedInUser() {
-    $userProph = $this->prophesize('GTSailing\Domain\Security\User');
-    $session_arr = array('user' => $userProph->reveal());
+  function testLogUserIn_NotAuthenticated() {
+    $user = UserRepoTest::createDefaultUser();
+    $session_arr = array();
     $session = new Session($session_arr);
-    
-    $this->assertEquals($userProph->reveal(), $session->getLoggedInUser());
+
+    try {
+      $session->logUserIn($user);
+      $this->fail();
+    } catch (NotAuthenticatedException $ex) {
+    }
+  }
+
+  function testUserIsLoggedIn_True() {
+    $user = UserTest::createAuthenticatedUser($this->prophet);
+    $session_arr = array();
+    $session = new Session($session_arr);
+    $session->logUserIn($user);
+    $this->assertTrue($session->userIsLoggedIn());
+  }
+
+  function testUserIsLoggedIn_Initial() {
+    $session_arr = array();
+    $session = new Session($session_arr);
+    $this->assertFalse($session->userIsLoggedIn());
   }
 
   /**

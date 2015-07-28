@@ -4,29 +4,36 @@ namespace GTSailing\Endpoints;
 
 use GTSailing\Endpoints\NotFoundException;
 use GTSailing\Endpoints\ResponseWriter;
-use GTSailing\Mills\LoginMill;
-use GTSailing\Mills\InvalidFBSessionException;
+use GTSailing\Domain\Account\User;
+use GTSailing\Domain\Facebook\InvalidFBSessionException;
+use GTSailing\Domain\Facebook\FBUserRetriever;
+use GTSailing\Domain\Security\NotLoggedInException;
+use GTSailing\Domain\Security\Session;
 use GTSailing\Repositories\DoesNotExistException;
+use GTSailing\Repositories\Account\UserRepo;
 
 class LoginEndpoint extends Endpoint {
 
-  function __construct(ResponseWriter $writer, LoginMill $loginMill) {
+  private $writer;
+  private $fbUserRetriever;
+  private $userRepo;
+  private $session;
+
+  function __construct(ResponseWriter $writer, FBUserRetriever $fbUserRetriever, UserRepo $userRepo, Session $session) {
     $this->writer = $writer;
-    $this->loginMill = $loginMill;
+    $this->fbUserRetriever = $fbUserRetriever;
+    $this->userRepo = $userRepo;
+    $this->session = $session;
   }
 
   public function options() {
     $this->returnNotImplemented();
   }
 
-  /**
-   * 
-  */
   public function get() {
-    try {
-      $this->loginMill->getLoggedInUser();
+    if ($this->session->userIsLoggedIn()) {
       $this->writer->writeBody("true");
-    } catch (\GTSailing\Domain\Security\NotLoggedInException $nlie) {
+    } else {
       $this->writer->writeBody('false');
     }
   }
@@ -45,12 +52,19 @@ class LoginEndpoint extends Endpoint {
     }
 
     try {
-      $this->loginMill->logInByFBAccessToken($_POST['accessToken']);
+      $fbUser = $this->fbUserRetriever->getUserByFBAccessToken($_POST['accessToken']);
     } catch (InvalidFBSessionException $fbEx) {
       throw new BadRequestException($fbEx->getMessage(), $fbEx);
+    }
+
+    try {
+      $gtUser = $fbUser->toUser($this->userRepo);
     } catch (DoesNotExistException $dne) {
       throw new NotFoundException($dne->getMessage(), $dne);
     }
+
+    $gtUser->authenticateByFBUser($fbUser);
+    $this->session->logUserIn($gtUser);
 
     $this->writer->setStatusCode(201);
   }
