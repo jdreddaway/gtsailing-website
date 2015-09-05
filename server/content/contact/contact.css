@@ -59,24 +59,24 @@ table {
 }
 
 #commodore_profile {
-	top:20%;
-	right:10%;
-}
-
-#commodore_lbl {
-	top:8%;
-	max-width:650px;
-}
-
-#vice_profile {
 	top:15%;
 	left:10%;
 }
 
-#vice {
-	top:12%;
+#commodore_lbl {
+	top:8%;
 	right:10%;
 	left:initial;
+}
+
+#vice_profile {
+	top:15%;
+	right:8%;
+}
+
+#vice {
+	left:auto;
+	top:10%;
 }
 
 #captain_profile {
@@ -95,23 +95,27 @@ table {
 }
 
 #social_profile {
-	right:8%;
-	top:15%;
+	left:3%;
+	bottom:20%;
 }
 
 #social {
 	top:12%;
+	right:5em;
+	left:initial;
 }
 
 #fleet_captain_profile {
-	right:5%;
 	left:initial;
-	top:12%;
+	right:8em;
+	bottom:15%;
 }
 
 #fleet_captain_lbl {
-	left:0%;
-	top:30%;
+	left:initial;
+	right:5em;
+	top:8%;
+	max-width:60em;
 }
 
 #treasurer_profile {
