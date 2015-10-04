@@ -129,17 +129,17 @@
 </div>
 
 <div id="race_captain" class="fixed">
-	<?php addFlowBackgroundImage("pitchatent"); ?>
+	<?php addFlowBackgroundImage("DSC09810"); ?>
 	<a href="https://www.facebook.com/lauren.yapp.3" target="_blank" class="profile" id="captain_profile">
 		<?php /* TODO resize this */ ?>
 		<img src="/images/exec/lauren-yapp.jpg" alt="Lauren Yapp" />
 	</a>
-	<div id="captain" class="light">
+	<div id="captain" class="dark">
 		<h2>Race Team Captain</h2>
 		<div>
 			<h3><a href="https://www.facebook.com/lauren.yapp.3" target="_blank">Lauren Yapp</a></h3>
 			<p>
-				Lauren is majoring in Industrial Engineering and started at Tech with the Class of 2018.
+				Lauren is majoring in Industrial Engineering and started at Tech with the freshman class of 2014.
 				She started sailing Optis when she was 7 years old, but hated it, crying on the way to the lake for every class.
 				Around the age of 11, she picked up sailing again and fell in love with the Laser.
 				Growing up at the <a href="http://www.atlantayachtclub.org/" target="_blank">Atlanta Yacht Club</a> on Lake Allatoona, she began racing ever since her first Junior Week.
@@ -194,7 +194,6 @@
 			<p>
 				Marten grew up racing sailboats in Houston, TX.
 				He came to Georgia Tech in 2011 to study Computer Science and has been on the Race Team since his freshman year.
-				Marten is very good with boats (even though his hands shake every now and then).
 			</p>
 			<p>
 				Email: <a href="mailto:martenk@comcast.net">martenk@comcast.net</a>
@@ -207,7 +206,7 @@
 </div>
 
 <div id="treasurer" class="fixed">
-	<?php addFlowBackgroundImage("DSCF1513"); ?>
+	<?php addFlowBackgroundImage("conner bg"); ?>
 	<a href="https://www.facebook.com/conner.killham" target="_blank" class="profile" id="treasurer_profile">
 		<img src="/images/exec/conner-killham.jpg" alt="Conner Killham" />
 	</a>
@@ -216,15 +215,9 @@
 		<div>
 			<h3><a href="https://www.facebook.com/conner.killham" target="_blank">Conner Killham</a></h3>
 			<p>
-				Justin is a Materials Science major and a member of the freshman class of 2012.
-				Justin and his family are members of <a href="http://www.atlantayachtclub.org/" target="_blank">Atlanta Yacht Club</a> on Lake Allatoona.
-				He first became treasurer his freshman year and did an outstanding job.
-				Some would argue that he saved the club financially.
-			</p>
-			<p>
-				Justin is also very active in the <a href="http://sga.gatech.edu/" target="_blank">Student Government Association</a>.
-				During his 2nd year, he was the Materials Sciences Undergraduate Representative,
-				and he is currently the Vice President of Campus Organizations.
+				Conner is a member of the freshman class of 2014.
+				He was on Severn High School's sailing team, which is located in Maryland.
+				He is a knowledgeable sailor and a good coach.
 			</p>
 			<p>
 				Email: <a href="mailto:ckillham+gtsc@gmail.com">ckillham+gtsc@gmail.com</a>

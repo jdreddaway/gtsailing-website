@@ -80,13 +80,14 @@ table {
 }
 
 #captain_profile {
-	right:10%;
-	top:12%;
+	left:10%;
+	top:14%;
 }
 
 #captain {
-	left:1%;
+	right:3em;
 	top:10%;
+	left:initial;
 }
 
 #captain > div {
@@ -119,16 +120,16 @@ table {
 }
 
 #treasurer_profile {
-	right:10%;
+	left:8%;
 	top:15%;
 }
 
 #treasurer_lbl {
 	top:10%;
-}
+	right:4em;
+	left:initial;
 
-#treasurer_lbl > div {
-	width:550px;
+	max-width:40%;
 }
 
 #secretary_profile {
