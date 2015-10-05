@@ -131,7 +131,6 @@
 <div id="race_captain" class="fixed">
 	<?php addFlowBackgroundImage("DSC09810"); ?>
 	<a href="https://www.facebook.com/lauren.yapp.3" target="_blank" class="profile" id="captain_profile">
-		<?php /* TODO resize this */ ?>
 		<img src="/images/exec/lauren-yapp.jpg" alt="Lauren Yapp" />
 	</a>
 	<div id="captain" class="dark">
