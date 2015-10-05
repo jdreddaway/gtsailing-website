@@ -70,15 +70,32 @@
 	</div>
 </div>
 
-<!-- TODO add this when collegesailing.org starts working again
 <div id="collegesailing" class="fixed">
-	<img alt="glass at eckerd" class="background" src="/images/backgrounds/glass%20at%20eckerd.png" />
-	<div id="icsa" class="dark">
-		<h2>Inter-Collegiate Sailing Association</h2>
-		<p>
-			Link to scores
-			Link to sign up page
-		</p>
+	<?php addFlowBackgroundImage("watching races"); ?>
+	<div id="icsa" class="light">
+		<h2><a target="_blank" href="http://collegesailing.org/">Inter-Collegiate Sailing Association</a></h2>
+		<div>
+			<p>
+				The <a target="_blank" href="http://collegesailing.org/">ICSA</a> is the governing body of college sailing in the United States. 
+				It makes and enforces the rules of college sailing and organizes interconference regattas.
+				<strong>In order to compete in any regatta, sailors must be <a target="_blank" href="http://classic.collegesailing.org/directory/individual/step1.asp">registered</a> with ICSA.</strong>
+				There are seven conferences, which schedule and administer regattas in their respective geographical region.
+			</p>
+			<p>
+				The Sailing Club at Georgia Tech is part of the South Atlantic region, which is governed by <a target="_blank" href="http://www.saisasailing.com">SAISA</a>.
+				SAISA is divided into two sub-regions:
+				North SAISA consists of the schools in Alabama, Georgia, Tennessee, North Carolina, and South Carolina;
+				South SAISA pretty much consists of just the schools in Florida, although Georgia Tech belonged to South SAISA at one point in its history.
+			</p>
+			<p>
+				Here are some important links:
+				<ul>
+					<li><a target="_blank" href="http://collegesailing.org/about/mailing-list">Mailing Lists</a></li>
+					<li><a target="_blank" href="http://classic.collegesailing.org/directory/individual/step1.asp">ICSA Individual Registration</a></li>
+					<li><a target="_blank" href="http://saisasailing.com/schedule/">SAISA Schedule</a></li>
+					<li><a target="_blank" href="http://scores.collegesailing.org/">Regatta Results</a></li>
+				</ul>
+			</p>
+		</div>
 	</div>
 </div>
--->

@@ -50,3 +50,9 @@
 	float:right;
 	margin:0 2em;
 }
+
+#icsa {
+	max-width:70%;
+	right:5em;
+	left:initial;
+}

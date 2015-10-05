@@ -8,3 +8,6 @@
 /server/settings
 /server/usbwebserver.exe
 /utilities/backgrounds-maker/images
+/server/includes/common/settings.php
+/server/vendor
+/server/xampp
