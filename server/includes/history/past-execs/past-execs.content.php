@@ -136,9 +136,10 @@
       <p>Chemical Engineering 2014</p>
     </td>
     <td>
-      <img alt="unknown" src="/images/past-exec/unknown.jpg" />
-      <p>unknown</p>
+      <img alt="Alex Richardson" src="/images/past-exec/alex-richardson.jpg" />
+      <p>Alexandra Richardson</p>
       <p>Social Chair</p>
+      <p>Biomedical Engineering 2015</p>
     </td>
   </tr></table>
 </div>
