@@ -1,14 +1,13 @@
 <?php
-	$DEBUG = true;
-
 	function requireOnce($path) {
 		require_once($_SERVER['DOCUMENT_ROOT'] . '/../includes' . $path);
 	}
 	
 	function underConstruction() {
-		global $DEBUG;
+		requireOnce('/common/settings.php');
+		global $debug;
 		
-		if (!$DEBUG) {
+		if (!$debug) {
 			header("HTTP/1.1 307 Temporary Redirect");
 			header('Location: /construction.php');
 		}
