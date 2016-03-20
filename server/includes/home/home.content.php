@@ -13,6 +13,7 @@
 			<li><a href="/contact/">Contact Us</a></li>
 			<li><a href="/members/">Members' Section</a></li>
 			<li><a href="/rules/">Rules</a></li>
+			<li><a href="/alumni/">Alumni</a></li>
 		</ul>
 		<div id="fb-root"></div>
 		<script type="text/javascript">

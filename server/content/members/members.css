@@ -7,7 +7,7 @@ div.widget_container {
 }
 
 div.widget_container > div {
-  background-color:#E0AA0F;
+  background-color:#002b45;
   border-radius:1em;
   padding:1em;
   display:inline-block;
@@ -39,5 +39,5 @@ div.widget_container li {
 }
 
 div.widget_container a:link, div.widget_container a:visited {
-  color:#002b45;
+  color:white;
 }

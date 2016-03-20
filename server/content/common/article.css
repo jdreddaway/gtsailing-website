@@ -15,12 +15,22 @@ h1 {
 	text-align:center;
 }
 
+h2 {
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
+}
+
 #content {
-	background-color:#E6E6E6;
+	background-color:#F3F3F3;
 	padding:1.5em;
 	border-radius:0.5em;
 	width:75%;
+	min-width: min-content;
 	margin:0 auto;
+}
+
+#content a:link, #content a:visited {
+	color: #003f66;
 }
 
 #content-wrapper {

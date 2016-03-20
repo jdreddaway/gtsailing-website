@@ -1,0 +1,1 @@
+Files should have a 2:3 width:height ratio. Make sure the images aren't too big so that the page doesn't take a long time to load. I chose 200x300 px for many of them.

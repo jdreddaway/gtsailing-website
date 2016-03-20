@@ -1,0 +1,26 @@
+/* board members section */
+#content > div > table {
+  width: 100%;
+}
+
+/* a board member */
+#content > div > table td {
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+
+  width: calc(100% / 7); /* 7 is the number of exec positions */
+  min-width: 64px;
+  box-sizing: border-box;
+
+  vertical-align: top;
+}
+
+
+#content > div > table td > img {
+  width: 100%;
+}
+
+#content > div > table td > * {
+  text-align: center;
+}

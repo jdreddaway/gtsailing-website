@@ -3,7 +3,7 @@
 
 	/* this expects that certain variables have already been set: */
 	global $title;
-	global $path; // the location of all the page's files; do not include '/' at either end
+	global $path; // the location of the page's files relative to the "includes" directory; do not include '/' at either end
 	global $pageName;
 ?>
 

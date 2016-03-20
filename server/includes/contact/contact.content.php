@@ -37,6 +37,12 @@
 							Email this list if you need a lakehost to take you up to LLSC.
 						</td>
 					</tr>
+					<tr>
+						<th><a href="https://groups.google.com/forum/#!forum/gt-sailing-alumni" target="_blank">gt-sailing-alumni@googlegroups.com</a></th>
+						<td>
+							For alumni to keep up-to-date with what the club is doing and to connect with other alumni.
+						</td>
+					</tr>
 				</table>
 			</div>
 		</div>
@@ -214,8 +220,8 @@
 		<div>
 			<h3><a href="https://www.facebook.com/conner.killham" target="_blank">Conner Killham</a></h3>
 			<p>
-				Conner is a member of the freshman class of 2014.
-				He was on Severn High School's sailing team, which is located in Maryland.
+				Conner studies Mechanical Engineering and plans on graduating in 2018.
+				He was on Severn High School's sailing team, which is in Maryland.
 				He is a knowledgeable sailor and a good coach.
 			</p>
 			<p>
