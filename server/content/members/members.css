@@ -38,6 +38,6 @@ div.widget_container li {
   padding:.25em;
 }
 
-div.widget_container a:link, div.widget_container a:visited {
+#content div.widget_container a:link, #content div.widget_container a:visited {
   color:white;
 }
